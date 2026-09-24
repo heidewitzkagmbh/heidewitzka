@@ -98,3 +98,19 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .gradient-orbit{position:absolute;inset:17% 23%;border:1px solid rgba(255,255,255,.5);border-radius:50%;transform:rotate(-30deg) scaleX(1.25)}
 .gradient-lines{position:absolute;inset:0;background:repeating-linear-gradient(160deg,transparent 0 45px,rgba(255,255,255,.09) 46px,transparent 47px);mask-image:linear-gradient(130deg,transparent 20%,#000 80%)}
 @media(max-width:900px){.ai-teaser .teaser-body{padding-top:22px}.ai-teaser p{margin-bottom:20px}.ai-teaser{padding-bottom:20px}}
+
+/* Heidewitzka introduction and product system cards. */
+.about-story{max-width:1060px;margin:0;font-size:clamp(20px,2vw,30px);line-height:1.35;color:#4b4b4b}
+.product-tile{min-height:520px}
+.product-tile img{filter:saturate(.95) brightness(1.02)}
+.product-tile:nth-child(1):after{background:linear-gradient(180deg,rgba(4,52,57,.06) 14%,rgba(8,66,70,.35) 54%,rgba(4,38,43,.91) 100%)}
+.product-tile:nth-child(2):after{background:linear-gradient(180deg,rgba(105,58,18,.04) 14%,rgba(126,66,28,.26) 54%,rgba(67,33,19,.91) 100%)}
+.product-tile:nth-child(3):after{background:linear-gradient(180deg,rgba(77,50,99,.05) 14%,rgba(80,46,91,.26) 54%,rgba(43,27,55,.92) 100%)}
+.product-tile:hover img,.product-tile:focus-visible img{filter:saturate(1.08) brightness(1.05)}
+.product-badge{position:absolute;top:22px;left:24px;z-index:2;background:rgba(255,255,255,.96);color:#111;padding:9px 13px;border-radius:999px;font-size:13px;font-weight:750;letter-spacing:.04em;text-transform:uppercase}
+.product-tile-content{padding:32px}
+.product-link{border-top-color:rgba(255,255,255,.7)}
+.brand-ico svg{width:22px;height:22px;display:block;flex:none}
+.brand-ico.brand-pair svg{width:17px;height:17px}
+@media(max-width:900px){.product-tile{min-height:480px}}
+@media(max-width:520px){.product-tile{min-height:430px}}
