@@ -118,3 +118,15 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .product-service-label{flex:none;display:inline-flex;align-items:center;padding:9px 14px;border-radius:999px;background:#eeeae3;color:#292722;font-size:14px;font-weight:700}
 .product-service p{margin:0;color:#525252;font-size:17px;line-height:1.45}
 @media(max-width:650px){.product-service{align-items:flex-start;flex-direction:column;gap:12px;padding:22px}}
+
+/* Requested visual corrections: animated production teaser and four insight cards. */
+.motion-teaser{isolation:isolate;overflow:hidden;background:linear-gradient(135deg,#1f1730,#7e4d78 52%,#ef8b72);}
+.motion-orb{position:absolute;border-radius:50%;filter:blur(2px);mix-blend-mode:screen;opacity:.8;animation:motion-drift 7s ease-in-out infinite alternate;}
+.motion-orb-one{width:48%;aspect-ratio:1;left:8%;top:18%;background:#ffbf87;box-shadow:0 0 80px #ffbf87;}
+.motion-orb-two{width:42%;aspect-ratio:1;right:4%;bottom:4%;background:#d9a7ff;box-shadow:0 0 90px #d9a7ff;animation-delay:-3s;}
+.motion-grid{position:absolute;inset:-20%;background:repeating-linear-gradient(125deg,transparent 0 34px,rgba(255,255,255,.15) 35px,transparent 36px);transform:rotate(-10deg);animation:motion-pan 10s linear infinite;}
+@keyframes motion-drift{from{transform:translate(-8%,4%) scale(.9)}to{transform:translate(12%,-8%) scale(1.15)}}
+@keyframes motion-pan{from{transform:translateX(-8%) rotate(-10deg)}to{transform:translateX(8%) rotate(-10deg)}}
+.unified-teaser-grid .teaser-media img{transition:transform .5s ease;}
+@media(max-width:1100px){.grid-4.unified-teaser-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid-4.unified-teaser-grid{grid-template-columns:1fr}}
