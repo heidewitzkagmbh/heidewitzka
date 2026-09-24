@@ -133,16 +133,19 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 
 
 /* Whitepaper download teasers */
-.whitepaper-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
-.whitepaper-card{position:relative;display:block;overflow:hidden;border-radius:24px;aspect-ratio:2/3;background:#171717;isolation:isolate}
-.whitepaper-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease,filter .45s ease}
-.whitepaper-card:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.02);transition:background .3s ease;z-index:1}
-.whitepaper-card:hover img,.whitepaper-card:focus-visible img{transform:scale(1.025);filter:brightness(.88)}
-.whitepaper-card:hover:after,.whitepaper-card:focus-visible:after{background:rgba(0,0,0,.08)}
-.whitepaper-download{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:min(82%,360px);min-height:58px;padding:15px 22px;border-radius:999px;display:flex;align-items:center;justify-content:space-between;gap:18px;color:#111;font-size:clamp(14px,1.15vw,18px);font-weight:750;letter-spacing:-.02em;opacity:0;transition:opacity .25s ease,transform .25s ease;box-shadow:none}
-.whitepaper-card:hover .whitepaper-download,.whitepaper-card:focus-visible .whitepaper-download{opacity:1;transform:translate(-50%,-50%) scale(1.02)}
-.whitepaper-download b{font-size:24px;line-height:1;font-weight:500}
-.wp-search .whitepaper-download{background:#c7ddd7}
-.wp-social .whitepaper-download{background:#f0a36f}
-.wp-creative .whitepaper-download{background:#c9b5df}
-@media(max-width:900px){.whitepaper-grid{grid-template-columns:1fr}.whitepaper-card{aspect-ratio:2/3;max-width:560px;width:100%;margin:0 auto}.whitepaper-download{opacity:1;top:auto;bottom:7%;transform:translateX(-50%);width:84%}.whitepaper-card:hover .whitepaper-download,.whitepaper-card:focus-visible .whitepaper-download{transform:translateX(-50%) scale(1.01)}}
+.whitepaper-head p{max-width:720px}
+.whitepaper-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.whitepaper-card{position:relative;overflow:hidden;border-radius:26px;aspect-ratio:2/3;background:#171717;isolation:isolate;color:#fff}
+.whitepaper-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease,filter .5s ease;z-index:-2}
+.whitepaper-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.04) 20%,rgba(0,0,0,.14) 48%,rgba(0,0,0,.86) 100%);transition:background .35s ease}
+.whitepaper-card:hover>img{transform:scale(1.035);filter:brightness(.95)}
+.whitepaper-card:hover:after{background:linear-gradient(180deg,rgba(0,0,0,.05) 15%,rgba(0,0,0,.18) 43%,rgba(0,0,0,.9) 100%)}
+.whitepaper-content{position:absolute;inset:auto 0 0;display:flex;flex-direction:column;align-items:flex-start;padding:34px;z-index:2}
+.whitepaper-kicker{font-size:13px;text-transform:uppercase;letter-spacing:.13em;font-weight:750;margin-bottom:13px;color:rgba(255,255,255,.78)}
+.whitepaper-content h3{font-size:clamp(31px,3vw,49px);line-height:.98;letter-spacing:-.055em;margin:0 0 14px;max-width:10ch}
+.whitepaper-content p{font-size:clamp(16px,1.2vw,19px);line-height:1.38;color:rgba(255,255,255,.84);margin:0 0 25px;max-width:30ch}
+.whitepaper-download{appearance:none;border:1px solid rgba(255,255,255,.42);background:rgba(255,255,255,.93);color:#111;border-radius:999px;padding:13px 18px;display:inline-flex;align-items:center;justify-content:space-between;gap:22px;font:inherit;font-size:15px;font-weight:750;letter-spacing:-.02em;cursor:pointer;transition:transform .2s ease,background .2s ease}
+.whitepaper-download b{font-size:21px;line-height:1;font-weight:500}
+.whitepaper-download:hover,.whitepaper-download:focus-visible{transform:translateY(-2px);background:#fff}
+@media(max-width:1050px){.whitepaper-content{padding:26px}.whitepaper-content h3{font-size:36px}}
+@media(max-width:900px){.whitepaper-grid{grid-template-columns:1fr}.whitepaper-card{max-width:560px;width:100%;margin:0 auto;aspect-ratio:2/3}.whitepaper-content{padding:30px}.whitepaper-content h3{font-size:clamp(34px,8vw,48px)}}
