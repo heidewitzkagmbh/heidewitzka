@@ -83,12 +83,18 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 @media(max-width:900px){.product-tile{min-height:390px}.contact-direct{border-left:0;border-top:1px solid var(--line);padding:30px 0 0}}
 @media(max-width:520px){.product-tile{min-height:370px}.product-tile-content{padding:24px}.product-tile strong{font-size:40px}}
 
-/* Home: editorial introduction and compact, fully clickable AI teasers. */
-.about-story{max-width:1060px;margin:0;font-size:clamp(20px,2vw,30px);line-height:1.35;color:#4b4b4b}
-.ai-teasers .teaser{display:flex;flex-direction:column;overflow:visible;min-width:0}
-.ai-teasers .media{aspect-ratio:16/9;width:100%;overflow:hidden}
-.ai-teasers .teaser p{font-size:clamp(16px,1.15vw,18px);line-height:1.45;max-width:39ch}
-.teaser-link{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;margin-top:20px;padding-bottom:4px;border-bottom:1px solid currentColor;font-size:16px;font-weight:650;transition:gap .2s ease}
-.ai-teasers .teaser:hover .teaser-link,.ai-teasers .teaser:focus-visible .teaser-link{gap:15px}
-.ai-teasers .teaser:focus-visible{outline:2px solid #111;outline-offset:8px;border-radius:8px}
-@media(max-width:900px){.ai-teasers .teaser{margin-bottom:20px}.ai-teasers .media{aspect-ratio:16/9}}
+/* AI teaser cards: generous text spacing and a quiet, consistent link treatment. */
+.ai-teaser{display:flex;flex-direction:column;min-width:0;overflow:visible}
+.ai-teaser .teaser-media{display:block;position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:24px;background:#d7d9d3}
+.ai-teaser .teaser-media img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .4s ease}
+.ai-teaser .teaser-media:hover img,.ai-teaser .teaser-media:focus-visible img{transform:scale(1.035)}
+.ai-teaser .teaser-body{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:27px 4px 0}
+.ai-teaser h3{font-size:clamp(29px,2.3vw,38px);margin:0 0 14px;line-height:1.08}
+.ai-teaser p{font-size:clamp(17px,1.3vw,20px);line-height:1.45;color:#616161;margin:0 0 26px}
+.ai-teaser .teaser-link{margin-top:auto;display:inline-flex;align-items:center;gap:14px;padding:0 0 8px;border-bottom:1px solid #111;font-weight:650;font-size:16px;line-height:1.4}
+.ai-teaser .teaser-link span{font-size:21px;line-height:1;transition:transform .2s ease}
+.ai-teaser .teaser-link:hover span,.ai-teaser .teaser-link:focus-visible span{transform:translate(3px,-3px)}
+.ai-teaser .teaser-gradient{isolation:isolate;background:radial-gradient(circle at 69% 28%,#e6b3e8 0%,transparent 24%),radial-gradient(circle at 22% 78%,#ee7f6a 0%,transparent 38%),linear-gradient(135deg,#3c294e 5%,#845474 52%,#ca857a 100%)}
+.gradient-orbit{position:absolute;inset:17% 23%;border:1px solid rgba(255,255,255,.5);border-radius:50%;transform:rotate(-30deg) scaleX(1.25)}
+.gradient-lines{position:absolute;inset:0;background:repeating-linear-gradient(160deg,transparent 0 45px,rgba(255,255,255,.09) 46px,transparent 47px);mask-image:linear-gradient(130deg,transparent 20%,#000 80%)}
+@media(max-width:900px){.ai-teaser .teaser-body{padding-top:22px}.ai-teaser p{margin-bottom:20px}.ai-teaser{padding-bottom:20px}}
