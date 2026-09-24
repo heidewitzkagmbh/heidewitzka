@@ -130,3 +130,19 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .unified-teaser-grid .teaser-media img{transition:transform .5s ease;}
 @media(max-width:1100px){.grid-4.unified-teaser-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.grid-4.unified-teaser-grid{grid-template-columns:1fr}}
+
+
+/* Whitepaper download teasers */
+.whitepaper-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.whitepaper-card{position:relative;display:block;overflow:hidden;border-radius:24px;aspect-ratio:2/3;background:#171717;isolation:isolate}
+.whitepaper-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease,filter .45s ease}
+.whitepaper-card:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.02);transition:background .3s ease;z-index:1}
+.whitepaper-card:hover img,.whitepaper-card:focus-visible img{transform:scale(1.025);filter:brightness(.88)}
+.whitepaper-card:hover:after,.whitepaper-card:focus-visible:after{background:rgba(0,0,0,.08)}
+.whitepaper-download{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:min(82%,360px);min-height:58px;padding:15px 22px;border-radius:999px;display:flex;align-items:center;justify-content:space-between;gap:18px;color:#111;font-size:clamp(14px,1.15vw,18px);font-weight:750;letter-spacing:-.02em;opacity:0;transition:opacity .25s ease,transform .25s ease;box-shadow:none}
+.whitepaper-card:hover .whitepaper-download,.whitepaper-card:focus-visible .whitepaper-download{opacity:1;transform:translate(-50%,-50%) scale(1.02)}
+.whitepaper-download b{font-size:24px;line-height:1;font-weight:500}
+.wp-search .whitepaper-download{background:#c7ddd7}
+.wp-social .whitepaper-download{background:#f0a36f}
+.wp-creative .whitepaper-download{background:#c9b5df}
+@media(max-width:900px){.whitepaper-grid{grid-template-columns:1fr}.whitepaper-card{aspect-ratio:2/3;max-width:560px;width:100%;margin:0 auto}.whitepaper-download{opacity:1;top:auto;bottom:7%;transform:translateX(-50%);width:84%}.whitepaper-card:hover .whitepaper-download,.whitepaper-card:focus-visible .whitepaper-download{transform:translateX(-50%) scale(1.01)}}
