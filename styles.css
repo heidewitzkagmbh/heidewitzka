@@ -82,3 +82,13 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .contact-direct{border-left:1px solid var(--line);padding:12px 0 12px 38px}.contact-direct a{font-size:clamp(24px,2.7vw,38px);font-weight:700;letter-spacing:-.04em;border-bottom:1px solid}.contact-direct p{font-size:18px;line-height:1.5;color:#666;max-width:440px;margin-top:28px}
 @media(max-width:900px){.product-tile{min-height:390px}.contact-direct{border-left:0;border-top:1px solid var(--line);padding:30px 0 0}}
 @media(max-width:520px){.product-tile{min-height:370px}.product-tile-content{padding:24px}.product-tile strong{font-size:40px}}
+
+/* Home: editorial introduction and compact, fully clickable AI teasers. */
+.about-story{max-width:1060px;margin:0;font-size:clamp(20px,2vw,30px);line-height:1.35;color:#4b4b4b}
+.ai-teasers .teaser{display:flex;flex-direction:column;overflow:visible;min-width:0}
+.ai-teasers .media{aspect-ratio:16/9;width:100%;overflow:hidden}
+.ai-teasers .teaser p{font-size:clamp(16px,1.15vw,18px);line-height:1.45;max-width:39ch}
+.teaser-link{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;margin-top:20px;padding-bottom:4px;border-bottom:1px solid currentColor;font-size:16px;font-weight:650;transition:gap .2s ease}
+.ai-teasers .teaser:hover .teaser-link,.ai-teasers .teaser:focus-visible .teaser-link{gap:15px}
+.ai-teasers .teaser:focus-visible{outline:2px solid #111;outline-offset:8px;border-radius:8px}
+@media(max-width:900px){.ai-teasers .teaser{margin-bottom:20px}.ai-teasers .media{aspect-ratio:16/9}}
