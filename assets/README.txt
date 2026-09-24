@@ -1,0 +1,1 @@
+Website image assets. Upload hero-male.png, woman-turn.png, orange-macro.png and vase-stilllife.png here.
