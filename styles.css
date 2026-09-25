@@ -475,3 +475,29 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 @media(max-width:600px){
   .shop-continuity-card{min-height:380px;}
 }
+
+
+/* Contact page: About Heidewitzka teaser */
+.contact-about-teaser-section{padding:0 0 70px}
+.contact-about-teaser{position:relative;display:block;height:300px;border-radius:30px;overflow:hidden;color:#fff;background:#222;isolation:isolate}
+.contact-about-teaser img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;z-index:-2;transition:transform .5s ease}
+.contact-about-overlay{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.42) 48%,rgba(0,0,0,.18) 100%)}
+.contact-about-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:38px 46px;max-width:760px}
+.contact-about-content .eyebrow{color:rgba(255,255,255,.72);margin-bottom:10px}
+.contact-about-content strong{font-size:clamp(34px,3.8vw,58px);line-height:.96;letter-spacing:-.055em;margin-bottom:12px}
+.contact-about-content>span:not(.eyebrow){font-size:17px;line-height:1.45;color:rgba(255,255,255,.88);max-width:650px}
+.contact-about-content b{display:inline-flex;margin-top:22px;padding:12px 17px;border-radius:999px;background:#fff;color:#111;font-size:15px}
+.contact-about-teaser:hover img,.contact-about-teaser:focus-visible img{transform:scale(1.025)}
+@media(max-width:700px){.contact-about-teaser{height:330px}.contact-about-content{padding:28px}.contact-about-overlay{background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.4))}}
+
+/* About Heidewitzka page */
+.about-page-hero{padding:88px 0 70px}
+.about-page-hero h1{font-size:clamp(64px,8vw,126px)}
+.about-page-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:start;margin:36px 0 50px}
+.about-page-hero-grid .lead{margin:0;font-size:clamp(26px,3vw,42px)}
+.about-page-hero-grid>p:last-child{font-size:21px;line-height:1.55;color:#555;margin:0}
+.about-page-image{height:min(54vw,670px);border-radius:30px;overflow:hidden}
+.about-page-image img{width:100%;height:100%;object-fit:cover;display:block}
+.about-principles .card{min-height:300px}.about-principles .card-pad>span{display:block;font-size:13px;letter-spacing:.14em;color:#888;margin-bottom:52px}.about-principles h3{font-size:34px}.about-principles p{font-size:18px}
+.about-page-cta{margin-top:0}
+@media(max-width:900px){.about-page-hero-grid{grid-template-columns:1fr;gap:22px}.about-page-image{height:60vh;min-height:460px}}
