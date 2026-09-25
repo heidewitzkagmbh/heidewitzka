@@ -640,3 +640,11 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 @media(max-width:1050px){.case-study-content{padding:24px}.case-study-content h3{font-size:31px}}
 @media(max-width:900px){.case-study-grid{grid-template-columns:1fr}.case-study-card{max-width:560px;width:100%;margin:0 auto;min-height:0}.case-study-content{padding:30px}.case-study-content h3{font-size:clamp(34px,8vw,48px)}}
 @media(max-width:520px){.case-studies-section{padding-top:64px}.case-study-content{padding:24px}.case-study-content h3{font-size:36px}}
+
+/* Keep the campaign management operations section on the light page surface. */
+.campaign-dark{background:#f3f2ed;color:#111;border-top:0}
+.campaign-dark .eyebrow,.campaign-dark .section-head p{color:#626262}
+.campaign-dark .management-grid{border-top:1px solid #d8d5cc}
+.campaign-dark .management-grid>div{border-bottom:1px solid #d8d5cc}
+.campaign-dark .management-grid>div:nth-child(even){border-left-color:#d8d5cc}
+.campaign-dark .management-grid span{color:#5c5c5c}
