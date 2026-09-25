@@ -6,13 +6,16 @@
 <link rel="canonical" href="https://www.heidewitzka.io/ueber-heidewitzka">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Heidewitzka"><meta property="og:title" content="Über Heidewitzka"><meta property="og:description" content="Warum Heidewitzka so heißt und wie wir Performance Marketing, KI und menschliche Entscheidungen zusammenbringen."><meta property="og:url" content="https://www.heidewitzka.io/ueber-heidewitzka"><meta name="twitter:card" content="summary_large_image">
 </head><body>
-<div class="nav-wrap"><div class="wrap"><nav>
+<div class="nav-wrap"><div class="wrap"><nav class="site-nav">
 <a class="logo" href="/">heidewitzka</a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+<div class="nav-links" id="site-menu">
 <a href="/campaign-management.html">Kampagnenmanagement</a>
 <a href="/ai.html">KI im Marketing</a>
 <a href="/shop.html">Service-Shop</a>
 <a href="/insights.html">Blog</a>
 <a href="/contact.html">Kontakt</a>
+</div>
 </nav></div></div>
 <main>
 <section class="about-page-hero"><div class="wrap">
@@ -44,4 +47,5 @@
 <div><strong>Kanäle</strong><a href="/channels.html">Search Engines</a><a href="/channels.html">Meta</a><a href="/channels.html">LinkedIn</a><a href="/channels.html">Pinterest</a><a href="/channels.html">YouTube</a></div>
 <div><strong>Mehr</strong><a href="/shop.html">Service-Shop</a><a href="/insights.html">Blog</a><a href="/ueber-heidewitzka.html">Über Heidewitzka</a><a href="/contact.html">Kontakt</a></div>
 </div></div></footer>
+<script>(function(){const nav=document.querySelector('.site-nav'),btn=document.querySelector('.nav-toggle'),menu=document.querySelector('.nav-links');if(!nav||!btn||!menu)return;const close=()=>{nav.classList.remove('menu-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü öffnen');document.body.classList.remove('nav-open')};btn.addEventListener('click',()=>{const open=!nav.classList.contains('menu-open');nav.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');document.body.classList.toggle('nav-open',open)});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});window.addEventListener('resize',()=>{if(window.innerWidth>900)close()})})();</script>
 </body></html>
