@@ -501,3 +501,11 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .about-principles .card{min-height:300px}.about-principles .card-pad>span{display:block;font-size:13px;letter-spacing:.14em;color:#888;margin-bottom:52px}.about-principles h3{font-size:34px}.about-principles p{font-size:18px}
 .about-page-cta{margin-top:0}
 @media(max-width:900px){.about-page-hero-grid{grid-template-columns:1fr;gap:22px}.about-page-image{height:60vh;min-height:460px}}
+
+/* Homepage producing teaser video */
+.teaser-video-wrap{background:#1d1d1b}
+.teaser-video{display:block;width:100%;height:100%;object-fit:cover}
+@media (prefers-reduced-motion: reduce){
+  .teaser-video{display:none}
+  .teaser-video-wrap{background:#1d1d1b url('/assets/produzieren-teaser-poster.jpg') center/cover no-repeat}
+}
