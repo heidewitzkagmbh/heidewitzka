@@ -324,3 +324,34 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .product-detail-bottom-cta{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;background:#ece9df;border-radius:30px;padding:52px}.product-detail-bottom-cta h2{max-width:800px}.product-detail-bottom-cta p{font-size:18px;color:#555;margin:18px 0 0}
 @media(max-width:950px){.product-detail-grid{grid-template-columns:1fr}.product-detail-image{min-height:560px}.product-deliverable-grid,.product-process{grid-template-columns:1fr}.product-detail-bottom-cta{grid-template-columns:1fr}.product-scope-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.product-detail-hero{padding-top:36px}.product-detail-image{min-height:430px}.product-detail-buy h1{font-size:54px}.product-detail-lead{font-size:21px}.product-scope-grid{grid-template-columns:1fr}.product-detail-bottom-cta{padding:30px}}
+
+/* Minimal icon headers for Services / Shop cards */
+.shop-listing-card .shop-card-media{
+  height:150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f2f2ee;
+  border-bottom:1px solid #e3e3de;
+  overflow:hidden;
+}
+.shop-listing-card .shop-card-media img{
+  width:74px;
+  height:74px;
+  object-fit:contain;
+  display:block;
+  opacity:.96;
+  transform:none;
+  transition:transform .2s ease,opacity .2s ease;
+}
+.shop-listing-card:hover .shop-card-media img{
+  transform:scale(1.06);
+  opacity:1;
+}
+@media(max-width:1100px){
+  .shop-listing-card .shop-card-media{height:145px}
+}
+@media(max-width:600px){
+  .shop-listing-card .shop-card-media{height:135px}
+  .shop-listing-card .shop-card-media img{width:68px;height:68px}
+}
