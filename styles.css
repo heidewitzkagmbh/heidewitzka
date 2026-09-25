@@ -191,3 +191,17 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .service-overview-card p{font-size:17px;line-height:1.5;color:#555;margin:0 0 28px}
 .service-overview-card b{margin-top:auto;font-size:15px}
 @media(max-width:900px){.channel-detail{grid-template-columns:1fr;gap:22px;padding:50px 0}.campaign-channel-block{margin-top:70px;padding-top:60px}}
+
+
+/* Campaign hero aligned with the homepage hero treatment */
+.campaign-page-hero{padding-top:72px;padding-bottom:100px}
+.campaign-page-hero .campaign-hero-copy{max-width:1180px}
+.campaign-page-hero .campaign-hero-copy h1{font-size:clamp(56px,7vw,112px);max-width:1180px}
+.campaign-hero-wide{width:100%;height:min(46vw,660px);min-height:520px;margin-top:46px;border-radius:32px}
+.campaign-hero-wide>img{object-position:center center}
+.campaign-hero-wide:after{background:linear-gradient(90deg,rgba(0,0,0,.48) 0%,rgba(0,0,0,.18) 42%,rgba(0,0,0,.03) 68%)}
+.campaign-hero-overlay{left:5%;bottom:7%;max-width:650px}
+.campaign-hero-overlay h3{font-size:clamp(32px,4vw,56px);max-width:12ch}
+.campaign-hero-overlay p{font-size:19px;line-height:1.35;max-width:520px}
+@media(max-width:900px){.campaign-hero-wide{height:68vh;min-height:520px}.campaign-hero-wide>img{object-position:52% center}.campaign-hero-overlay{left:7%;right:7%;bottom:7%}}
+@media(max-width:620px){.campaign-hero-wide{height:62vh;min-height:460px}.campaign-hero-overlay h3{font-size:38px}}
