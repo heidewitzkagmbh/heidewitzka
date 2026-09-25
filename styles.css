@@ -377,23 +377,21 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
   box-shadow:0 24px 60px rgba(0,0,0,.10);
 }
 .shop-continuity-card--campaign{
-  background:
-    radial-gradient(circle at 84% 12%,rgba(255,255,255,.28),transparent 22%),
-    linear-gradient(145deg,#173a3c 0%,#0c2527 55%,#091819 100%);
+  background:#143b3c;
   color:#fff;
 }
 .shop-continuity-card--ai{
   background:
-    radial-gradient(circle at 82% 10%,rgba(255,255,255,.34),transparent 22%),
-    linear-gradient(145deg,#efe7ff 0%,#c7b5ef 48%,#8e75c0 100%);
-  color:#17131f;
+    linear-gradient(180deg,rgba(9,9,9,.08) 0%,rgba(9,9,9,.26) 45%,rgba(9,9,9,.82) 100%),
+    url('/assets/woman-turn.webp') center/cover no-repeat;
+  color:#fff;
 }
 .shop-continuity-card .eyebrow{margin:0;color:inherit;opacity:.72}
 .shop-continuity-top{display:flex;justify-content:space-between;align-items:flex-start}
 .shop-continuity-arrow{font-size:28px;line-height:1;transition:transform .2s ease}
 .shop-continuity-card:hover .shop-continuity-arrow{transform:translate(4px,-4px)}
 .shop-continuity-content{margin-top:auto;max-width:610px}
-.shop-continuity-card h3{font-size:clamp(42px,4.6vw,72px);line-height:.95;letter-spacing:-.055em;margin:0 0 22px}
+.shop-continuity-card h3{font-size:clamp(42px,4.2vw,68px);line-height:.94;letter-spacing:-.055em;margin:0 0 22px}
 .shop-continuity-card p{font-size:19px;line-height:1.5;margin:0 0 22px;max-width:48ch;color:inherit;opacity:.82}
 .shop-continuity-card ul{margin:0 0 34px;padding-left:20px;font-size:16px;line-height:1.65;opacity:.84}
 .shop-continuity-card strong{font-size:16px;border-top:1px solid currentColor;padding-top:18px;opacity:.92}
