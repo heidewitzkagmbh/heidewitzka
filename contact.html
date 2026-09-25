@@ -2,8 +2,16 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><title>Kontakt | Heidewitzka</title>
 <link rel="stylesheet" href="/styles.css"><meta name="description" content="Projekt mit Heidewitzka besprechen: Kampagnenmanagement, Performance Marketing, KI im Marketing, AI Operations oder Tracking."><link rel="canonical" href="https://www.heidewitzka.io/kontakt"><meta property="og:type" content="website"><meta property="og:site_name" content="Heidewitzka"><meta property="og:title" content="Kontakt | Heidewitzka"><meta property="og:description" content="Projekt mit Heidewitzka besprechen: Kampagnenmanagement, Performance Marketing, KI im Marketing oder Tracking."><meta property="og:url" content="https://www.heidewitzka.io/kontakt"><meta name="twitter:card" content="summary_large_image"></head><body>
-<div class="nav-wrap"><div class="wrap"><nav>
-<a class="logo" href="/">heidewitzka</a><a href="/campaign-management.html">Kampagnenmanagement</a><a href="/ai.html">KI im Marketing</a><a href="/shop.html">Service-Shop</a><a href="/insights.html">Blog</a><a href="/contact.html">Kontakt</a>
+<div class="nav-wrap"><div class="wrap"><nav class="site-nav">
+<a class="logo" href="/">heidewitzka</a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+<div class="nav-links" id="site-menu">
+<a href="/campaign-management.html">Kampagnenmanagement</a>
+<a href="/ai.html">KI im Marketing</a>
+<a href="/shop.html">Service-Shop</a>
+<a href="/insights.html">Blog</a>
+<a href="/contact.html">Kontakt</a>
+</div>
 </nav></div></div>
 <main>
 <section class="page-hero contact-hero"><div class="wrap"><div class="eyebrow">Kontakt</div><h1>Was soll besser laufen?</h1><p class="lead">Kampagnen, KI, Tracking oder ein konkreter Prozess. Schreib kurz, worum es geht – den Rest klären wir gemeinsam.</p></div></section>
@@ -39,4 +47,5 @@
 </div></div></section></main>
 <footer class="footer"><div class="wrap"><div class="footer-grid"><div><strong>.heidewitzka</strong><p style="color:#aaa;max-width:420px">Performance Marketing + AI Operations im Marketing.</p></div><div><strong>Leistungen</strong><a href="/performance.html">Performance Marketing</a><a href="/campaign-management.html">Kampagnenmanagement</a><a href="/ai.html">KI im Marketing</a><a href="/ai.html#agentic">Agentic Marketing</a></div><div><strong>Kanäle</strong><a href="/channels.html">Search Engines</a><a href="/channels.html">Meta</a><a href="/channels.html">LinkedIn</a><a href="/channels.html">Pinterest</a><a href="/channels.html">YouTube</a></div><div><strong>Mehr</strong><a href="/shop.html">Service-Shop</a><a href="/insights.html">Blog</a><a href="mailto:hello@heidewitzka.io?subject=White-Label-Anfrage">White-Label anfragen</a><a href="/contact.html">Kontakt</a></div></div></div></footer>
 <script>document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const subject='Projektanfrage Heidewitzka – '+(d.get('topic')||'Allgemein');const lines=['Name: '+(d.get('name')||''),'Unternehmen: '+(d.get('company')||''),'E-Mail: '+(d.get('email')||''),'Thema: '+(d.get('topic')||''),'Media-Budget: '+(d.get('budget')||'nicht angegeben'),'','Aufgabe:',d.get('message')||''];window.location.href='mailto:hello@heidewitzka.io?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));});</script>
+<script>(function(){const nav=document.querySelector('.site-nav'),btn=document.querySelector('.nav-toggle'),menu=document.querySelector('.nav-links');if(!nav||!btn||!menu)return;const close=()=>{nav.classList.remove('menu-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü öffnen');document.body.classList.remove('nav-open')};btn.addEventListener('click',()=>{const open=!nav.classList.contains('menu-open');nav.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');document.body.classList.toggle('nav-open',open)});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});window.addEventListener('resize',()=>{if(window.innerWidth>900)close()})})();</script>
 </body></html>
