@@ -170,3 +170,24 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .shop-program-note{margin:18px 2px 0;color:#777;font-size:13px;line-height:1.45}
 @media(max-width:1100px){.shop-program-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.shop-program-grid{grid-template-columns:1fr}.shop-card{min-height:220px}}
+
+
+/* Linked channel cards */
+.channel-link{position:relative;padding-right:58px;min-height:92px;transition:transform .18s ease,background .18s ease,border-color .18s ease}
+.channel-link:hover,.channel-link:focus-visible{transform:translateY(-2px);background:#fefefe;border-color:#bdbdb7}
+.channel-arrow{position:absolute;right:20px;top:18px;font-size:20px;line-height:1;transition:transform .18s ease}
+.channel-link:hover .channel-arrow,.channel-link:focus-visible .channel-arrow{transform:translate(3px,-3px)}
+.campaign-channel-block{margin-top:100px;padding-top:80px;border-top:1px solid var(--line)}
+.channel-detail-section{padding-top:40px}
+.channel-detail{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;padding:70px 0;border-top:1px solid var(--line);scroll-margin-top:110px}
+.channel-detail h2{font-size:clamp(38px,4.5vw,66px)}
+.channel-detail p{font-size:20px;line-height:1.55;color:#4f4f4f;margin:0 0 20px}
+.channel-detail ul{margin:0;padding-left:20px;color:#555;font-size:17px;line-height:1.7}
+.service-overview-grid{align-items:stretch}
+.service-overview-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;min-height:330px;transition:transform .18s ease,border-color .18s ease}
+.service-overview-card:hover,.service-overview-card:focus-visible{transform:translateY(-3px);border-color:#bdbdb7}
+.service-overview-card>span{font-size:13px;letter-spacing:.14em;color:#888;margin-bottom:54px}
+.service-overview-card h3{font-size:32px}
+.service-overview-card p{font-size:17px;line-height:1.5;color:#555;margin:0 0 28px}
+.service-overview-card b{margin-top:auto;font-size:15px}
+@media(max-width:900px){.channel-detail{grid-template-columns:1fr;gap:22px;padding:50px 0}.campaign-channel-block{margin-top:70px;padding-top:60px}}
