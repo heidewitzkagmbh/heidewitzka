@@ -103,7 +103,7 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .about-story{max-width:1060px;margin:0;font-size:clamp(20px,2vw,30px);line-height:1.35;color:#4b4b4b}
 .product-tile{min-height:520px}
 .product-tile img{filter:saturate(.95) brightness(1.02)}
-.product-tile:nth-child(1):after{background:linear-gradient(180deg,rgba(4,52,57,.06) 14%,rgba(8,66,70,.35) 54%,rgba(4,38,43,.91) 100%)}
+.product-tile:nth-child(1):after{background:radial-gradient(circle at 22% 10%,rgba(255,232,154,.28),transparent 40%),linear-gradient(180deg,rgba(72,220,205,.04) 10%,rgba(30,188,179,.20) 50%,rgba(4,106,108,.82) 100%)}
 .product-tile:nth-child(2):after{background:linear-gradient(180deg,rgba(105,58,18,.04) 14%,rgba(126,66,28,.26) 54%,rgba(67,33,19,.91) 100%)}
 .product-tile:nth-child(3):after{background:linear-gradient(180deg,rgba(77,50,99,.05) 14%,rgba(80,46,91,.26) 54%,rgba(43,27,55,.92) 100%)}
 .product-tile:hover img,.product-tile:focus-visible img{filter:saturate(1.08) brightness(1.05)}
