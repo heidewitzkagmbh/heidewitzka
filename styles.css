@@ -434,3 +434,44 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
   .shop-continuity-card{padding:28px;min-height:400px}
   .shop-contact-teaser{padding:28px;min-height:0}
 }
+
+
+/* Shop cross-sell test: compact height + video background */
+.shop-continuity-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+.shop-continuity-card{min-height:440px;}
+.shop-continuity-card--campaign{
+  background:#171717;
+  color:#fff;
+}
+.shop-continuity-card--ai{
+  background:#111;
+  color:#fff;
+}
+.shop-continuity-card--video{isolation:isolate;}
+.shop-continuity-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  z-index:0;
+}
+.shop-continuity-video-overlay{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(180deg,rgba(0,0,0,.12) 0%,rgba(0,0,0,.28) 45%,rgba(0,0,0,.72) 100%);
+}
+.shop-continuity-card--video .shop-continuity-top,
+.shop-continuity-card--video .shop-continuity-content,
+.shop-continuity-card--video > strong{
+  position:relative;
+  z-index:2;
+}
+@media(max-width:900px){
+  .shop-continuity-card{min-height:420px;}
+}
+@media(max-width:600px){
+  .shop-continuity-card{min-height:380px;}
+}
