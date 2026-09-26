@@ -648,3 +648,40 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .campaign-dark .management-grid>div{border-bottom:1px solid var(--line)}
 .campaign-dark .management-grid>div:nth-child(even){border-left-color:var(--line)}
 .campaign-dark .management-grid span{color:#5c5c5c}
+
+
+/* Campaign hero AI disclosure badge */
+.campaign-ai-badge{
+  position:absolute;
+  right:22px;
+  bottom:22px;
+  z-index:4;
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:14px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(255,255,255,.72);
+  box-shadow:0 6px 18px rgba(0,0,0,.14);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  color:rgba(17,17,17,.76);
+  font-family:Helvetica,Arial,sans-serif;
+  font-size:24px;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.06em;
+  pointer-events:none;
+}
+@media(max-width:620px){
+  .campaign-ai-badge{
+    right:14px;
+    bottom:14px;
+    width:44px;
+    height:44px;
+    border-radius:12px;
+    font-size:20px;
+  }
+}
