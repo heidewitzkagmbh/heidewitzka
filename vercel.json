@@ -1,4 +1,66 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/ai/market-intelligence",
+      "destination": "/ai/research-opportunities",
+      "permanent": true
+    },
+    {
+      "source": "/ai/market-intelligence.html",
+      "destination": "/ai/research-opportunities",
+      "permanent": true
+    },
+    {
+      "source": "/ai/campaign-intelligence",
+      "destination": "/ai/targeting-kampagnensteuerung",
+      "permanent": true
+    },
+    {
+      "source": "/ai/campaign-intelligence.html",
+      "destination": "/ai/targeting-kampagnensteuerung",
+      "permanent": true
+    },
+    {
+      "source": "/ai/content-creative-generation",
+      "destination": "/ai/content-creatives",
+      "permanent": true
+    },
+    {
+      "source": "/ai/content-creative-generation.html",
+      "destination": "/ai/content-creatives",
+      "permanent": true
+    },
+    {
+      "source": "/ai/predictive-monitoring",
+      "destination": "/ai/tracking-analyse-automation",
+      "permanent": true
+    },
+    {
+      "source": "/ai/predictive-monitoring.html",
+      "destination": "/ai/tracking-analyse-automation",
+      "permanent": true
+    },
+    {
+      "source": "/ai/lead-intelligence",
+      "destination": "/ai/tracking-analyse-automation",
+      "permanent": true
+    },
+    {
+      "source": "/ai/lead-intelligence.html",
+      "destination": "/ai/tracking-analyse-automation",
+      "permanent": true
+    },
+    {
+      "source": "/ai/workflow-automation",
+      "destination": "/ai/tracking-analyse-automation",
+      "permanent": true
+    },
+    {
+      "source": "/ai/workflow-automation.html",
+      "destination": "/ai/tracking-analyse-automation",
+      "permanent": true
+    }
+  ]
 }
