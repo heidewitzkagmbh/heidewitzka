@@ -1,9 +1,5 @@
-const { createHmac, createHash, timingSafeEqual, randomBytes } = require('node:crypto');
-const COOKIE='__Host-heidewitzka_session';
-const ttl=8*60*60;
-const equal=(a,b)=>{const x=Buffer.from(a),y=Buffer.from(b);return x.length===y.length&&timingSafeEqual(x,y);};
-function sign(value,password){return createHmac('sha256',password).update('heidewitzka-cockpit-v1:'+value).digest('base64url');}
-function valid(req,password){const cookie=(req.headers.cookie||'').split(';').map(x=>x.trim()).find(x=>x.startsWith(COOKIE+'='));if(!cookie)return false;const [exp,nonce,sig,...extra]=cookie.slice(COOKIE.length+1).split('.');const time=Number(exp);return !extra.length&&/^\d+$/.test(exp)&&Number.isSafeInteger(time)&&time>Date.now()&&time<=Date.now()+ttl*1000&&/^[a-f0-9]{32}$/.test(nonce||'')&&!!sig&&equal(sign(exp+'.'+nonce,password),sig);}
+const { createHash, randomBytes } = require('node:crypto');
+const { COOKIE, ttl, equal, sign, valid } = require('./_cockpit/session');
 module.exports=async function handler(req,res){
 res.setHeader('Cache-Control','no-store, max-age=0');res.setHeader('X-Robots-Tag','noindex, nofollow');res.setHeader('Content-Type','application/json; charset=utf-8');res.setHeader('X-Content-Type-Options','nosniff');
 const send=(status,data)=>{res.statusCode=status;res.end(JSON.stringify(data));};

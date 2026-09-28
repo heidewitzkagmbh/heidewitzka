@@ -1,6 +1,13 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/internal.js": { "includeFiles": "api/_cockpit/**" }
+  },
+  "rewrites": [
+    { "source": "/intern", "destination": "/api/internal" },
+    { "source": "/intern/:path*", "destination": "/api/internal" }
+  ],
   "headers": [
     {
       "source": "/intern",
