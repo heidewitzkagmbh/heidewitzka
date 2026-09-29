@@ -706,6 +706,7 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 /* Article previews at the end of the main pages */
 .blog-preview .insight-media{height:auto;aspect-ratio:3/2}
 .blog-preview .insight-card h3{font-size:clamp(25px,2.15vw,34px)}
-.blog-preview .section-head>.insight-more{align-self:flex-end;white-space:nowrap}
+.blog-preview .section-head>.insight-more{align-self:flex-end;justify-self:end;width:max-content;white-space:nowrap}
 @media(min-width:851px){.blog-preview-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:900px){.blog-preview .section-head>.insight-more{justify-self:start}}
 @media(max-width:850px){.blog-preview-grid{grid-template-columns:1fr;gap:44px}.blog-preview .section-head>.insight-more{align-self:flex-start}.blog-preview .insight-card p{max-width:42ch}}
