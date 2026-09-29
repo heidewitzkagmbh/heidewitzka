@@ -13,5 +13,5 @@
 @media(max-width:650px){.article-table-wrap table{font-size:14px}.article-table-wrap th,.article-table-wrap td{padding:14px}.article-related a{font-size:18px}}
 
 .blog-cover{margin:0 auto 38px;overflow:hidden;border-radius:24px;background:#ddd}
-.blog-cover img{display:block;width:100%;height:auto}
+.blog-cover img{filter:grayscale(1);display:block;width:100%;height:auto}
 @media(max-width:650px){.blog-cover{margin-bottom:24px;border-radius:16px}}
