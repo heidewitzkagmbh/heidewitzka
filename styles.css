@@ -702,3 +702,10 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .nav-links .nav-consultation:focus-visible{outline:3px solid #063e30;outline-offset:4px}
 @media(min-width:901px) and (max-width:1150px){.site-nav{gap:22px}.site-nav .nav-links{gap:18px}.nav-links a{font-size:14px}.nav-links .nav-consultation{font-size:14px;padding:14px 16px}}
 @media(max-width:900px){.site-nav .nav-links{gap:0}.nav-links .nav-consultation{margin-top:16px;min-height:58px;padding:16px;font-size:18px;white-space:normal;text-align:center}}
+
+/* Article previews at the end of the main pages */
+.blog-preview .insight-media{height:auto;aspect-ratio:3/2}
+.blog-preview .insight-card h3{font-size:clamp(25px,2.15vw,34px)}
+.blog-preview .section-head>.insight-more{align-self:flex-end;white-space:nowrap}
+@media(min-width:851px){.blog-preview-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:850px){.blog-preview-grid{grid-template-columns:1fr;gap:44px}.blog-preview .section-head>.insight-more{align-self:flex-start}.blog-preview .insight-card p{max-width:42ch}}
