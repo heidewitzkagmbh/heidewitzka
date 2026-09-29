@@ -11,3 +11,7 @@
 .article-related{margin-top:76px;padding-top:28px;border-top:1px solid var(--line)}.article-related h2{margin:0 0 24px;font-size:34px}
 .article-related a{display:block;max-width:840px;padding:18px 0;font-size:20px;line-height:1.4}
 @media(max-width:650px){.article-table-wrap table{font-size:14px}.article-table-wrap th,.article-table-wrap td{padding:14px}.article-related a{font-size:18px}}
+
+.blog-cover{margin:0 auto 38px;overflow:hidden;border-radius:24px;background:#ddd}
+.blog-cover img{display:block;width:100%;height:auto}
+@media(max-width:650px){.blog-cover{margin-bottom:24px;border-radius:16px}}
