@@ -29,3 +29,7 @@
 .faq-sources a{text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
 .faq-card-label{position:absolute;left:20px;bottom:20px;border:1px solid rgba(255,255,255,.65);border-radius:999px;padding:9px 15px;background:rgba(0,0,0,.72);color:#fff;font-size:14px;font-weight:650}
 @media(max-width:650px){.faq-blog .blog-header h1{font-size:clamp(42px,10vw,64px);line-height:1}.faq-blog .article-cta h2{font-size:36px}.faq-card-label{left:16px;bottom:16px}}
+
+/* Typography teasers: show every word without image cropping. */
+.insight-media.faq-text-media{height:auto;aspect-ratio:3/2}
+.insight-media.faq-text-media img{object-fit:contain;filter:none}
