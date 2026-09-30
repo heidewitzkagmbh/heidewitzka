@@ -2,11 +2,19 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "functions": {
-    "api/internal.js": { "includeFiles": "api/_cockpit/**" }
+    "api/internal.js": {
+      "includeFiles": "api/_cockpit/**"
+    }
   },
   "rewrites": [
-    { "source": "/intern", "destination": "/api/internal" },
-    { "source": "/intern/:path*", "destination": "/api/internal" }
+    {
+      "source": "/intern",
+      "destination": "/api/internal"
+    },
+    {
+      "source": "/intern/:path*",
+      "destination": "/api/internal"
+    }
   ],
   "headers": [
     {
@@ -29,6 +37,18 @@
           "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/tim-vogt-erfahrungen",
+      "destination": "/tim-vogt",
+      "permanent": true
+    },
+    {
+      "source": "/tim-vogt-erfahrungen.html",
+      "destination": "/tim-vogt",
+      "permanent": true
     }
   ]
 }
