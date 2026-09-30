@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.heidewitzka.io/</loc><priority>1.0</priority></url>
 <url><loc>https://www.heidewitzka.io/performance-marketing</loc><priority>0.9</priority></url>
-  <url><loc>https://www.heidewitzka.io/kampagnenmanagement</loc><priority>0.9</priority></url>
+  <url><loc>https://www.heidewitzka.io/kampagnen</loc><priority>0.9</priority></url>
   <url><loc>https://www.heidewitzka.io/ki-im-marketing</loc><priority>0.9</priority></url>
   <url><loc>https://www.heidewitzka.io/agentic-marketing</loc><priority>0.8</priority></url>
   <url><loc>https://www.heidewitzka.io/kanaele</loc><priority>0.7</priority></url>
@@ -25,4 +25,10 @@
 <url><loc>https://www.heidewitzka.io/google-ads-faq</loc><lastmod>2026-09-30</lastmod></url>
 <url><loc>https://www.heidewitzka.io/meta-ads-faq</loc><lastmod>2026-09-30</lastmod></url>
 <url><loc>https://www.heidewitzka.io/kampagnen-faq</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://www.heidewitzka.io/kampagnen/chatgpt-ads</loc></url>
+  <url><loc>https://www.heidewitzka.io/kampagnen/display</loc></url>
+  <url><loc>https://www.heidewitzka.io/kampagnen/google-ads</loc></url>
+  <url><loc>https://www.heidewitzka.io/kampagnen/meta-ads</loc></url>
+  <url><loc>https://www.heidewitzka.io/kampagnen/linkedin</loc></url>
+  <url><loc>https://www.heidewitzka.io/kampagnen/pinterest</loc></url>
 </urlset>

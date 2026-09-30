@@ -41,6 +41,141 @@
   ],
   "redirects": [
     {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN][mM][aA][nN][aA][gG][eE][mM][eE][nN][tT]|[cC][aA][mM][pP][aA][iI][gG][nN]-[mM][aA][nN][aA][gG][eE][mM][eE][nN][tT])/:topic([cC][hH][aA][tT][gG][pP][tT]-[aA][dD][sS](?:\\.html)?)",
+      "destination": "/kampagnen/chatgpt-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic([cC][hH][aA][tT][gG][pP][tT]-[aA][dD][sS]\\.html)",
+      "destination": "/kampagnen/chatgpt-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic((?!chatgpt-ads$)[cC][hH][aA][tT][gG][pP][tT]-[aA][dD][sS])",
+      "destination": "/kampagnen/chatgpt-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base((?!kampagnen/)[kK][aA][mM][pP][aA][gG][nN][eE][nN])/chatgpt-ads",
+      "destination": "/kampagnen/chatgpt-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN][mM][aA][nN][aA][gG][eE][mM][eE][nN][tT]|[cC][aA][mM][pP][aA][iI][gG][nN]-[mM][aA][nN][aA][gG][eE][mM][eE][nN][tT])/:topic([dD][iI][sS][pP][lL][aA][yY](?:\\.html)?)",
+      "destination": "/kampagnen/display",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic([dD][iI][sS][pP][lL][aA][yY]\\.html)",
+      "destination": "/kampagnen/display",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic((?!display$)[dD][iI][sS][pP][lL][aA][yY])",
+      "destination": "/kampagnen/display",
+      "permanent": true
+    },
+    {
+      "source": "/:base((?!kampagnen/)[kK][aA][mM][pP][aA][gG][nN][eE][nN])/display",
+      "destination": "/kampagnen/display",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN][mM][aA][nN][aA][gG][eE][mM][eE][nN][tT]|[cC][aA][mM][pP][aA][iI][gG][nN]-[mM][aA][nN][aA][gG][eE][mM][eE][nN][tT])/:topic([gG][oO][oO][gG][lL][eE]-[aA][dD][sS](?:\\.html)?)",
+      "destination": "/kampagnen/google-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic([gG][oO][oO][gG][lL][eE]-[aA][dD][sS]\\.html)",
+      "destination": "/kampagnen/google-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic((?!google-ads$)[gG][oO][oO][gG][lL][eE]-[aA][dD][sS])",
+      "destination": "/kampagnen/google-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base((?!kampagnen/)[kK][aA][mM][pP][aA][gG][nN][eE][nN])/google-ads",
+      "destination": "/kampagnen/google-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN][mM][aA][nN][aA][gG][eE][mM][eE][nN][tT]|[cC][aA][mM][pP][aA][iI][gG][nN]-[mM][aA][nN][aA][gG][eE][mM][eE][nN][tT])/:topic([mM][eE][tT][aA]-[aA][dD][sS](?:\\.html)?)",
+      "destination": "/kampagnen/meta-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic([mM][eE][tT][aA]-[aA][dD][sS]\\.html)",
+      "destination": "/kampagnen/meta-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic((?!meta-ads$)[mM][eE][tT][aA]-[aA][dD][sS])",
+      "destination": "/kampagnen/meta-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base((?!kampagnen/)[kK][aA][mM][pP][aA][gG][nN][eE][nN])/meta-ads",
+      "destination": "/kampagnen/meta-ads",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN][mM][aA][nN][aA][gG][eE][mM][eE][nN][tT]|[cC][aA][mM][pP][aA][iI][gG][nN]-[mM][aA][nN][aA][gG][eE][mM][eE][nN][tT])/:topic([lL][iI][nN][kK][eE][dD][iI][nN](?:\\.html)?)",
+      "destination": "/kampagnen/linkedin",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic([lL][iI][nN][kK][eE][dD][iI][nN]\\.html)",
+      "destination": "/kampagnen/linkedin",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic((?!linkedin$)[lL][iI][nN][kK][eE][dD][iI][nN])",
+      "destination": "/kampagnen/linkedin",
+      "permanent": true
+    },
+    {
+      "source": "/:base((?!kampagnen/)[kK][aA][mM][pP][aA][gG][nN][eE][nN])/linkedin",
+      "destination": "/kampagnen/linkedin",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN][mM][aA][nN][aA][gG][eE][mM][eE][nN][tT]|[cC][aA][mM][pP][aA][iI][gG][nN]-[mM][aA][nN][aA][gG][eE][mM][eE][nN][tT])/:topic([pP][iI][nN][tT][eE][rR][eE][sS][tT](?:\\.html)?)",
+      "destination": "/kampagnen/pinterest",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic([pP][iI][nN][tT][eE][rR][eE][sS][tT]\\.html)",
+      "destination": "/kampagnen/pinterest",
+      "permanent": true
+    },
+    {
+      "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN])/:topic((?!pinterest$)[pP][iI][nN][tT][eE][rR][eE][sS][tT])",
+      "destination": "/kampagnen/pinterest",
+      "permanent": true
+    },
+    {
+      "source": "/:base((?!kampagnen/)[kK][aA][mM][pP][aA][gG][nN][eE][nN])/pinterest",
+      "destination": "/kampagnen/pinterest",
+      "permanent": true
+    },
+    {
+      "source": "/:legacy((?:[kK][aA][mM][pP][aA][gG][nN][eE][nN][mM][aA][nN][aA][gG][eE][mM][eE][nN][tT]|[cC][aA][mM][pP][aA][iI][gG][nN]-[mM][aA][nN][aA][gG][eE][mM][eE][nN][tT])(?:\\.html)?)",
+      "destination": "/kampagnen",
+      "permanent": true
+    },
+    {
+      "source": "/:legacy((?!kampagnen$)[kK][aA][mM][pP][aA][gG][nN][eE][nN])",
+      "destination": "/kampagnen",
+      "permanent": true
+    },
+    {
+      "source": "/kampagnen.html",
+      "destination": "/kampagnen",
+      "permanent": true
+    },
+    {
       "source": "/tim-vogt-erfahrungen",
       "destination": "/tim-vogt",
       "permanent": true
