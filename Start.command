@@ -13,5 +13,10 @@ fi
 pbcopy < "$TASK_PRIVATE_DIR/login-password"
 echo 'Das lokale Passwort ist in der Zwischenablage. Im Login mit Cmd+V einfügen.'
 echo 'Beim ersten Öffnen das lokale HTTPS-Zertifikat nur für localhost bestätigen.'
-open 'https://localhost:8766/intern/persoenlich'
+if curl --silent --insecure --fail --max-time 2 'https://localhost:8766/api/cockpit' >/dev/null; then
+  open 'https://localhost:8766/intern/persoenlich'
+  echo 'Das Dashboard läuft bereits.'
+  exit 0
+fi
+export PERSONAL_OPEN_BROWSER=1
 exec "$TASK_NODE" tools/local-server.cjs

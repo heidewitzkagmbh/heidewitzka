@@ -42,7 +42,8 @@ function start(options={}){
     }catch{if(!res.headersSent)res.writeHead(500);res.end('Anfrage fehlgeschlagen.');}
   });
   server.on('close',()=>store.close());
-  server.listen(options.port??Number(process.env.PORT||8766),'127.0.0.1',()=>{if(!options.quiet)console.log(`Persönliches Dashboard: https://localhost:${server.address().port}/intern/persoenlich\nNur lokal erreichbar. Das Anmeldepasswort liegt in der privaten Ablage; Start.command kopiert es in die Zwischenablage.`);});
+  server.on('error',()=>{console.error('Der lokale Server konnte nicht gestartet werden. Bitte prüfen, ob Port 8766 bereits verwendet wird.');store.close();process.exitCode=1;});
+  server.listen(options.port??Number(process.env.PORT||8766),'127.0.0.1',()=>{if(!options.quiet)console.log(`Persönliches Dashboard: https://localhost:${server.address().port}/intern/persoenlich\nNur lokal erreichbar. Das Anmeldepasswort liegt in der privaten Ablage; Start.command kopiert es in die Zwischenablage.`);if(process.env.PERSONAL_OPEN_BROWSER==='1')execFileSync('/usr/bin/open',[`https://localhost:${server.address().port}/intern/persoenlich`]);});
   return {server,directory,passwordPath};
 }
 if(require.main===module){const {server}=start();for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>server.close(()=>process.exit(0)));}
