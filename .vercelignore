@@ -1,0 +1,9 @@
+.local
+.env*
+*.sqlite3*
+*.pem
+*.key
+*.crt
+tools
+tests
+Start.command

@@ -1,0 +1,10 @@
+.local/
+.env
+.env.*
+!.env.example
+node_modules/
+*.sqlite3*
+*.pem
+*.key
+*.crt
+.DS_Store

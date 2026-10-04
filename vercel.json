@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "functions": {
     "api/internal.js": {
-      "includeFiles": "api/_cockpit/**"
+      "includeFiles": "api/_{cockpit,personal}/**"
     }
   },
   "rewrites": [
