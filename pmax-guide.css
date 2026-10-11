@@ -16,7 +16,7 @@
 .pmax-principles span{display:block;font-size:23px;line-height:1.3}
 .pmax-guide .pmax-answer p{color:#bbb;font-size:17px;margin:28px 0 0}
 .pmax-priority-list li{padding:12px 0 18px;border-bottom:1px solid #ddd}
-.pmax-toc{margin:55px 0;padding:30px;border:1px solid var(--line);border-radius:20px;background:#fff}
+.pmax-guide .pmax-toc{display:block;height:auto;overflow:visible;margin:55px 0;padding:30px;border:1px solid var(--line);border-radius:20px;background:#fff}
 .pmax-guide .pmax-toc h2{font-size:28px;margin:14px 0 22px}
 .pmax-guide .pmax-toc ol{columns:2;column-gap:45px}
 .pmax-guide .pmax-toc li{font-size:16px;line-height:1.5;break-inside:avoid;padding:5px 0;margin:0 0 8px}
