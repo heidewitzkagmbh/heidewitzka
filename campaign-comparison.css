@@ -1,0 +1,83 @@
+.campaign-comparison .blog-narrow{max-width:1200px}
+.campaign-comparison .blog-header{padding-bottom:32px}
+.campaign-comparison .blog-header h1{max-width:1120px;font-size:clamp(48px,6.4vw,94px);line-height:1;overflow-wrap:break-word}
+.campaign-comparison .blog-deck{max-width:900px}
+.comparison-switch{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 0}
+.comparison-switch a{font-size:14px;padding:10px 15px;border:1px solid #ccc;border-radius:999px}
+.comparison-switch a[aria-current=page]{background:#111;color:white;border-color:#111}
+.comparison-hero{display:grid;grid-template-columns:1.2fr 1fr;gap:42px;margin:0 0 45px;padding:42px;border-radius:24px;background:#ece9df}
+.comparison-hero h2{font-size:clamp(32px,4vw,50px);line-height:1.08;margin:12px 0 20px;max-width:590px}
+.comparison-hero p{font-size:19px;line-height:1.5;max-width:600px;margin:0;color:#555}
+.comparison-hero ol{list-style:none;counter-reset:steps;margin:0;padding:0;display:grid;align-content:center}
+.comparison-hero li{counter-increment:steps;padding:17px 0;border-top:1px solid #c7c1b5;display:flex;gap:18px;font-size:18px;line-height:1.4}
+.comparison-hero li:before{content:'0' counter(steps);color:#b05530;font-size:15px;font-weight:700;padding-top:3px}
+.comparison-jumps{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 44px}
+.comparison-jumps a{padding:10px 15px;border:1px solid var(--line);border-radius:999px;font-size:15px;text-decoration:none!important}
+.campaign-comparison [id]{scroll-margin-top:105px}
+.campaign-comparison .blog-body h2{font-size:clamp(34px,4vw,54px);line-height:1.1;max-width:1000px;margin:70px 0 24px}
+.campaign-comparison .blog-body p{max-width:930px}
+.campaign-comparison .comparison-intro{font-size:23px;line-height:1.5;max-width:970px}
+.comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:32px 0}
+.comparison-card{background:white;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.comparison-card.is-suggested{border:2px solid #b95e38}
+.comparison-card-head{padding:26px 30px 24px;background:#ece9df;min-height:150px;position:relative;display:flex;flex-direction:column;justify-content:flex-end}
+.comparison-card:nth-child(3n+2) .comparison-card-head{background:#ded9ce}
+.comparison-card:nth-child(3n) .comparison-card-head{background:#111;color:white}
+.comparison-card-index{font-size:12px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:22px;opacity:.6}
+.campaign-comparison .comparison-card h3{font-size:clamp(32px,3.1vw,42px);margin:0 0 8px;line-height:1.08}
+.comparison-card-head>p{font-size:16px!important;line-height:1.4!important;margin:0!important;color:inherit!important;opacity:.7}
+.comparison-card-body{padding:26px 30px 30px;display:flex;flex-direction:column;flex:1}
+.comparison-card .fit{font-size:20px!important;line-height:1.4!important;margin:0 0 22px!important;color:#111!important}
+.comparison-card .fit small{font-size:11px;letter-spacing:.1em;text-transform:uppercase;display:block;color:#8a4a31;margin-bottom:8px}
+.comparison-card dl{margin:0;display:grid;gap:15px}
+.comparison-card dt{font-size:13px;font-weight:750;color:#111;margin-bottom:5px}
+.comparison-card dd{margin:0;font-size:16px;line-height:1.5;color:#555}
+.comparison-card .example{font-size:16px!important;line-height:1.5!important;background:#f5f4ef;border-radius:12px;padding:16px;margin:23px 0!important}
+.comparison-card-actions{margin-top:auto;padding-top:20px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-top:1px solid var(--line)}
+.comparison-card-actions a{font-size:15px;font-weight:650}
+.compare-choice{display:inline-flex;gap:9px;align-items:center;font-size:14px;cursor:pointer}
+.compare-choice input{width:19px;height:19px;accent-color:#111}
+.campaign-comparison .finder{background:#111;color:white;border-radius:24px;padding:36px;margin:36px 0 48px}
+.campaign-comparison .finder h2{color:white;font-size:clamp(30px,3.2vw,42px);margin:12px 0 14px}
+.campaign-comparison .finder p{color:#bbb;font-size:17px;line-height:1.5}
+.finder .eyebrow{color:#aaa}
+.finder-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:25px 0}
+.finder label{font-size:13px;font-weight:600;display:block;color:#ddd}
+.finder select{display:block;width:100%;margin-top:10px;background:#fff;color:#111;border:1px solid #ddd;border-radius:10px;padding:13px 34px 13px 13px;font:inherit;font-size:15px;min-height:50px}
+.finder select:focus-visible,.finder button:focus-visible,.compare-choice input:focus-visible,.comparison-switch a:focus-visible,.comparison-jumps a:focus-visible{outline:3px solid #cc764f;outline-offset:4px}
+.finder button{border:0;background:#e5ddd0;color:#111;padding:15px 21px;border-radius:12px;font:inherit;font-weight:700;cursor:pointer}
+.finder-result{margin-top:25px;padding-top:25px;border-top:1px solid #555}
+.finder-result h3{font-size:25px!important;color:white;margin:0 0 12px!important;line-height:1.2!important}
+.finder-result p{margin:0 0 14px}
+.finder-result a{color:white;font-size:16px;margin-right:20px;display:inline-block;padding:6px 0}
+.finder-result .finder-caveat{font-size:14px;color:#aaa;margin-top:14px}
+.comparison-matrix{max-width:none}
+.comparison-matrix table{min-width:700px;table-layout:fixed}
+.comparison-matrix thead th:first-child,.comparison-matrix tbody th{width:165px}
+.comparison-matrix thead th:first-child{position:sticky;left:0;z-index:2;background:#111}
+.comparison-matrix tbody th{position:sticky;left:0;z-index:1;background:#f4f2ec;font-size:14px}
+.comparison-matrix td{font-size:15px;overflow-wrap:break-word}
+.comparison-matrix caption{text-align:left;font-size:14px;color:#666;padding:16px 20px}
+.comparison-status{font-size:15px!important;line-height:1.5!important;min-height:24px;color:#666!important}
+.comparison-note{border-left:3px solid #b95e38;padding:4px 0 4px 22px;margin:36px 0}
+.comparison-note p{font-size:17px!important;margin:0;line-height:1.6!important}
+.scenario-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:30px 0}
+.scenario{border-top:1px solid #bbb;padding-top:20px}
+.campaign-comparison .scenario h3{font-size:26px;margin:0 0 14px;line-height:1.2}
+.campaign-comparison .scenario p{font-size:18px;line-height:1.6;margin:0 0 15px}
+.comparison-checks{padding-left:23px;max-width:950px}
+.comparison-checks li{font-size:19px;line-height:1.6;margin:14px 0;color:#444}
+.comparison-faq details{border-top:1px solid var(--line);padding:22px 0;max-width:950px}
+.comparison-faq summary{font-size:24px;line-height:1.3;cursor:pointer;font-weight:650}
+.comparison-faq summary:focus-visible{outline:3px solid #b95e38;outline-offset:4px}
+.comparison-faq p{font-size:18px!important;margin-bottom:0}
+.comparison-sources{margin-top:60px;border-top:1px solid var(--line);padding-top:20px}
+.campaign-comparison .comparison-sources h2{font-size:30px;margin:20px 0}
+.comparison-sources li,.campaign-comparison .comparison-sources p{font-size:15px;line-height:1.6;color:#666}
+.comparison-sources ol{padding-left:22px}.comparison-sources li{margin:8px 0}
+.comparison-ref{font-size:12px}
+.campaign-comparison .article-cta h2{margin:0;font-size:clamp(32px,4vw,52px)}
+.campaign-comparison .article-cta .btn{white-space:normal;text-align:center}
+@media(max-width:800px){.comparison-hero{grid-template-columns:1fr;gap:25px;padding:27px}.finder-fields{grid-template-columns:1fr}.comparison-grid,.scenario-grid{grid-template-columns:1fr}.campaign-comparison .finder{padding:26px}.comparison-card-head{min-height:130px}.comparison-card-head,.comparison-card-body{padding:24px}.comparison-matrix table{min-width:620px}.comparison-matrix thead th:first-child,.comparison-matrix tbody th{width:135px}.comparison-matrix th,.comparison-matrix td{padding:13px}.comparison-faq summary{font-size:21px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.finder,.compare-choice,.nav-wrap,.footer,.comparison-switch{display:none}.comparison-grid{grid-template-columns:1fr 1fr}.comparison-card{break-inside:avoid}.comparison-matrix{overflow:visible}.comparison-matrix table{min-width:0}.campaign-comparison .blog-header{padding-top:20px}}
