@@ -8,6 +8,30 @@
   },
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?heidewitzka\\.io"
+        }
+      ],
+      "destination": "/baustelle.html"
+    },
+    {
+      "source": "/index",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?heidewitzka\\.io"
+        }
+      ],
+      "destination": "/baustelle.html"
+    },
+    {
+      "source": "/startseite-test",
+      "destination": "/index.html"
+    },
+    {
       "source": "/intern",
       "destination": "/api/internal"
     },
@@ -17,6 +41,21 @@
     }
   ],
   "headers": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?heidewitzka\\.io"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
     {
       "source": "/intern",
       "headers": [
