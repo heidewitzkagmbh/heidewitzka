@@ -137,8 +137,8 @@ input,textarea{width:100%;padding:15px 16px;border:1px solid #cfcfc9;border-radi
 .whitepaper-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
 .whitepaper-card{position:relative;overflow:hidden;border-radius:26px;aspect-ratio:2/3;background:#171717;isolation:isolate;color:#fff}
 .whitepaper-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease,filter .5s ease;z-index:-2}
-.whitepaper-card>.whitepaper-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:-2}
-.whitepaper-card.wp-googleads:after,.whitepaper-card.wp-googleads:hover:after{background:linear-gradient(180deg,rgba(0,0,0,0) 25%,rgba(0,0,0,.42) 45%,rgba(0,0,0,.82) 65%,rgba(0,0,0,.94) 100%)}
+.whitepaper-card>.whitepaper-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;display:block;z-index:-2}
+.whitepaper-card.wp-googleads:after,.whitepaper-card.wp-googleads:hover:after{background:linear-gradient(180deg,rgba(0,0,0,0) 25%,rgba(0,0,0,.12) 40%,rgba(0,0,0,.76) 58%,rgba(0,0,0,.94) 100%)}
 .whitepaper-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.04) 20%,rgba(0,0,0,.14) 48%,rgba(0,0,0,.86) 100%);transition:background .35s ease}
 .whitepaper-card:hover>img{transform:scale(1.035);filter:brightness(.95)}
 .whitepaper-card:hover:after{background:linear-gradient(180deg,rgba(0,0,0,.05) 15%,rgba(0,0,0,.18) 43%,rgba(0,0,0,.9) 100%)}
