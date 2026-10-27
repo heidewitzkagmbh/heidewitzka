@@ -1,0 +1,17 @@
+/* Detail pages share the Google Ads Audit layout; allow longer service titles. */
+.hw-service-detail .product-detail-grid>*,
+.hw-service-detail .product-scope-card,
+.hw-service-detail .product-deliverable-grid>*,
+.hw-service-detail .product-process>*,
+.hw-service-detail .product-detail-bottom-cta>*{min-width:0}
+.hw-service-detail .product-detail-buy h1{font-size:clamp(42px,5.2vw,78px);max-width:100%;overflow-wrap:break-word;hyphens:auto}
+.hw-service-detail .product-detail-buy>.hw-scope-note{font-size:16px;line-height:1.6;color:#59616b;margin:0 0 24px}
+.hw-service-detail .product-scope-card h3,
+.hw-service-detail .product-process h3,
+.hw-service-detail .product-deliverable-grid h3{overflow-wrap:break-word;hyphens:auto}
+.hw-service-detail .product-detail-price span{display:block;margin-top:6px}
+.hw-service-detail .product-detail-bottom-cta .btn{white-space:normal}
+.hw-service-detail .product-detail-faq summary{position:relative;padding-right:32px}
+.hw-service-detail .product-detail-faq summary:after{position:absolute;right:0;top:0}
+.hw-service-detail a:focus-visible,.hw-service-detail summary:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+@media(max-width:600px){.hw-service-detail .product-breadcrumb{flex-wrap:wrap}.hw-service-detail .hw-audit-summary{padding:26px}.hw-service-detail .product-detail-buy h1{font-size:44px}.hw-service-detail .product-detail-bottom-cta{gap:24px}}
