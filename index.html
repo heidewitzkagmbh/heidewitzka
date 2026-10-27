@@ -102,7 +102,7 @@
 </div>
 </article>
 <article class="whitepaper-card wp-googleads">
-<img alt="Drei Menschen schließen eine Lücke zwischen zwei Plattformen" src="/assets/whitepaper-googleads-bw.webp"/>
+<video aria-hidden="true" class="whitepaper-video" loop="" muted="" playsinline="" poster="/assets/google-ads-teaser-color.webp" preload="none" tabindex="-1"><source data-src="/assets/google-ads-teaser-color.mp4" type="video/mp4"/></video>
 <div class="whitepaper-content">
 <span class="whitepaper-kicker">Einblick</span>
 <h3>Google Ads nach dem Klick</h3>
@@ -136,5 +136,42 @@
 <div><strong>Mehr</strong><a href="/shop.html">Leistungen &amp; Preise</a><a href="/insights.html">Blog</a><a href="/white-label">White Label</a><a href="/freelancer-team">Freelancer-Team</a><a href="/contact.html">Kontakt</a></div>
 </div>
 </div><div class="wrap footer-login-row"><a class="footer-login" href="/intern">Login <span aria-hidden="true">↗</span></a></div></footer><script>(function(){const nav=document.querySelector('.site-nav'),btn=document.querySelector('.nav-toggle'),menu=document.querySelector('.nav-links');if(!nav||!btn||!menu)return;const close=()=>{nav.classList.remove('menu-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü öffnen');document.body.classList.remove('nav-open')};btn.addEventListener('click',()=>{const open=!nav.classList.contains('menu-open');nav.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');document.body.classList.toggle('nav-open',open)});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});window.addEventListener('resize',()=>{if(window.innerWidth>900)close()})})();</script>
-<script>(function(){const video=document.querySelector('.channel-tile-video');if(!video||matchMedia('(prefers-reduced-motion: reduce)').matches||(navigator.connection&&navigator.connection.saveData))return;const observe=()=>{const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const source=video.querySelector('source');if(!source.src){source.src=source.dataset.src;video.load()}video.play().catch(()=>{})}else video.pause()})},{threshold:.2});observer.observe(video)};if(document.readyState==='complete')observe();else window.addEventListener('load',observe,{once:true})})();</script>
+<script>
+(function(){
+  const videos=document.querySelectorAll('.channel-tile-video, .whitepaper-video');
+  const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+  const connection=navigator.connection;
+  if(!videos.length||!('IntersectionObserver' in window))return;
+  const visible=new Set();
+  const update=video=>{
+    if(!visible.has(video)||document.hidden||reducedMotion.matches||(connection&&connection.saveData)){
+      video.pause();
+      return;
+    }
+    const source=video.querySelector('source[data-src]');
+    if(source&&!source.hasAttribute('src')){
+      source.src=source.dataset.src;
+      video.load();
+    }
+    video.muted=true;
+    video.play().catch(()=>{});
+  };
+  const updateAll=()=>videos.forEach(update);
+  const observe=()=>{
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting&&entry.intersectionRatio>=.2)visible.add(entry.target);
+        else visible.delete(entry.target);
+        update(entry.target);
+      });
+    },{threshold:.2});
+    videos.forEach(video=>observer.observe(video));
+    document.addEventListener('visibilitychange',updateAll);
+    reducedMotion.addEventListener('change',updateAll);
+    if(connection&&connection.addEventListener)connection.addEventListener('change',updateAll);
+  };
+  if(document.readyState==='complete')observe();
+  else window.addEventListener('load',observe,{once:true});
+})();
+</script>
 </body></html>
