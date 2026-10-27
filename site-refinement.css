@@ -7,8 +7,13 @@ body.hw-refined{--bg:#fff;--paper:#fff;--line:#e1e4e8;background:#fff;font-famil
 .hw-refined .page-hero{padding-top:76px;padding-bottom:64px}
 .hw-refined .page-hero h1{font-size:clamp(44px,6.4vw,94px);line-height:1.02;max-width:1150px}
 .hw-refined .lead{line-height:1.4}
-.hw-refined .section-head{align-items:start}
-.hw-refined .section-head h2{line-height:1.06}
+.hw-refined .section-head{align-items:end}
+/* Give headings and their supporting copy a clear, shared reading order. */
+.hw-refined .section-head:has(>p),
+.hw-refined .section-head:has(>div:only-child){grid-template-columns:minmax(0,1fr);gap:24px}
+.hw-refined .section-head h2{line-height:1.06;overflow-wrap:normal;word-break:normal;hyphens:auto}
+.hw-refined .section-head:has(>p) h2{max-width:26ch}
+.hw-refined .section-head>p{max-width:66ch;margin:0;font-family:inherit;font-size:clamp(18px,1.5vw,20px);font-weight:400;line-height:1.6;letter-spacing:normal}
 .hw-refined main p{overflow-wrap:break-word}
 .hw-refined .btn{min-height:48px;line-height:1.35;text-align:left}
 .hw-refined a:focus-visible,.hw-refined button:focus-visible,.hw-refined summary:focus-visible{outline:3px solid #0a66c2;outline-offset:5px}
@@ -67,8 +72,8 @@ body.hw-refined{--bg:#fff;--paper:#fff;--line:#e1e4e8;background:#fff;font-famil
 .hw-refined .whitepaper-download{background:#fff}
 .hw-refined .product-section .product-detail{background:#fff}
 .hw-refined .section-head>*{min-width:0}
-.hw-refined .section-head h2{overflow-wrap:anywhere}
 .hw-refined .case-study-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .hw-refined .case-study-card,.hw-refined .case-study-content{min-width:0}
 @media(max-width:900px){.hw-refined .case-study-grid{grid-template-columns:1fr}}
 .hw-refined .case-study-card{width:100%;aspect-ratio:auto}
+
