@@ -1,0 +1,47 @@
+/* Editorial pages use the same white, cool grey and mint palette as the service pages. */
+.hw-blog .nav-links a[aria-current]{color:#111}
+.hw-blog .page-hero .insights-hero-media{width:100%;max-width:100%;min-width:0}
+.hw-blog .blog-header h1{line-height:1.02;overflow-wrap:break-word}
+.hw-blog .blog-body h2,.hw-blog .blog-body h3{overflow-wrap:break-word}
+.hw-blog .insights-tags button{border-color:#d5dae0;background:#fff}
+.hw-blog .insights-tags button:hover,.hw-blog .insights-tags button.active{background:#111;color:#fff;border-color:#111}
+.hw-blog .insights-search:focus-within{border-bottom-color:#0a66c2}
+.hw-blog .article-service,
+.hw-blog .article-callout:not(.article-callout-dark),
+.hw-blog .article-end-cta,
+.hw-blog .pmax-status,
+.hw-blog .comparison-hero,
+.hw-blog .comparison-card .example,
+.hw-blog .comparison-matrix tbody th,
+.hw-blog .se-summary,
+.hw-blog .se-chart-error,
+.hw-blog .se-chips a{background:#f4f5f7}
+.hw-blog .article-toc-links a{background:#f4f5f7;border-color:var(--line)}
+.hw-blog .article-toc-links a:hover,.hw-blog .article-toc-links a:focus-visible{background:#e8ebef}
+.hw-blog .article-table-wrap th,.hw-blog .article-table-wrap td{border-bottom-color:var(--line)}
+.hw-blog .article-flow,.hw-blog .article-flow>div,.hw-blog .comparison-hero li{border-color:var(--line)}
+.hw-blog .comparison-card-head{background:#f4f5f7}
+.hw-blog .comparison-card:nth-child(3n+2) .comparison-card-head{background:#e8ebef}
+.hw-blog .comparison-card:nth-child(3n) .comparison-card-head{background:#111;color:#fff}
+.hw-blog .comparison-hero li:before,.hw-blog .comparison-card .fit small{color:#59616b}
+.hw-blog .comparison-card.is-suggested,.hw-blog .comparison-note{border-color:#0a66c2}
+.hw-blog .finder button{background:#3cebb0;color:#063e30}
+.hw-blog .finder button:hover{background:#2bd69c}
+.hw-blog .se-chart-controls button,.hw-blog .se-chart-controls a{background:#f4f5f7;border-color:#d5dae0}
+.hw-blog .se-chart-controls button[aria-pressed="true"]{background:#111;border-color:#111;color:#fff}
+.hw-blog .article-cta .btn{background:#3cebb0;color:#063e30;white-space:normal}
+.hw-blog .article-cta .btn:hover{background:#2bd69c}
+.hw-blog .article-table-wrap:focus-visible,
+.hw-blog .finder select:focus-visible,
+.hw-blog .compare-choice input:focus-visible,
+.hw-blog .comparison-faq summary:focus-visible{outline:3px solid #0a66c2;outline-offset:4px}
+.hw-blog .finder button:focus-visible,
+.hw-blog .pmax-answer a:focus-visible,
+.hw-blog .article-cta a:focus-visible,
+.hw-blog .footer a:focus-visible{outline:3px solid #fff;outline-offset:4px}
+@media(max-width:650px){
+  .hw-blog .blog-header h1{font-size:clamp(38px,10vw,64px)}
+  .hw-blog .blog-meta{overflow-wrap:anywhere}
+  .hw-blog .article-cta{min-width:0}
+  .hw-blog .article-cta>*{min-width:0;max-width:100%}
+}

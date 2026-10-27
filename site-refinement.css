@@ -1,4 +1,4 @@
-/* Client-facing service pages only. Blog and article styles are intentionally unchanged. */
+/* Shared visual theme for service and editorial pages. */
 body.hw-refined{--bg:#fff;--paper:#fff;--line:#e1e4e8;background:#fff;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
 .hw-refined .nav-wrap{background:rgba(255,255,255,.96)}
 .hw-refined .nav-links{background-color:transparent}
