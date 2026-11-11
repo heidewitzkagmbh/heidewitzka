@@ -177,7 +177,59 @@
     border-top: 1px solid #d9dde1;
   }
 }
-</style></head><body class="hw-refined">
+</style><style id="campaign-spacing">
+.hw-campaigns {
+  --campaign-section-space: 64px;
+  --campaign-content-gap: 32px;
+  --campaign-card-gap: 18px;
+}
+.hw-campaigns .campaign-page-hero {
+  padding-bottom: var(--campaign-section-space);
+}
+.hw-campaigns .campaign-hero-wide {
+  margin-top: var(--campaign-content-gap);
+}
+.hw-campaigns main > .section {
+  padding: var(--campaign-section-space) 0;
+}
+.hw-campaigns main > .campaign-channel-section {
+  margin-top: 0;
+  padding-top: 0;
+}
+.hw-campaigns main > .section .section-head {
+  gap: 20px;
+  margin-bottom: var(--campaign-content-gap);
+}
+.hw-campaigns main > .section :is(.grid-3, .channel-link-grid, .case-study-grid, .blog-preview-grid) {
+  gap: var(--campaign-card-gap);
+}
+.hw-campaigns main > .hw-contact {
+  margin: var(--campaign-section-space) auto;
+}
+/* The contact teaser margin already separates it from the next section. */
+.hw-campaigns main > .hw-contact + .section {
+  padding-top: 0;
+  border-top: 0;
+}
+@media (max-width: 900px) {
+  .hw-campaigns {
+    --campaign-section-space: 48px;
+    --campaign-content-gap: 28px;
+  }
+  .hw-campaigns main > .section .blog-preview-grid {
+    row-gap: 32px;
+  }
+}
+@media (max-width: 640px) {
+  .hw-campaigns {
+    --campaign-section-space: 40px;
+    --campaign-content-gap: 24px;
+  }
+  .hw-campaigns main > .section .section-head {
+    gap: 16px;
+  }
+}
+</style></head><body class="hw-refined hw-campaigns">
 <div class="nav-wrap"><div class="wrap"><nav class="site-nav">
 <a class="logo" href="/">heidewitzka</a>
 <button aria-controls="site-menu" aria-expanded="false" aria-label="Menü öffnen" class="nav-toggle" type="button"><span></span><span></span><span></span></button>
