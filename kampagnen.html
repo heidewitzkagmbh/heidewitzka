@@ -73,7 +73,82 @@
 @media(max-width:420px){.google-contact-teaser{grid-template-columns:110px minmax(0,1fr);gap:16px 14px}.google-contact-teaser>img{width:110px;height:76px}.google-contact-actions{grid-template-columns:1fr}.google-contact-actions a{font-size:14px;padding:0 16px}}
 .google-contact-teaser{align-items:start}.google-contact-teaser>img,.google-contact-copy,.google-contact-actions{align-self:start}.google-contact-copy{padding-top:0}.google-contact-quote{margin-top:0}
 @media(min-width:901px) and (max-width:1100px){.google-contact-copy{padding-right:24px}}@media(max-width:900px){.google-contact-copy{padding-right:0}.google-contact-teaser{row-gap:26px}}
-.google-contact-teaser{margin-bottom:48px}.google-contact-teaser + .campaign-faq-section{padding-top:64px}.google-contact-teaser + .blog-preview{padding-top:64px}</style><link href="/contact-teaser.css" rel="stylesheet"/><link href="/site-refinement.css?v=20261027" rel="stylesheet"/></head><body class="hw-refined">
+.google-contact-teaser{margin-bottom:48px}.google-contact-teaser + .campaign-faq-section{padding-top:64px}.google-contact-teaser + .blog-preview{padding-top:64px}</style><link href="/contact-teaser.css" rel="stylesheet"/><link href="/site-refinement.css?v=20261027" rel="stylesheet"/><style>
+.campaign-combination .section-head {
+  margin-bottom: 32px;
+}
+.campaign-combination-panel {
+  border: 1px solid #d9dde1;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #f4f5f7;
+}
+.campaign-combination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.campaign-combination-part,
+.campaign-combination-summary {
+  padding: clamp(22px, 2.5vw, 36px);
+}
+.campaign-combination-part + .campaign-combination-part {
+  border-inline-start: 1px solid #d9dde1;
+}
+.campaign-combination-part {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.campaign-combination h3 {
+  margin: 0 0 14px;
+  font-size: clamp(26px, 2.3vw, 38px);
+  line-height: 1.1;
+  letter-spacing: -.04em;
+}
+.campaign-combination p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.55;
+}
+.campaign-combination-part a {
+  margin-top: auto;
+  padding-top: 20px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.campaign-combination-ai {
+  background: #42edb4;
+  color: #10241d;
+}
+.campaign-combination-ai h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.campaign-combination-ai h3 span {
+  font-size: 1.55em;
+  line-height: .7;
+}
+.campaign-combination-summary {
+  border-top: 1px solid #d9dde1;
+  background: #fff;
+}
+.campaign-combination-summary h3 {
+  font-size: clamp(22px, 2vw, 30px);
+  margin-bottom: 10px;
+}
+.campaign-combination-summary p {
+  max-width: 78ch;
+}
+@media (max-width: 850px) {
+  .campaign-combination-grid { grid-template-columns: minmax(0, 1fr); }
+  .campaign-combination-part + .campaign-combination-part {
+    border-inline-start: 0;
+    border-top: 1px solid #d9dde1;
+  }
+}
+</style></head><body class="hw-refined">
 <div class="nav-wrap"><div class="wrap"><nav class="site-nav">
 <a class="logo" href="/">heidewitzka</a>
 <button aria-controls="site-menu" aria-expanded="false" aria-label="Menü öffnen" class="nav-toggle" type="button"><span></span><span></span><span></span></button>
@@ -134,6 +209,35 @@
 </article>
 </div></div></section>
 <section class="section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Tracking &amp; Daten</div><h2>Optimierung braucht brauchbare Signale.</h2></div><p>Darum gehört die Messung zum Kampagnenmanagement dazu – auch wenn nicht jedes Projekt ein komplettes Tracking-Setup benötigt.</p></div><div class="two-col campaign-data-grid"><div class="campaign-data-card"><h3>Messung</h3><p>GA4, Google Tag Manager, Conversion-Tracking und erweiterte Conversions sauber anbinden und regelmäßig plausibilisieren.</p></div><a aria-label="Artikel über Messung und Conversion-Ziele lesen" class="campaign-data-card campaign-data-card-link" href="/google-ads-strategie-sechs-ebenen#messung"><h3>Zielsystem</h3><p>Primäre und sekundäre Conversions so ordnen, dass Plattformen auf relevante Signale optimieren – und Reports nicht nur Aktivität zeigen.</p><span class="campaign-data-cta">Im Artikel vertiefen <span aria-hidden="true">↗</span></span></a></div></div></section>
+<section class="section campaign-combination" aria-labelledby="campaign-combination-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div><h2 id="campaign-combination-title">Starke Kombinationen</h2></div>
+    </div>
+    <div class="campaign-combination-panel">
+      <div class="campaign-combination-grid">
+        <div class="campaign-combination-part">
+          <h3>Google Ads</h3>
+          <p>Rund 15 Jahre Erfahrung mit Google Ads. Suchanzeigen greifen konkrete Nachfrage auf, wenn Menschen nach einem Produkt oder einer Lösung suchen.</p>
+          <a href="/kampagnen/google-ads">Mehr zu Google Ads <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="campaign-combination-part">
+          <h3>ChatGPT Ads</h3>
+          <p>Seit 2026 ein neuer Werbekanal. Anzeigen können zu relevanten Gesprächen passen, in denen Menschen sich informieren, Alternativen vergleichen und Entscheidungen vorbereiten.</p>
+          <a href="/kampagnen/chatgpt-ads">Mehr zu ChatGPT Ads <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="campaign-combination-part campaign-combination-ai">
+          <h3><span aria-hidden="true">+</span> KI-Features</h3>
+          <p>Über die Google Ads API und die Google Analytics Data API lassen sich die zuletzt verfügbaren Kampagnen- und Website-Daten auf Abruf mit KI auswerten. Sie kann Auffälligkeiten sichtbar machen, die in der Gesamtübersicht leicht untergehen, etwa steigende Kosten pro Anfrage in einzelnen Regionen.</p>
+        </div>
+      </div>
+      <div class="campaign-combination-summary">
+        <h3>Was das Zusammenspiel bringt</h3>
+        <p>Google Ads erreicht Menschen bei der gezielten Suche. ChatGPT Ads ergänzt diesen Kontaktpunkt, wenn sie sich zu einer Frage beraten lassen oder Optionen abwägen. Mit gemeinsamen Kampagnenzielen und einheitlicher Messung lässt sich vergleichen, was beide Kanäle zu Anfragen oder Verkäufen beitragen.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Leistungen im Überblick</div><h2>Vom Setup bis zur laufenden Steuerung.</h2></div><p>Das Ziel ist nicht möglichst viel Aktivität im Werbekonto, sondern ein belastbares System aus Struktur, Budget, Messung, Tests und klaren Entscheidungen.</p></div>
 <div class="grid-3 campaign-service-grid">
 <article class="card campaign-card"><div class="card-pad"><span class="campaign-card-number">01</span><h3>Setup &amp; Struktur</h3><p>Kampagnen- und Accountstruktur, Zieldefinition, Keywords, Zielgruppen, Assets, P-Max-Setups und saubere Übergabe in den laufenden Betrieb.</p></div></article>
