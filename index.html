@@ -47,7 +47,43 @@
 
 </style><style>
 .ai-example-links{list-style:none;margin:0 0 25px;padding:0;width:100%}.ai-example-links li{border-top:1px solid #ddd}.ai-example-links a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;font-size:16px;font-weight:500;line-height:1.4}.ai-example-links a>span{flex-shrink:0}.ai-example-links a:hover{text-decoration:underline;text-underline-offset:4px}.ai-example-links a:focus-visible{outline:2px solid #111;outline-offset:4px}.ai-automation-note{max-width:920px;margin:32px 0 0;color:#616161;font-size:17px;line-height:1.55}
-</style><link href="/site-refinement.css?v=20261027" rel="stylesheet"/></head><body class="hw-refined">
+</style><link href="/site-refinement.css?v=20261027" rel="stylesheet"/><style id="homepage-spacing">
+/* Homepage rhythm: shared spacing prevents neighboring sections from drifting apart. */
+.hw-home {
+  --home-section-space: 64px;
+  --home-content-gap: 32px;
+  --home-card-gap: 18px;
+}
+.hw-home .hero { padding-bottom: var(--home-section-space); }
+.hw-home .hero-media { margin-top: var(--home-content-gap); }
+.hw-home main > .section { padding: var(--home-section-space) 0; }
+.hw-home main > .campaign-channel-section { margin-top: 0; padding-top: 0; }
+.hw-home main > .section .section-head {
+  gap: 20px;
+  margin-bottom: var(--home-content-gap);
+}
+.hw-home main > .section :is(.grid-3, .channel-link-grid, .blog-preview-grid) {
+  gap: var(--home-card-gap);
+}
+.hw-home .ai-teaser .teaser-body { padding-top: 24px; }
+.hw-home .ai-teaser p { margin-bottom: 20px; }
+.hw-home .ai-example-links { margin-bottom: 24px; }
+.hw-home .ai-automation-note { margin-top: 24px; }
+.hw-home .hw-pricing-note { margin: 24px 0; }
+.hw-home main > .hw-contact { margin: var(--home-section-space) auto; }
+/* The contact teaser already supplies the space above the blog heading. */
+.hw-home main > .blog-preview { padding-top: 0; border-top: 0; }
+@media (max-width: 900px) {
+  .hw-home { --home-section-space: 48px; --home-content-gap: 28px; }
+  .hw-home main > .section :is(.ai-teaser-grid, .blog-preview-grid) { row-gap: 32px; }
+  .hw-home .ai-teaser { padding-bottom: 0; }
+  .hw-home .ai-teaser .teaser-body { padding-top: 20px; }
+}
+@media (max-width: 640px) {
+  .hw-home { --home-section-space: 40px; --home-content-gap: 24px; }
+  .hw-home main > .section .section-head { gap: 16px; }
+}
+</style></head><body class="hw-refined hw-home">
 <div class="nav-wrap"><div class="wrap"><nav class="site-nav">
 <a class="logo" href="/">heidewitzka</a>
 <button aria-controls="site-menu" aria-expanded="false" aria-label="Menü öffnen" class="nav-toggle" type="button"><span></span><span></span><span></span></button>
@@ -84,7 +120,7 @@
 <div class="section-head"><div><div class="eyebrow">01 · KI im Marketing</div><h2>KI, die im Marketing mitarbeitet.</h2></div>
 <p>Heidewitzka setzt KI für konkrete Aufgaben ein: Recherche, Anzeigenvarianten und wiederkehrende Auswertungen – mit fachlicher Prüfung und klaren Zuständigkeiten.</p></div>
 <div class="grid-3 ai-teaser-grid">
-<article class="ai-teaser"><span class="teaser-media"><img alt="Frau blickt aufmerksam in die Kamera" src="/assets/performance-radar-bright.webp"/></span><div class="teaser-body"><h3>Analysieren</h3><p>Daten, Kampagnen und Signale schneller einordnen – damit aus Beobachtungen klare nächste Schritte werden.</p><ul class="ai-example-links"><li><a href="/contact.html?service=tracking-setup#projektanfrage">Tracking sauber einrichten <span aria-hidden="true">↗</span></a></li><li><a href="/ai.html#performance-radar">Regelmäßige Funktionschecks <span aria-hidden="true">↗</span></a></li><li><a href="/ai/tracking-analyse-automation">Performance analysieren &amp; Optimierungen vorschlagen <span aria-hidden="true">↗</span></a></li></ul><a class="teaser-link" href="/ai.html#analysieren">Mehr erfahren <span aria-hidden="true">↗</span></a></div></article>
+<article class="ai-teaser"><span class="teaser-media"><img alt="Monitor mit vereinfachtem Analytics-Dashboard, orangefarbenem Logo und Diagrammen ohne Zahlen" decoding="async" height="1086" loading="lazy" src="/assets/analytics-monitor.webp" width="1448"/></span><div class="teaser-body"><h3>Analysieren</h3><p>Daten, Kampagnen und Signale schneller einordnen – damit aus Beobachtungen klare nächste Schritte werden.</p><ul class="ai-example-links"><li><a href="/contact.html?service=tracking-setup#projektanfrage">Tracking sauber einrichten <span aria-hidden="true">↗</span></a></li><li><a href="/ai.html#performance-radar">Regelmäßige Funktionschecks <span aria-hidden="true">↗</span></a></li><li><a href="/ai/tracking-analyse-automation">Performance analysieren &amp; Optimierungen vorschlagen <span aria-hidden="true">↗</span></a></li></ul><a class="teaser-link" href="/ai.html#analysieren">Mehr erfahren <span aria-hidden="true">↗</span></a></div></article>
 <article class="ai-teaser"><span aria-label="Kurzer Videoausschnitt für den Bereich Produzieren" class="teaser-media teaser-video-wrap"><video autoplay="" class="teaser-video" loop="" muted="" playsinline="" poster="/assets/produzieren-teaser-poster.jpg" preload="metadata"><source src="/assets/produzieren-teaser-loop.mp4" type="video/mp4"/></video></span><div class="teaser-body"><h3>Produzieren</h3><p>Assets, Varianten und Content systematischer erzeugen – mit mehr Tempo, Qualität und Raum für gute Ideen.</p><ul class="ai-example-links"><li><a href="/ai/content-creatives">Videoproduktion mit KI <span aria-hidden="true">↗</span></a></li><li><a href="/ai/content-creatives">Banner &amp; Anzeigenmotive mit KI <span aria-hidden="true">↗</span></a></li><li><a href="/ai/content-creatives">Content-Produktion mit KI <span aria-hidden="true">↗</span></a></li></ul><a class="teaser-link" href="/ai.html#produzieren">Mehr erfahren <span aria-hidden="true">↗</span></a></div></article>
 <article class="ai-teaser"><span class="teaser-media teaser-gradient"><span class="gradient-orbit"></span><span class="gradient-lines"></span></span><div class="teaser-body"><h3>Automatisieren</h3><p>Wiederkehrende Abläufe durch Agents und Workflows abbilden – verlässlich, nachvollziehbar und mit menschlicher Freigabe.</p><ul class="ai-example-links"><li><a href="/ai.html#campaign-lab">Markt &amp; Wettbewerb beobachten <span aria-hidden="true">↗</span></a></li><li><a href="/ai/tracking-analyse-automation">Reports automatisch erstellen <span aria-hidden="true">↗</span></a></li><li><a href="/ai/research-opportunities">Keyword- &amp; Themenvorschläge vorbereiten <span aria-hidden="true">↗</span></a></li></ul><a class="teaser-link" href="/ai.html#automatisieren">Mehr erfahren <span aria-hidden="true">↗</span></a></div></article>
 </div><p class="ai-automation-note">Kampagnen werden nicht automatisiert gesteuert. KI und Workflows unterstützen wiederkehrende Aufgaben wie Funktionschecks, Marktbeobachtung, Reports und Keyword-Vorschläge. Optimierungsvorschläge werden fachlich geprüft; Änderungen an Kampagnen bleiben eine bewusste Entscheidung.</p></div></section>
