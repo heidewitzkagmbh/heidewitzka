@@ -110,12 +110,15 @@
   font-size: 17px;
   line-height: 1.55;
 }
-.campaign-combination-part a {
-  margin-top: auto;
-  padding-top: 20px;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.campaign-combination-part ul {
+  margin: 18px 0 0;
+  padding-inline-start: 1.2em;
+  list-style: disc;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.campaign-combination-part li + li {
+  margin-top: 12px;
 }
 .campaign-combination-ai {
   background: #42edb4;
@@ -134,9 +137,23 @@
   border-top: 1px solid #d9dde1;
   background: #fff;
 }
-.campaign-combination-summary h3 {
-  font-size: clamp(22px, 2vw, 30px);
-  margin-bottom: 10px;
+.campaign-combination-details {
+  margin-top: 18px;
+}
+.campaign-combination-details summary {
+  width: fit-content;
+  max-width: 100%;
+  cursor: pointer;
+  list-style: none;
+}
+.campaign-combination-details summary::-webkit-details-marker {
+  display: none;
+}
+.campaign-combination-details[open] summary span {
+  transform: rotate(180deg);
+}
+.campaign-combination-details p {
+  margin-top: 16px;
 }
 .campaign-combination-summary p {
   max-width: 78ch;
@@ -218,22 +235,38 @@
       <div class="campaign-combination-grid">
         <div class="campaign-combination-part">
           <h3>Google Ads</h3>
-          <p>Rund 15 Jahre Erfahrung mit Google Ads. Suchanzeigen greifen konkrete Nachfrage auf, wenn Menschen nach einem Produkt oder einer Lösung suchen.</p>
-          <a href="/kampagnen/google-ads">Mehr zu Google Ads <span aria-hidden="true">↗</span></a>
+          <p>Seit rund 15 Jahren setzt Heidewitzka Google Ads ein, um aus konkreter Nachfrage Anfragen und Verkäufe zu machen.</p>
+          <ul>
+            <li><strong>Suchabsicht nutzen.</strong> Anzeigen schalten, wenn Menschen gezielt nach einem Produkt, einem Anbieter oder einer Lösung suchen.</li>
+            <li><strong>Budget steuern.</strong> Regionen, Suchbegriffe und Kampagnen nach ihrer Leistung priorisieren.</li>
+            <li><strong>Auf Ergebnisse optimieren.</strong> Gebote an gemessenen Anfragen, Käufen oder Umsatz ausrichten.</li>
+          </ul>
         </div>
         <div class="campaign-combination-part">
           <h3>ChatGPT Ads</h3>
-          <p>Seit 2026 ein neuer Werbekanal. Anzeigen können zu relevanten Gesprächen passen, in denen Menschen sich informieren, Alternativen vergleichen und Entscheidungen vorbereiten.</p>
-          <a href="/kampagnen/chatgpt-ads">Mehr zu ChatGPT Ads <span aria-hidden="true">↗</span></a>
+          <p>Seit 2026 können Angebote auch sichtbar werden, während Menschen in ChatGPT eine Frage klären oder Optionen vergleichen.</p>
+          <ul>
+            <li><strong>Früh in die Auswahl kommen.</strong> Menschen erreichen, während sie noch abwägen, was zu ihnen passt.</li>
+            <li><strong>Anzeigen am Gespräch ausrichten.</strong> Mit Kontexthinweisen beschreiben, bei welchen Themen und Fragen das Angebot relevant ist.</li>
+            <li><strong>Botschaften testen.</strong> Unterschiedliche Nutzenargumente und Zielseiten anhand von Anzeigenklicks und Website-Aktionen vergleichen.</li>
+          </ul>
         </div>
         <div class="campaign-combination-part campaign-combination-ai">
           <h3><span aria-hidden="true">+</span> KI-Features</h3>
-          <p>Über die Google Ads API und die Google Analytics Data API lassen sich die zuletzt verfügbaren Kampagnen- und Website-Daten auf Abruf mit KI auswerten. Sie kann Auffälligkeiten sichtbar machen, die in der Gesamtübersicht leicht untergehen, etwa steigende Kosten pro Anfrage in einzelnen Regionen.</p>
+          <p>Mit der Google Ads API und der Google Analytics Data API lassen sich die zuletzt verfügbaren Daten direkt mit KI auswerten.</p>
+          <ul>
+            <li><strong>Berichte auf Abruf.</strong> Kosten, Besuche und Anfragen für einen gewählten Zeitraum zusammenfassen.</li>
+            <li><strong>Auffälligkeiten finden.</strong> Nach Regionen, Geräten oder Kampagnen aufschlüsseln, wo Kosten steigen oder Anfragen ausbleiben.</li>
+            <li><strong>Nächste Schritte vorbereiten.</strong> Hinweise für die Prüfung priorisieren, etwa eine teure Suchanfrage oder eine Zielseite mit wenigen Abschlüssen.</li>
+          </ul>
         </div>
       </div>
       <div class="campaign-combination-summary">
-        <h3>Was das Zusammenspiel bringt</h3>
-        <p>Google Ads erreicht Menschen bei der gezielten Suche. ChatGPT Ads ergänzt diesen Kontaktpunkt, wenn sie sich zu einer Frage beraten lassen oder Optionen abwägen. Mit gemeinsamen Kampagnenzielen und einheitlicher Messung lässt sich vergleichen, was beide Kanäle zu Anfragen oder Verkäufen beitragen.</p>
+        <p><strong>Interessant für</strong> Anbieter von Solar und Wärmepumpen, Möbelshops mit beratungsintensivem Sortiment und B2B-Anbieter mit erklärungsbedürftigen Lösungen.</p>
+        <details class="campaign-combination-details">
+          <summary class="btn">Was das Zusammenspiel bringt <span aria-hidden="true">↓</span></summary>
+          <p>Wer nach „Wärmepumpe installieren lassen“ sucht, hat bereits ein konkretes Vorhaben. In ChatGPT kann dasselbe Angebot schon relevant sein, wenn jemand abwägt, welche Heizung zum eigenen Haus passt. Mit getrennten Kampagnenlinks und demselben Anfrageziel lässt sich vergleichen, welche Besuche und Anfragen beide Kanäle bringen.</p>
+        </details>
       </div>
     </div>
   </div>
