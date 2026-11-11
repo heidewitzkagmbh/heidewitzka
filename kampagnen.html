@@ -6,10 +6,23 @@
 <link href="/styles.css" rel="stylesheet"/><meta content="Laufendes Kampagnenmanagement für Google Ads, Microsoft Ads, Meta, LinkedIn, Pinterest und weitere Paid-Media-Kanäle – inklusive Budgetsteuerung, Testing, Tracking und Reporting." name="description"/><link href="https://www.heidewitzka.io/kampagnen" rel="canonical"/><meta content="website" property="og:type"/><meta content="Heidewitzka" property="og:site_name"/><meta content="Kampagnenmanagement | Heidewitzka" property="og:title"/><meta content="Kampagnen laufend steuern, optimieren und weiterentwickeln – kanalübergreifend, datenbasiert und mit klaren nächsten Schritten." property="og:description"/><meta content="https://www.heidewitzka.io/kampagnen" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><style>
 /* Readable download teasers with a prominent call to action. */
 .case-studies-section .case-study-card{min-height:660px}
-.case-studies-section .case-study-card:after{background:linear-gradient(180deg,rgba(0,0,0,.03) 15%,rgba(0,0,0,.18) 35%,rgba(0,0,0,.9) 100%)}
-.case-studies-section .case-study-content h3{font-size:clamp(36px,3.3vw,52px);line-height:1.06;overflow-wrap:break-word}
+.case-studies-section .case-study-card:after {
+  background: linear-gradient(180deg, rgba(0,0,0,.24), rgba(0,0,0,.16) 20%, rgba(0,0,0,.06) 45%, rgba(0,0,0,.92) 100%);
+}
+.case-studies-section .case-study-title {
+  position: absolute;
+  inset: 30px 30px auto;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(48px, 5.6vw, 84px);
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+@media (max-width: 1100px) {
+  .case-studies-section .case-study-title { inset: 24px 22px auto; }
+}
 .case-studies-section .case-study-content p{font-size:20px;line-height:1.45;color:#fff}
-.case-studies-section .case-study-kicker{font-size:16px;letter-spacing:.07em;color:#fff}
 .case-studies-section .case-study-button{font-size:18px;font-weight:750;padding:15px 24px;min-height:54px;gap:22px;background:#ff8a00;border:2px solid #ff8a00;color:#111;box-shadow:0 6px 24px rgba(0,0,0,.2);text-decoration:none;transition:background .2s,border-color .2s}
 .case-studies-section .case-study-button b{font-size:25px;font-weight:700;line-height:1}
 .case-study-card--download .case-study-content{position:static;min-height:inherit;justify-content:flex-end;box-sizing:border-box}
@@ -20,14 +33,9 @@
 @media(min-width:901px) and (max-width:1100px){
 .case-studies-section .case-study-content{padding:22px}
 .case-studies-section .case-study-card{min-height:700px}
-.case-studies-section .case-study-content h3{font-size:36px}
-.case-studies-section .case-study-kicker{font-size:14px}
 }
-@media(max-width:900px){.case-studies-section .case-study-content h3{font-size:clamp(40px,8.8vw,56px)}}
 @media(max-width:520px){
 .case-studies-section .case-study-card{min-height:660px}
-.case-studies-section .case-study-content h3{font-size:40px}
-.case-studies-section .case-study-kicker{font-size:15px}
 }
 
 /* Channel overview immediately follows the hero. */
@@ -110,16 +118,19 @@
 <div class="section-head"><div><div class="eyebrow">Einblick in die Praxis</div><h2>Drei fiktive Unternehmen.<br/>Drei Herangehensweisen.</h2></div><p>Drei Geschäftsmodelle, drei passende Kampagnenkonzepte. Das Solar-Konzept steht als PDF bereit. Weitere Konzepte entwickeln wir passend zu Ihrem Angebot.</p></div>
 <div class="case-study-grid">
 <article class="case-study-card case-study-card--download">
-<img alt="Mitarbeiter eines überregionalen Solar- und Wärmepumpenanbieters vor einem Haus mit Solaranlage" src="/assets/case-solar-teaser.webp"/>
-<div class="case-study-content"><span class="case-study-kicker">Solar &amp; Wärmepumpe</span><h3>Überregional Anfragen gewinnen</h3><p>Search, Meta und Native für einen Anbieter mit breiter Zielgruppe und komplexer Kaufentscheidung.</p><a aria-label="Heidewitzka Solar: Kampagnenkonzept als PDF herunterladen" class="case-study-button" download="Heidewitzka-Solar-Kampagnenkonzept.pdf" href="/downloads/Heidewitzka-Solar-Kampagnenkonzept.pdf">PDF Download <b aria-hidden="true">↓</b></a></div>
+<img alt="Mitarbeiter eines überregionalen Solar- und Wärmepumpenanbieters vor einem Haus mit Solaranlage" src="/assets/case-solar-teaser-clean.webp" loading="lazy"/>
+<h3 class="case-study-title">Solar</h3>
+<div class="case-study-content"><p>Search, Meta und Native für einen Anbieter mit breiter Zielgruppe und komplexer Kaufentscheidung.</p><a aria-label="Solar-Kampagnenkonzept als PDF herunterladen" class="case-study-button" download="Solar-Kampagnenkonzept.pdf" href="/downloads/Heidewitzka-Solar-Kampagnenkonzept.pdf">PDF Download <b aria-hidden="true">↓</b></a></div>
 </article>
 <article class="case-study-card">
-<img alt="Orangefarbene modulare Kommode vor blauem Studiohintergrund" src="/assets/case-moebel-teaser.webp"/>
-<div class="case-study-content"><span class="case-study-kicker">E-Commerce · Möbel</span><h3>Möbel online verkaufen</h3><p>Wie Produktkampagnen Nachfrage aufbauen und Interessierte vom ersten Kontakt bis zum Kauf begleiten.</p><a class="case-study-button" href="/contact.html?service=kampagnenkonzept#projektanfrage">Konzept besprechen ↗</a></div>
+<img alt="Orangefarbene modulare Kommode vor blauem Studiohintergrund" src="/assets/case-moebel-teaser-clean.webp" loading="lazy"/>
+<h3 class="case-study-title">Möbel</h3>
+<div class="case-study-content"><p>Wie Produktkampagnen Nachfrage aufbauen und Interessierte vom ersten Kontakt bis zum Kauf begleiten.</p><a class="case-study-button" href="/contact.html?service=kampagnenkonzept#projektanfrage">Konzept besprechen ↗</a></div>
 </article>
 <article class="case-study-card">
-<img alt="Mitarbeiter an einer industriellen Spritzgussmaschine" src="/assets/case-industry-teaser.webp"/>
-<div class="case-study-content"><span class="case-study-kicker">B2B · Industry Systems</span><h3>Industrielle Entscheider erreichen</h3><p>Wie Search und LinkedIn qualifizierte Kontakte für einen Anbieter industrieller Automatisierung unterstützen.</p><a class="case-study-button" href="/contact.html?service=kampagnenkonzept#projektanfrage">Konzept besprechen ↗</a></div>
+<img alt="Mitarbeiter an einer industriellen Spritzgussmaschine" src="/assets/case-industry-teaser-clean.webp" loading="lazy"/>
+<h3 class="case-study-title">B2B</h3>
+<div class="case-study-content"><p>Wie Search und LinkedIn qualifizierte Kontakte für einen Anbieter industrieller Automatisierung unterstützen.</p><a class="case-study-button" href="/contact.html?service=kampagnenkonzept#projektanfrage">Konzept besprechen ↗</a></div>
 </article>
 </div></div></section>
 <section class="section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Tracking &amp; Daten</div><h2>Optimierung braucht brauchbare Signale.</h2></div><p>Darum gehört die Messung zum Kampagnenmanagement dazu – auch wenn nicht jedes Projekt ein komplettes Tracking-Setup benötigt.</p></div><div class="two-col campaign-data-grid"><div class="campaign-data-card"><h3>Messung</h3><p>GA4, Google Tag Manager, Conversion-Tracking und erweiterte Conversions sauber anbinden und regelmäßig plausibilisieren.</p></div><a aria-label="Artikel über Messung und Conversion-Ziele lesen" class="campaign-data-card campaign-data-card-link" href="/google-ads-strategie-sechs-ebenen#messung"><h3>Zielsystem</h3><p>Primäre und sekundäre Conversions so ordnen, dass Plattformen auf relevante Signale optimieren – und Reports nicht nur Aktivität zeigen.</p><span class="campaign-data-cta">Im Artikel vertiefen <span aria-hidden="true">↗</span></span></a></div></div></section>
