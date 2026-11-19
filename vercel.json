@@ -8,26 +8,6 @@
   },
   "rewrites": [
     {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "(?:www\\.)?heidewitzka\\.io"
-        }
-      ],
-      "destination": "/baustelle.html"
-    },
-    {
-      "source": "/index",
-      "has": [
-        {
-          "type": "host",
-          "value": "(?:www\\.)?heidewitzka\\.io"
-        }
-      ],
-      "destination": "/baustelle.html"
-    },
-    {
       "source": "/startseite-test",
       "destination": "/index.html"
     },
@@ -46,7 +26,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(?:www\\.)?heidewitzka\\.io"
+          "value": ".*\\.vercel\\.app"
         }
       ],
       "headers": [
@@ -222,6 +202,56 @@
     {
       "source": "/tim-vogt-erfahrungen.html",
       "destination": "/tim-vogt",
+      "permanent": true
+    },
+    {
+      "source": "/performance-marketing",
+      "destination": "/performance",
+      "permanent": true
+    },
+    {
+      "source": "/ki-im-marketing",
+      "destination": "/ai",
+      "permanent": true
+    },
+    {
+      "source": "/agentic-marketing",
+      "destination": "/agentic",
+      "permanent": true
+    },
+    {
+      "source": "/kanaele",
+      "destination": "/channels",
+      "permanent": true
+    },
+    {
+      "source": "/services-shop",
+      "destination": "/shop",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/shop",
+      "permanent": true
+    },
+    {
+      "source": "/ai-integration",
+      "destination": "/ai",
+      "permanent": true
+    },
+    {
+      "source": "/preview",
+      "destination": "/",
       "permanent": true
     }
   ]
