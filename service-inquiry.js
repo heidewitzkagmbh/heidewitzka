@@ -11,6 +11,8 @@
     'ki-sichtbarkeit-strategie':'Strategie für KI-Sichtbarkeit',
     'google-ads':'Google Ads & Microsoft Ads', 'meta-ads':'Meta & Instagram Ads',
     'linkedin':'LinkedIn Ads', 'pinterest':'Pinterest Ads',
+    'display-retargeting':'Display, Native Advertising & Retargeting',
+    'chatgpt-ads':'ChatGPT Ads',
     'performance-radar':'Performance Radar', 'growth-navigator':'Growth Navigator',
     'campaign-lab':'Campaign Lab', 'kampagnenkonzept':'Individuelles Kampagnenkonzept'
   };
