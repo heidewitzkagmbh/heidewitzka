@@ -3,7 +3,42 @@
 <html lang="de"><head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Kontakt | Heidewitzka</title>
-<link href="/styles.css" rel="stylesheet"/><meta content="Projekt mit Heidewitzka besprechen: Kampagnenmanagement, Performance Marketing, KI im Marketing, AI Operations oder Tracking." name="description"/><link href="https://www.heidewitzka.io/kontakt" rel="canonical"/><meta content="website" property="og:type"/><meta content="Heidewitzka" property="og:site_name"/><meta content="Kontakt | Heidewitzka" property="og:title"/><meta content="Projekt mit Heidewitzka besprechen: Kampagnenmanagement, Performance Marketing, KI im Marketing oder Tracking." property="og:description"/><meta content="https://www.heidewitzka.io/kontakt" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><link href="/site-refinement.css?v=20261027" rel="stylesheet"/></head><body class="hw-refined">
+<link href="/styles.css" rel="stylesheet"/><meta content="Projekt mit Heidewitzka besprechen: Kampagnenmanagement, Performance Marketing, KI im Marketing, AI Operations oder Tracking." name="description"/><link href="https://www.heidewitzka.io/kontakt" rel="canonical"/><meta content="website" property="og:type"/><meta content="Heidewitzka" property="og:site_name"/><meta content="Kontakt | Heidewitzka" property="og:title"/><meta content="Projekt mit Heidewitzka besprechen: Kampagnenmanagement, Performance Marketing, KI im Marketing oder Tracking." property="og:description"/><meta content="https://www.heidewitzka.io/kontakt" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><link href="/site-refinement.css?v=20261027" rel="stylesheet"/><style>
+.contact-phone {
+  margin-top: 22px;
+  padding: clamp(24px, 5vw, 72px) clamp(16px, 4vw, 56px);
+  border-radius: 28px;
+  background: #111;
+  color: #fff;
+}
+.contact-phone h2 {
+  margin: 0;
+  color: inherit;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.15;
+}
+.contact-phone p {
+  margin: 8px 0 20px;
+  color: #d4d4d4;
+  font-size: clamp(16px, 1.6vw, 20px);
+}
+.contact-phone .contact-phone-number {
+  display: inline-block;
+  max-width: 100%;
+  color: inherit;
+  font-size: clamp(28px, 8vw, 104px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+.contact-phone .contact-phone-number:hover,
+.contact-phone .contact-phone-number:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+</style>
+</head><body class="hw-refined">
 <div class="nav-wrap"><div class="wrap"><nav class="site-nav">
 <a class="logo" href="/">heidewitzka</a>
 <button aria-controls="site-menu" aria-expanded="false" aria-label="Menü öffnen" class="nav-toggle" type="button"><span></span><span></span><span></span></button>
@@ -29,7 +64,13 @@
 <div class="contact-submit-row"><button class="btn contact-submit" type="submit">Anfrage im E-Mail-Programm öffnen →</button><p>Der Button öffnet Ihr E-Mail-Programm mit den vorausgefüllten Angaben. Versendet wird die Anfrage erst dort. Alternativ schreiben Sie direkt an hello@heidewitzka.io. <a href="/datenschutz#kontakt">Datenschutzhinweise</a></p></div>
 </form></div>
 <aside class="contact-aside"><div class="eyebrow">Direkt</div><a class="contact-mail" href="mailto:hello@heidewitzka.io?subject=Projektanfrage%20Heidewitzka">hello@heidewitzka.io ↗</a><div class="contact-aside-block"><strong>Postanschrift</strong><p>Heidewitzka GmbH<br/>Alter Postweg 7<br/>21781 Cadenberge<br/>Deutschland</p></div><div class="contact-aside-block"><strong>Sitz der Gesellschaft</strong><p>Heidewitzka GmbH<br/>Deichstraße 21<br/>21785 Neuhaus (Oste)<br/>Deutschland</p></div></aside>
-</div></div></section>
+</div>
+<section class="contact-phone" aria-labelledby="contact-phone-heading">
+  <h2 id="contact-phone-heading">Rufen Sie mich an</h2>
+  <p>Tim Vogt · Für Fragen zu Ihrem Projekt</p>
+  <a class="contact-phone-number" href="tel:+4947522310975">04752 2310975</a>
+</section>
+</div></section>
 </main>
 <footer class="footer"><div class="wrap"><div class="footer-grid"><div><strong>.heidewitzka</strong><p style="color:#aaa;max-width:420px">Performance Marketing + AI Operations im Marketing.</p></div><div><strong>Leistungen</strong><a href="/performance.html">Performance Marketing</a><a href="/kampagnen">Kampagnenmanagement</a><a href="/ai.html">KI im Marketing</a><a href="/agentic.html">Agentic Marketing</a></div><div><strong>Kanäle</strong><a href="/channels.html#search">Search Engines</a><a href="/channels.html#meta">Meta</a><a href="/channels.html#linkedin">LinkedIn</a><a href="/channels.html#pinterest">Pinterest</a><a href="/channels.html#youtube">YouTube</a></div><div><strong>Mehr</strong><a href="/shop.html">Leistungen &amp; Preise</a><a href="/insights.html">Blog</a><a href="/kontakt">Kontakt</a></div></div></div><div class="wrap footer-login-row"><a class="footer-login" href="/intern">Login <span aria-hidden="true">↗</span></a></div><div class="wrap footer-legal-row"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a></div></footer>
 <script>document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const subject='Projektanfrage Heidewitzka – '+(d.get('topic')||'Allgemein');const lines=['Name: '+(d.get('name')||''),'Unternehmen: '+(d.get('company')||''),'E-Mail: '+(d.get('email')||''),'Thema: '+(d.get('topic')||''),'Media-Budget: '+(d.get('budget')||'nicht angegeben'),'','Aufgabe:',d.get('message')||''];window.location.href='mailto:hello@heidewitzka.io?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));});</script>
