@@ -60,6 +60,21 @@
   ],
   "redirects": [
     {
+      "source": "/freelancer-team",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/white-label",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/ueber-heidewitzka",
+      "destination": "/",
+      "permanent": false
+    },
+    {
       "source": "/:base([kK][aA][mM][pP][aA][gG][nN][eE][nN][mM][aA][nN][aA][gG][eE][mM][eE][nN][tT]|[cC][aA][mM][pP][aA][iI][gG][nN]-[mM][aA][nN][aA][gG][eE][mM][eE][nN][tT])/:topic([cC][hH][aA][tT][gG][pP][tT]-[aA][dD][sS](?:\\.html)?)",
       "destination": "/kampagnen/chatgpt-ads",
       "permanent": true
