@@ -60,6 +60,11 @@
   ],
   "redirects": [
     {
+      "source": "/contact",
+      "destination": "/kontakt",
+      "permanent": true
+    },
+    {
       "source": "/tim-vogt",
       "destination": "/",
       "permanent": false
@@ -247,11 +252,6 @@
     {
       "source": "/services-shop",
       "destination": "/shop",
-      "permanent": true
-    },
-    {
-      "source": "/kontakt",
-      "destination": "/contact",
       "permanent": true
     },
     {
