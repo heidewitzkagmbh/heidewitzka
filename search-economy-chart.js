@@ -2,7 +2,9 @@
   const stage = document.getElementById('search-economy-chart');
   const controls = document.querySelector('.se-chart-controls');
   const external = document.getElementById('se-chart-external');
-  if (!stage || !controls || !external) return;
+  const load = document.getElementById('chart-load');
+  const revoke = document.getElementById('chart-revoke');
+  if (!stage || !controls || !external || !load || !revoke) return;
 
   const buttons = [...controls.querySelectorAll('button[data-symbol]')];
   let selectedSymbol;
@@ -68,7 +70,13 @@
     container.append(script);
   }
 
-  controls.hidden = false;
   buttons.forEach(button => button.addEventListener('click', () => showChart(button)));
-  showChart(buttons[0]);
+  load.addEventListener('click', () => {
+    controls.hidden = false;
+    revoke.hidden = false;
+    showChart(buttons[0]);
+    buttons[0].focus();
+  });
+  // Reload also stops scripts installed by the external widget. No permission is persisted.
+  revoke.addEventListener('click', () => window.location.reload());
 })();

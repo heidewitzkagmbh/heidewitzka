@@ -79,3 +79,40 @@ body.hw-refined{--bg:#fff;--paper:#fff;--line:#e1e4e8;background:#fff;font-famil
 
 
 @media(max-width:640px){.hw-refined .section-head h2{hyphens:auto;text-wrap:wrap}}
+
+/* Legal pages and optional third-party embeds. */
+.footer-legal-row{display:flex;flex-wrap:wrap;gap:24px;padding-top:20px;padding-bottom:28px}
+.footer-legal-row a{color:#ccc;font-size:14px;text-decoration:underline;text-underline-offset:4px}
+.hw-refined .legal-page{padding-top:72px;padding-bottom:88px;max-width:1000px}
+.hw-refined .legal-page h1{font-size:clamp(36px,6vw,76px);line-height:1.08;letter-spacing:-.045em;overflow-wrap:anywhere;margin:16px 0 40px}
+.legal-copy{max-width:780px;font-size:18px;line-height:1.65}
+.legal-copy section{margin:38px 0}
+.hw-refined .legal-copy h2{font-size:27px;line-height:1.25;letter-spacing:-.025em;margin:0 0 16px}
+.hw-refined .legal-copy h3{font-size:21px;line-height:1.3;margin:26px 0 12px}
+.legal-copy p{margin:0 0 18px}
+.legal-copy a,.external-content-notice a{color:#075ca8;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.legal-copy code{font-size:.88em;overflow-wrap:anywhere}
+.legal-note{padding:24px;border-radius:16px;background:#f1f3f6;margin:24px 0}
+.legal-note p{margin:10px 0 0}
+.legal-toc{display:flex;flex-wrap:wrap;gap:12px 24px;padding:20px 0;border-block:1px solid #e1e4e8;font-size:16px}
+.external-content-notice{max-width:650px;margin:auto;padding:36px 28px;text-align:center;font-size:16px;line-height:1.5;position:relative;z-index:1}
+.external-content-notice strong{font-size:22px}
+.external-content-notice p{margin:14px 0}
+.external-content-notice .btn{font:inherit;cursor:pointer;background:#111;color:#fff;border:0}
+.external-content-revoke{font:inherit;font-size:14px;cursor:pointer;background:transparent;border:1px solid #bfc5cc;border-radius:8px;padding:10px 16px;margin-top:12px;color:#222}
+.external-content-revoke[hidden]{display:none}
+.contact-map-card{height:auto;min-height:480px}
+.contact-map-stage{min-height:480px}
+.contact-map-stage .external-content-notice{padding-bottom:190px}
+.contact-map-stage iframe{min-height:480px}
+.se-chart-stage:has(#chart-load){height:auto;min-height:320px}
+@media(max-width:620px){
+  .hw-refined .legal-page{padding-top:40px;padding-bottom:56px}
+  .legal-copy{font-size:16px}
+  .hw-refined .legal-copy h2{font-size:24px}
+  .legal-note{padding:20px}
+  .external-content-notice{padding:28px 20px}
+  .contact-map-card,.contact-map-stage{min-height:540px}
+  .contact-map-stage .external-content-notice{padding-bottom:210px}
+  .contact-map-stage iframe{min-height:540px}
+}
