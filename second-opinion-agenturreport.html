@@ -13,6 +13,16 @@
 <link href="/styles.css" rel="stylesheet"/>
 <link href="/site-refinement.css?v=20261027" rel="stylesheet"/>
 <link href="/service-details.css?v=20261028" rel="stylesheet"/>
+<style>
+.second-opinion-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 12px}
+.hw-refined .second-opinion-actions .btn{min-height:54px;justify-content:center;padding:13px 14px;border-radius:10px;text-align:center;white-space:normal}
+.hw-refined .second-opinion-actions .second-opinion-book{background:#1745bf;color:#fff}
+.hw-refined .second-opinion-actions .second-opinion-question{background:#e5edff;color:#153888}
+.hw-refined .second-opinion-actions .second-opinion-book:hover{background:#123795}
+.hw-refined .second-opinion-actions .second-opinion-question:hover{background:#d6e3ff}
+#direkt-buchen{scroll-margin-top:104px}
+@media(max-width:440px){.second-opinion-actions{grid-template-columns:1fr}}
+</style>
 </head><body class="hw-refined">
 <div class="nav-wrap"><div class="wrap"><nav class="site-nav">
 <a class="logo" href="/">heidewitzka</a>
@@ -42,8 +52,11 @@
 <p class="product-detail-lead">Eine unabhängige Einschätzung Ihres aktuellen Agenturreports. Sie erhalten Antworten auf bis zu drei Fragen und wissen, welche Punkte Sie mit Ihrer Agentur besprechen sollten.</p>
 <div class="product-detail-price">390 € <span>einmalig, zzgl. MwSt.</span></div>
 <ul class="product-detail-highlights"><li>Prüfung eines Monatsreports</li><li>Kompakte schriftliche Einschätzung</li><li>Konkrete Fragen für Ihr nächstes Agenturgespräch</li><li>30 Minuten Besprechung mit Tim Vogt</li></ul>
-<a class="btn product-detail-cta" href="/kontakt?service=second-opinion-agenturreport#projektanfrage">Second Opinion anfragen →</a>
-<p class="product-detail-note">Für Unternehmen. Nach Auftragsbestätigung zahlen Sie per Rechnung.</p>
+<div class="second-opinion-actions">
+<a class="btn second-opinion-book" href="#direkt-buchen" aria-describedby="buchungshinweis">Jetzt direkt buchen</a>
+<a class="btn second-opinion-question" href="/kontakt?service=second-opinion-agenturreport&amp;anliegen=frage#projektanfrage">Fragen klären</a>
+</div>
+<p class="product-detail-note" id="buchungshinweis">Bis zur Freischaltung der Online-Zahlung können Unternehmen die Leistung zum Festpreis per E-Mail anfragen.</p>
 </div></div></div></section>
 <section class="section product-detail-section" id="leistungsumfang"><div class="wrap">
 <div class="section-head"><div><div class="eyebrow">Leistungsumfang</div><h2>Vom Reporting zur Entscheidung.</h2></div><p>Die Prüfung orientiert sich an Ihrer Fragestellung und an den Angaben im vorliegenden Report.</p></div>
@@ -74,9 +87,9 @@
 <details><summary>Braucht Heidewitzka Zugriff auf unsere Werbekonten?</summary><p>Für die Second Opinion genügt der Report. Falls Angaben zur Messung oder zur Herkunft einer Kennzahl fehlen, benennt die Einschätzung, welche Informationen Sie für Ihre Entscheidung noch brauchen.</p></details>
 <details><summary>Was kostet die Second Opinion und wie bezahle ich?</summary><p>Der Festpreis beträgt 390 € netto zuzüglich Umsatzsteuer. Nach Bestätigung des Auftrags erhalten Sie eine Rechnung zur Überweisung.</p></details>
 </div></section>
-<section class="section"><div class="wrap"><div class="product-detail-bottom-cta">
-<div><div class="eyebrow">Second Opinion zum Agenturreport</div><h2>Bereiten Sie Ihr nächstes Agenturgespräch vor.</h2><p>Prüfung eines Monatsreports, schriftliche Einschätzung und 30 Minuten Besprechung für 390 € zzgl. MwSt.</p></div>
-<a class="btn product-detail-cta" href="/kontakt?service=second-opinion-agenturreport#projektanfrage">Second Opinion anfragen →</a>
+<section class="section" id="direkt-buchen" aria-labelledby="buchung-heading"><div class="wrap"><div class="product-detail-bottom-cta">
+<div><div class="eyebrow">Second Opinion zum Agenturreport</div><h2 id="buchung-heading">Second Opinion zum Festpreis anfragen.</h2><p>Schicken Sie uns Ihre Anfrage für die Reportprüfung für 390 € zzgl. MwSt. Wir bestätigen den Termin und senden Ihnen nach Auftragsbestätigung die Rechnung zur Überweisung.</p></div>
+<a class="btn product-detail-cta" href="/kontakt?service=second-opinion-agenturreport#projektanfrage">Buchung per E-Mail anfragen →</a>
 </div></div></section>
 </main>
 <footer class="footer"><div class="wrap"><div class="footer-grid">
