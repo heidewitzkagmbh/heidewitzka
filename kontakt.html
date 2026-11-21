@@ -77,11 +77,17 @@
 <script>(function(){const nav=document.querySelector('.site-nav'),btn=document.querySelector('.nav-toggle'),menu=document.querySelector('.nav-links');if(!nav||!btn||!menu)return;const close=()=>{nav.classList.remove('menu-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü öffnen');document.body.classList.remove('nav-open')};btn.addEventListener('click',()=>{const open=!nav.classList.contains('menu-open');nav.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');document.body.classList.toggle('nav-open',open)});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});window.addEventListener('resize',()=>{if(window.innerWidth>900)close()})})();</script>
 <script>(function(){const cases={"netflix-ads": "Netflix Ads & Streaming-Werbung","research-opportunities": "Research & Opportunities", "targeting-kampagnensteuerung": "Targeting & Kampagnensteuerung", "content-creatives": "Content & Creatives", "tracking-analyse-automation": "Tracking, Analyse & Automation", "market-intelligence": "Research & Opportunities", "campaign-intelligence": "Targeting & Kampagnensteuerung", "content-creative-generation": "Content & Creatives", "predictive-monitoring": "Tracking, Analyse & Automation", "lead-intelligence": "Tracking, Analyse & Automation", "workflow-automation": "Tracking, Analyse & Automation", "plattform-ki": "Plattform-KI"};const key=new URLSearchParams(location.search).get('use_case');if(!Object.prototype.hasOwnProperty.call(cases,key))return;const topic=document.getElementById('topic');const message=document.getElementById('message');const label=cases[key];const option=document.createElement('option');option.value=label;option.textContent=label;topic.appendChild(option);topic.value=label;if(!message.value)message.value='Ich interessiere mich für '+label+' im Kampagnenmanagement.\n\nUnsere aktuelle Situation:\n\nUnser Ziel:\n';})();</script><script defer="" src="/service-inquiry.js"></script><script>
 (function(){
-  if (new URLSearchParams(location.search).get('service') !== 'second-opinion-agenturreport') return;
+  const params = new URLSearchParams(location.search);
+  if (params.get('service') !== 'second-opinion-agenturreport') return;
   const form = document.getElementById('contact-form');
-  form.closest('.contact-form-card').querySelector('h2').textContent = 'Second Opinion zum Agenturreport anfragen';
+  const isQuestion = params.get('anliegen') === 'frage';
+  form.closest('.contact-form-card').querySelector('h2').textContent = isQuestion
+    ? 'Fragen zur Second Opinion klären'
+    : 'Second Opinion zum Agenturreport anfragen';
   form.elements.topic.value = 'Second Opinion zum Agenturreport';
-  form.elements.message.placeholder = 'Welches Ziel verfolgen Sie? Welche bis zu drei Fragen soll die Prüfung beantworten?';
+  form.elements.message.placeholder = isQuestion
+    ? 'Was möchten Sie vor der Buchung klären?'
+    : 'Welches Ziel verfolgen Sie? Welche bis zu drei Fragen soll die Prüfung beantworten?';
   form.elements.budget.closest('.field').style.display = 'none';
 })();
 </script>
