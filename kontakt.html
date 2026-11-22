@@ -74,6 +74,45 @@
   outline: 2px solid #111;
   outline-offset: 3px;
 }
+.contact-hero {
+  margin-top: clamp(20px, 4vw, 46px);
+  height: auto;
+  min-height: 300px;
+  aspect-ratio: 21 / 9;
+  background: #080808 center 14% / cover no-repeat url("https://d2ol7oe51mr4n9.cloudfront.net/user_3BonWUjPR6MWFNzvbZ78ajaHQL4/c02cec87-c119-4e7c-a76d-bad75c85f7b1.webp");
+}
+.contact-hero > video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 14%;
+}
+.contact-hero::after {
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(0,0,0,.68), rgba(0,0,0,.45) 48%, rgba(0,0,0,.2));
+}
+.contact-hero .hero-copy {
+  right: 5%;
+  max-width: 90%;
+  color: #fff;
+}
+.contact-hero h1 {
+  font-size: clamp(28px, 6vw, 82px);
+  line-height: 1.02;
+  letter-spacing: -.055em;
+  margin: 0 0 clamp(16px, 2vw, 24px);
+}
+.contact-hero .hero-copy p {
+  font-size: clamp(16px, 1.8vw, 24px);
+  line-height: 1.4;
+  max-width: 650px;
+  margin: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-hero > video { display: none; }
+}
 </style>
 </head><body class="hw-refined">
 <div class="nav-wrap"><div class="wrap"><nav class="site-nav">
@@ -88,6 +127,15 @@
 </div>
 </nav></div></div>
 <main>
+<div class="wrap">
+  <section class="hero-media contact-hero" aria-labelledby="contact-hero-title">
+    <video autoplay muted loop playsinline preload="metadata" poster="https://d2ol7oe51mr4n9.cloudfront.net/user_3BonWUjPR6MWFNzvbZ78ajaHQL4/c02cec87-c119-4e7c-a76d-bad75c85f7b1.webp" aria-hidden="true"><source src="https://d2ol7oe51mr4n9.cloudfront.net/user_3BonWUjPR6MWFNzvbZ78ajaHQL4/94f86253-0ea5-4e80-80b6-98033bf21678.mp4" type="video/mp4"></video>
+    <div class="hero-copy">
+      <h1 id="contact-hero-title">Sprechen wir über Ihr Projekt.</h1>
+      <p>Ob Kampagnen, Tracking oder KI im Marketing: Erzählen Sie uns kurz, was Sie vorhaben.</p>
+    </div>
+  </section>
+</div>
 <section class="section contact-section" id="projektanfrage"><div class="wrap"><div class="contact-shell">
 <div class="contact-form-card"><div class="eyebrow">Projektanfrage</div><h2>Worum geht es in Ihrem Projekt?</h2>
 <form class="contact-form" id="contact-form"><div class="contact-form-grid">
