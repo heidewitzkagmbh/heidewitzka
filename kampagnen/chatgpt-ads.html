@@ -113,9 +113,8 @@
 .gpt-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin-top: 28px; }
 .gpt-text-link { font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
 .gpt-section, #tracking { scroll-margin-top: 100px; }
-.gpt-pilot-intro { padding: clamp(20px, 3vw, 34px); background: #f1f3f6; max-width: 900px; }
-.gpt-pilot-intro h2, .gpt-support h2 { font-size: clamp(34px, 4.5vw, 64px); line-height: 1.05; margin: 0 0 16px; }
-.gpt-pilot-intro p { margin: 0; }
+.gpt-pilot-description { max-width: 78ch; color: #555; font-size: 17px; line-height: 1.6; }
+.gpt-support h2 { font-size: clamp(34px, 4.5vw, 64px); line-height: 1.05; margin: 0 0 16px; }
 .gpt-table-wrap { overflow: auto; margin-top: 26px; border: 1px solid var(--line); border-radius: 18px; }
 .gpt-table-wrap table { width: 100%; border-collapse: collapse; min-width: 620px; text-align: left; font-size: 16px; line-height: 1.5; }
 .gpt-table-wrap th, .gpt-table-wrap td { padding: 16px 20px; vertical-align: top; border-bottom: 1px solid var(--line); }
@@ -167,10 +166,11 @@
 
 <section class="section gpt-section" id="pilot" aria-labelledby="pilot-heading">
   <div class="wrap">
-    <div class="gpt-pilot-intro">
-      <h2 id="pilot-heading">60 Tage testen. Danach entscheiden.</h2>
+    <div class="section-head">
+      <div><h2 id="pilot-heading">60 Tage testen. Danach entscheiden.</h2></div>
       <p>Ein konkretes Angebot, ein messbares Ziel und ein vorab vereinbartes Mediabudget.</p>
     </div>
+    <p class="gpt-pilot-description">Vor dem Start klären wir gemeinsam, was die Kampagne erreichen soll und woran wir ihren Erfolg messen. Dann prüfen wir die Zielseite, bereiten die Anzeigen vor und kontrollieren das Tracking. Mit der Freigabe und dem Start der Kampagne beginnt die 60-tägige Testphase. In zwei Zwischenbesprechungen schauen wir auf Auslieferung, Kosten und die Qualität erster Anfragen oder Käufe. Zum Abschluss gleichen wir die Ergebnisse mit dem vereinbarten Ziel ab und empfehlen, ob sich eine Fortsetzung lohnt, was wir ändern würden oder ob eine Pause sinnvoll ist.</p>
     <div class="gpt-table-wrap" role="region" aria-label="Ablauf des 60-Tage-Piloten" tabindex="0">
       <table>
         <thead><tr><th scope="col">Zeitraum</th><th scope="col">Was wir tun</th><th scope="col">Was Sie erhalten</th></tr></thead>
