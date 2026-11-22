@@ -5,12 +5,25 @@
 
 <title>Google Analytics 4 einrichten | Heidewitzka</title>
 <link href="/styles.css" rel="stylesheet"/>
-<meta content="Erfassen Sie, über welche Kanäle Besucher kommen und welche Anfragen oder Käufe daraus entstehen." name="description"/>
+<meta content="Google Analytics 4 für Produktseiten, Shops und B2B einrichten oder ausbauen: Käufe, Checkout, Kampagnenquellen und qualifizierte Anfragen besser messen." name="description"/>
 <link href="https://www.heidewitzka.io/google-analytics-4-einrichten" rel="canonical"/>
-<meta content="website" property="og:type"/><meta content="Heidewitzka" property="og:site_name"/><meta content="Google Analytics 4 einrichten | Heidewitzka" property="og:title"/><meta content="Erfassen Sie, über welche Kanäle Besucher kommen und welche Anfragen oder Käufe daraus entstehen." property="og:description"/><meta content="https://www.heidewitzka.io/google-analytics-4-einrichten" property="og:url"/><meta content="summary_large_image" name="twitter:card"/>
+<meta content="website" property="og:type"/><meta content="Heidewitzka" property="og:site_name"/><meta content="Google Analytics 4 einrichten | Heidewitzka" property="og:title"/><meta content="Google Analytics 4 für Produktseiten, Shops und B2B einrichten oder ausbauen: Käufe, Checkout, Kampagnenquellen und qualifizierte Anfragen besser messen." property="og:description"/><meta content="https://www.heidewitzka.io/google-analytics-4-einrichten" property="og:url"/><meta content="summary_large_image" name="twitter:card"/>
 <link href="/site-refinement.css?v=20261027" rel="stylesheet"/><link href="/service-details.css?v=20261028" rel="stylesheet"/><style>
 .product-booking-actions { display:flex; flex-wrap:wrap; gap:12px; }
 .product-booking-actions a + a { background:#fff; color:#111; border:1px solid var(--line); }
+
+.ga4-quicklinks { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; }
+.ga4-use-case-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 6vw, 88px); align-items: start; }
+.ga4-use-case-intro h2 { font-size: clamp(34px, 4vw, 56px); line-height: 1.06; margin-bottom: 20px; }
+.ga4-use-case-intro p, .ga4-use-case-list { color: #444; font-size: 18px; line-height: 1.6; }
+.ga4-use-case-example { margin-top: 25px; padding: 22px; border: 1px solid var(--teaser-border); border-radius: 16px; background: #f4f5f7; }
+.ga4-use-case-example h3 { margin: 0 0 8px; font-size: 21px; }
+.ga4-use-case-example p { margin: 0; font-size: 16px; }
+.ga4-use-case-list { margin: 0; padding-inline-start: 23px; }
+.ga4-use-case-list li + li { margin-top: 15px; }
+@media (max-width: 850px) {
+  .ga4-use-case-grid { grid-template-columns: minmax(0, 1fr); }
+}
 </style></head><body class="hw-refined">
 <div class="nav-wrap"><div class="wrap"><nav class="site-nav">
 <a class="logo" href="/">heidewitzka</a>
@@ -27,8 +40,8 @@
 <section class="product-detail-hero"><div class="wrap">
   <div class="product-breadcrumb"><a href="/shop">Leistungen &amp; Preise</a><span aria-hidden="true">→</span><span>Google Analytics 4 einrichten</span></div>
   <div class="product-detail-grid">
-    <div class="hw-audit-summary"><h2>Was Sie erhalten</h2><ol><li>Datenquelle einrichten</li><li>Schlüsselereignisse festlegen</li><li>Messung testen</li></ol><a href="#leistungsumfang">Zum Leistungsumfang ↓</a></div>
-    <div class="product-detail-buy"><div class="eyebrow">Tracking &amp; Daten</div><h1>Google Analytics 4 einrichten</h1><p class="product-detail-lead">Erfassen Sie, über welche Kanäle Besucher kommen und welche Anfragen oder Käufe daraus entstehen.</p><div class="product-detail-price">125 € <span>pro Stunde · zzgl. MwSt.</span></div>
+    <div class="hw-audit-summary"><h2>Was Sie erhalten</h2><ol><li>Datenquelle einrichten</li><li>Schlüsselereignisse festlegen</li><li>Messung testen</li></ol><a href="#leistungsumfang">Zum Leistungsumfang ↓</a><div class="ga4-quicklinks"><a href="#shops">Produktseiten und Shops ↓</a><a href="#b2b-leads">B2B-Leads ↓</a></div></div>
+    <div class="product-detail-buy"><div class="eyebrow">Tracking &amp; Daten</div><h1>Google Analytics 4 einrichten</h1><p class="product-detail-lead">Sie sehen, wo Käufer im Shop aussteigen und welche Kampagnen passende B2B-Anfragen bringen. Wir richten GA4 dafür ein oder bauen Ihre bestehende Messung aus.</p><div class="product-detail-price">125 € <span>pro Stunde · zzgl. MwSt.</span></div>
     <p class="hw-scope-note">Wir schätzen den Aufwand vorab. Abgerechnet wird der vereinbarte Aufwand zum ausgewiesenen Stundensatz.</p>
     <div class="product-booking-actions"><a class="btn product-detail-cta" href="#direkt-buchen">Jetzt direkt buchen <span aria-hidden="true">↗</span></a> <a class="btn product-detail-cta" href="/kontakt?service=ga4-einrichtung#projektanfrage">Fragen klären <span aria-hidden="true">↗</span></a></div><p class="product-detail-note">Buchung per E-Mail mit anschließender Auftragsbestätigung.</p></div>
   </div>
@@ -41,7 +54,52 @@
   <div class="product-scope-card"><h3>Messung testen</h3><p>Testanfragen oder Testkäufe auslösen und prüfen, ob Ereignisse und Kampagnenquellen korrekt ankommen.</p></div>
 </div>
 </div></section>
-<section class="section" id="direkt-buchen" aria-labelledby="buchung-heading"><div class="wrap"><div class="product-detail-bottom-cta"><div><h2 id="buchung-heading">Google Analytics 4 einrichten buchen</h2><p>Das Honorar beträgt 125 € netto pro Stunde zzgl. MwSt. Schicken Sie uns die Eckdaten per E-Mail. Wir bestätigen Aufwand und Termin vor dem Start.</p></div><a class="btn product-detail-cta" href="mailto:hello@heidewitzka.io?subject=Buchungsanfrage%20%C2%B7%20Google%20Analytics%204%20einrichten&amp;body=Guten%20Tag%2C%0A%0Aich%20m%C3%B6chte%20folgende%20Leistung%20buchen%3A%20Google%20Analytics%204%20einrichten%20(125%20%E2%82%AC%20pro%20Stunde%20%C2%B7%20netto).%0A%0AUnternehmen%3A%0AWebsite%3A%0ABesteht%20bereits%20eine%20GA4-Property%3F%0AWelche%20Aktionen%20sollen%20gemessen%20werden%3F%0AGew%C3%BCnschter%20Termin%3A%0A%0AViele%20Gr%C3%BC%C3%9Fe">Buchung per E-Mail anfragen <span aria-hidden="true">↗</span></a></div></div></section>
+<section class="section ga4-use-case" id="shops" aria-labelledby="shops-heading">
+  <div class="wrap ga4-use-case-grid">
+    <div class="ga4-use-case-intro">
+      <div class="eyebrow">E-Commerce</div>
+      <h2 id="shops-heading">GA4-Ausbau für Produktseiten und Shops</h2>
+      <p>Welche Produkte werden gefunden, welche landen im Warenkorb und wo bricht der Kauf ab? Wir bauen die Messung so auf, dass Sie diese Fragen nach Produktgruppe, Gerät und Kampagnenquelle beantworten können.</p>
+      <aside class="ga4-use-case-example" aria-label="Beispiel">
+        <h3>Was Ihnen die Auswertung zeigt</h3>
+        <p>Viele klicken auf die Produktseite, wenige legen den Artikel in den Warenkorb. Die Auswertung zeigt, ob das vor allem bei einer Variante, auf Mobilgeräten oder bei einer bestimmten Kampagne passiert.</p>
+      </aside>
+    </div>
+    <ul class="ga4-use-case-list">
+      <li><strong>Produktsuche und Listen.</strong> Kategorie- und Listenaufrufe, Produktklicks sowie interne Suchbegriffe erfassen. So sehen Sie, welche Artikel Nutzer in einer Liste finden und wo die Suche ins Leere läuft, sofern der Shop diese Information bereitstellt.</li>
+      <li><strong>Produktdetails und Varianten.</strong> Artikel-ID, Produktname, Kategorie, Marke und Variante konsistent übergeben. Für Produktseiten ohne Checkout können wir etwa Händlerklicks oder Produktanfragen als eigene Ziele erfassen.</li>
+      <li><strong>Warenkorb bis Checkout.</strong> Hinzufügen und Entfernen, Beginn des Checkouts und verfügbare Schritte für Versand und Zahlungsart messen. Daraus lässt sich ein Trichter nach Gerät oder Kanal erstellen.</li>
+      <li><strong>Bestellungen und Erstattungen.</strong> Transaktions-ID, Währung, Bestellwert und Artikelpositionen prüfen. Doppelte Kaufereignisse vermeiden und Erstattungen anbinden, wenn die Shopdaten dafür vorliegen.</li>
+      <li><strong>Aktionen und Gutscheine.</strong> Interne Werbeflächen und Produktaktionen messen sowie Gutscheine oder Rabatte auswerten, wenn die Shopintegration diese Daten liefert.</li>
+      <li><strong>Zahlungsanbieter und Kampagnenquellen.</strong> Externe Zahlungsanbieter und Domainwechsel prüfen. Sicherstellen, dass der Kauf nach der Rückkehr dem richtigen Besuch zugeordnet werden kann.</li>
+      <li><strong>Testkauf und Abgleich.</strong> Einen Testkauf durchspielen und den erfassten Artikel, Bestellwert und die Quelle in GA4 mit der Bestellung im Shop abgleichen.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section ga4-use-case" id="b2b-leads" aria-labelledby="b2b-leads-heading">
+  <div class="wrap ga4-use-case-grid">
+    <div class="ga4-use-case-intro">
+      <div class="eyebrow">B2B-Leadgenerierung</div>
+      <h2 id="b2b-leads-heading">GA4-Ausbau für B2B-Unternehmen</h2>
+      <p>Welche Kanäle bringen Anfragen, die der Vertrieb weiterverfolgen kann? Wir erfassen erfolgreiche Anfragen und stimmen mit Ihnen ab, welche späteren Schritte sich aus Ihrem CRM zurückmelden lassen.</p>
+      <aside class="ga4-use-case-example" aria-label="Beispiel">
+        <h3>Was Ihnen die Auswertung zeigt</h3>
+        <p>Zwei Kampagnen bringen gleich viele Formulare. Im CRM zeigt sich, aus welcher Kampagne tatsächlich passende Projekte und bestätigte Vertriebsgespräche hervorgehen.</p>
+      </aside>
+    </div>
+    <ul class="ga4-use-case-list">
+      <li><strong>Das tatsächliche Absenden messen.</strong> Formularstarts, Fehler und Abbrüche für die Diagnose erfassen. Eine Anfrage erst dann zählen, wenn das Formular erfolgreich angenommen wurde.</li>
+      <li><strong>Kontaktwege unterscheiden.</strong> Demo-Anfragen, Terminbuchungen, Angebotsanfragen und Downloads mit eigenen Ereignissen oder Merkmalen auswerten. Telefon- und E-Mail-Klicks zählen als Kontaktabsicht.</li>
+      <li><strong>Quellen und Einstiegsseiten abbilden.</strong> UTM-Kennzeichnungen vereinheitlichen. Landingpage, Kampagnenquelle und Anfrageweg prüfen, auch wenn ein externer Kalender oder ein eingebettetes Formular beteiligt ist.</li>
+      <li><strong>Qualität aus dem CRM einbeziehen.</strong> Wenn CRM, Einwilligung und technische Zuordnung es erlauben, qualifizierte Leads und gewonnene Kunden als spätere Ereignisse ergänzen. Namen, E-Mail-Adressen und Freitext bleiben im CRM.</li>
+      <li><strong>Schlüsselereignisse gezielt auswählen.</strong> Erfolgreiche Anfragen oder bestätigte Buchungen als Schlüsselereignisse definieren. Frühe Interaktionen wie Downloads getrennt betrachten.</li>
+      <li><strong>Lange Entscheidungswege auswerten.</strong> Anfragen und spätere Vertriebsfortschritte nach Quelle und Zeitraum betrachten, soweit die CRM-Daten eine Zuordnung ermöglichen.</li>
+      <li><strong>Testanfrage bis ins CRM prüfen.</strong> Eine Anfrage durchspielen und zeigen, welche Ereignisse in GA4 erscheinen, wo der Datensatz im CRM landet und welche Rückmeldungen verfügbar sind.</li>
+    </ul>
+  </div>
+</section>
+<section class="section" id="direkt-buchen" aria-labelledby="buchung-heading"><div class="wrap"><div class="product-detail-bottom-cta"><div><h2 id="buchung-heading">GA4-Einrichtung buchen</h2><p>Das Honorar beträgt 125 € netto pro Stunde zzgl. MwSt. Schicken Sie uns die Eckdaten per E-Mail. Wir bestätigen Aufwand und Termin vor dem Start.</p></div><a class="btn product-detail-cta" href="mailto:hello@heidewitzka.io?subject=Buchungsanfrage%20%C2%B7%20Google%20Analytics%204%20einrichten&amp;body=Guten%20Tag%2C%0A%0Aich%20m%C3%B6chte%20folgende%20Leistung%20buchen%3A%20Google%20Analytics%204%20einrichten%20(125%20%E2%82%AC%20pro%20Stunde%20%C2%B7%20netto).%0A%0AUnternehmen%3A%0AWebsite%3A%0ABesteht%20bereits%20eine%20GA4-Property%3F%0AWelche%20Aktionen%20sollen%20gemessen%20werden%3F%0AGew%C3%BCnschter%20Termin%3A%0A%0AViele%20Gr%C3%BC%C3%9Fe">Buchung per E-Mail anfragen <span aria-hidden="true">↗</span></a></div></div></section>
 </main>
 <footer class="footer"><div class="wrap"><div class="footer-grid">
 <div><strong>.heidewitzka</strong><p style="color:#aaa;max-width:420px">Performance Marketing + AI Operations im Marketing.</p></div>
