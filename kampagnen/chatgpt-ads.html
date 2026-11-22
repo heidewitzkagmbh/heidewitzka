@@ -150,7 +150,22 @@
 }
 .gpt-note { margin-top: 18px; color: #555; font-size: 15px; }
 .gpt-section .campaign-faq-item:last-child { border-bottom: 0; }
-#gespraech { margin-bottom: 24px; }
+.hw-refined .gpt-page { --gpt-section-space: 64px; --gpt-content-gap: 32px; }
+.hw-refined .gpt-page > .page-hero { padding-bottom: var(--gpt-section-space); }
+.hw-refined .gpt-page > .section { padding-block: var(--gpt-section-space); }
+.hw-refined .gpt-page > .section .section-head { margin-bottom: var(--gpt-content-gap); gap: 20px; }
+.hw-refined .gpt-page > #gespraech { margin: var(--gpt-section-space) auto; }
+.gpt-offer-actions { display: grid; gap: 10px; margin-top: auto; }
+.gpt-offer-actions .gpt-offer-inquiry { background: #fff; color: #111; border: 1px solid #c7cdd4; }
+.gpt-offer-actions .gpt-offer-inquiry:hover { background: #f4f5f7; }
+.campaign-data-grid .campaign-data-card { display: flex; flex-direction: column; }
+.campaign-data-card .gpt-offer-actions { padding-top: 20px; }
+.campaign-data-card .gpt-offer-actions .btn { justify-content: space-between; border-radius: 10px; }
+@media (max-width: 900px) { .hw-refined .gpt-page { --gpt-section-space: 48px; --gpt-content-gap: 28px; } }
+@media (max-width: 640px) {
+  .hw-refined .gpt-page { --gpt-section-space: 40px; --gpt-content-gap: 24px; }
+  .hw-refined .gpt-page > .section .section-head { gap: 16px; }
+}
 .blog-preview .blog-preview-cta { justify-self: start; }
 </style><link href="/site-refinement.css?v=20261027" rel="stylesheet"/></head><body class="hw-refined"><div class="nav-wrap"><div class="wrap"><nav class="site-nav">
 <a class="logo" href="/">heidewitzka</a>
@@ -163,7 +178,7 @@
 <a class="nav-consultation" href="https://calendly.com/vogt-heidewitzka/30min" rel="noopener noreferrer" target="_blank">20-Minuten-Gespräch buchen</a>
 </div>
 </nav></div></div>
-<main>
+<main class="gpt-page">
 <section class="page-hero campaign-page-hero gpt-hero" aria-labelledby="gpt-heading">
   <div class="wrap">
     <div class="campaign-hero-copy">
@@ -234,7 +249,7 @@
           <li>Zwei Zwischenbesprechungen und eine Abschlussauswertung</li>
         </ul>
         <p class="hw-scope-note">Das Mediabudget wird separat vereinbart.</p>
-        <a class="btn" href="/kontakt?service=chatgpt-ads-pilot#projektanfrage">Pilot anfragen <span aria-hidden="true">↗</span></a>
+        <div class="gpt-offer-actions"><a class="btn" href="/chatgpt-ads-pilot">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn gpt-offer-inquiry" href="/kontakt?service=chatgpt-ads-pilot#projektanfrage">Pilot anfragen <span aria-hidden="true">↗</span></a></div>
       </article>
       <article class="hw-service">
         <div class="eyebrow">Nach Aufwand</div>
@@ -247,7 +262,7 @@
           <li>Tracking prüfen, Ergebnisse einordnen oder Fragen im Sparring klären</li>
         </ul>
         <p class="hw-scope-note">Den Aufwand stimmen wir vorab mit Ihnen ab.</p>
-        <a class="btn" href="/kontakt?service=chatgpt-ads-stunden#projektanfrage">Stundenweise Hilfe anfragen <span aria-hidden="true">↗</span></a>
+        <div class="gpt-offer-actions"><a class="btn" href="/marketing-unterstuetzung">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn gpt-offer-inquiry" href="/kontakt?service=chatgpt-ads-stunden#projektanfrage">Stundenweise Hilfe anfragen <span aria-hidden="true">↗</span></a></div>
       </article>
       <article class="hw-service">
         <div class="eyebrow">Fortlaufend</div>
@@ -323,6 +338,7 @@
       <li>Anfragen und Käufe als Ereignisse erfassen und als Schlüsselereignisse markieren.</li>
       <li>Testanfragen und Testkäufe auslösen und prüfen, ob Ereignisse und Kampagnenquellen korrekt ankommen.</li>
     </ul>
+    <div class="gpt-offer-actions"><a class="btn" href="/google-analytics-4-einrichten">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn gpt-offer-inquiry" href="/kontakt?service=ga4-einrichtung#projektanfrage">Einrichtung anfragen <span aria-hidden="true">↗</span></a></div>
   </article>
   <article class="campaign-data-card">
     <h3>Search Console einrichten</h3>
@@ -331,6 +347,7 @@
       <li>XML-Sitemap einreichen und prüfen, ob wichtige Seiten bei Google indexiert sind.</li>
       <li>Suchanfragen, Impressionen und Klicks aus der unbezahlten Google-Suche auswerten.</li>
     </ul>
+    <div class="gpt-offer-actions"><a class="btn" href="/search-console-einrichten">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn gpt-offer-inquiry" href="/kontakt?service=search-console-einrichtung#projektanfrage">Einrichtung anfragen <span aria-hidden="true">↗</span></a></div>
   </article>
   <article class="campaign-data-card">
     <h3>Tag Management einrichten</h3>
@@ -339,6 +356,7 @@
       <li>Einwilligungssignale aus dem Cookie-Banner anbinden und prüfen, wann Tags ausgelöst werden.</li>
       <li>Tags im Vorschaumodus testen, veröffentlichen und die Einrichtung dokumentieren.</li>
     </ul>
+    <div class="gpt-offer-actions"><a class="btn" href="/tag-manager-einrichten">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn gpt-offer-inquiry" href="/kontakt?service=tag-manager-einrichtung#projektanfrage">Einrichtung anfragen <span aria-hidden="true">↗</span></a></div>
   </article>
 </div></div></section>
 
