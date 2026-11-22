@@ -125,11 +125,6 @@
 .gpt-table-wrap thead { background: #f1f3f6; }
 .gpt-table-wrap th:first-child { width: 18%; }
 .gpt-table-wrap tbody tr:last-child > * { border-bottom: 0; }
-.gpt-offer-grid.shop-listing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.gpt-offer-grid .shop-card { min-width: 0; min-height: 0; border-radius: 24px; }
-.gpt-offer-grid .shop-card-media { height: 128px; }
-.gpt-offer-grid .shop-card h3 { font-size: clamp(24px, 2.2vw, 31px); }
-.gpt-offer-grid .shop-button { align-self: flex-start; }
 .gpt-note { margin-top: 18px; color: #555; font-size: 15px; }
 .gpt-support { display: grid; grid-template-columns: 1.15fr 1fr; gap: 42px; align-items: start; }
 .gpt-support ul { margin: 8px 0 0; padding-inline-start: 24px; }
@@ -138,7 +133,7 @@
 .gpt-section .campaign-faq-item:last-child { border-bottom: 0; }
 #gespraech { margin-bottom: 24px; }
 @media (max-width: 760px) {
-  .gpt-offer-grid.shop-listing-grid, .gpt-support { grid-template-columns: 1fr; }
+  .gpt-support { grid-template-columns: 1fr; }
   .gpt-support { gap: 16px; }
   .gpt-table-wrap th, .gpt-table-wrap td { padding: 12px; }
 }
@@ -194,40 +189,46 @@
 <section class="section gpt-section" id="angebote" aria-labelledby="angebote-heading">
   <div class="wrap">
     <div class="section-head"><h2 id="angebote-heading">Drei Wege, das Thema anzugehen.</h2></div>
-    <div class="gpt-offer-grid shop-program-grid shop-listing-grid">
-    <article class="shop-card shop-listing-card">
-      <div class="shop-card-media"><img src="/assets/chatgpt-ads-icon.png" alt="" loading="lazy" width="80" height="80"></div>
-      <div class="shop-card-body">
+    <div class="hw-services">
+      <article class="hw-service">
         <div class="eyebrow">60 Tage</div>
         <h3>ChatGPT Ads Pilot</h3>
         <p>Für Unternehmen, die mit einem konkreten Angebot herausfinden möchten, ob der Kanal zu ihnen passt.</p>
-        <ul class="shop-card-points"><li>Eignungsprüfung, Kampagnenaufbau und bis zu drei Anzeigenvarianten</li><li>Messung im bestehenden Setup prüfen und die Kampagne nach Freigabe starten</li><li>Zwei Zwischenbesprechungen und eine Abschlussauswertung</li></ul>
-        <div class="price">2.400 € netto einmalig</div>
-        <a class="shop-button" href="/kontakt?service=chatgpt-ads-pilot#projektanfrage">Pilot anfragen</a>
-      </div>
-    </article>
-    <article class="shop-card shop-listing-card">
-      <div class="shop-card-media"><img src="/assets/chatgpt-ads-icon.png" alt="" loading="lazy" width="80" height="80"></div>
-      <div class="shop-card-body">
+        <div class="hw-price">2.400 €<span>einmalig · netto</span></div>
+        <ul>
+          <li>Eignungsprüfung, Kampagnenaufbau und bis zu drei Anzeigenvarianten</li>
+          <li>Prüfung der bestehenden Messung und Kampagnenstart nach Freigabe</li>
+          <li>Zwei Zwischenbesprechungen und eine Abschlussauswertung</li>
+        </ul>
+        <p class="hw-scope-note">Das Mediabudget wird separat vereinbart.</p>
+        <a class="btn" href="/kontakt?service=chatgpt-ads-pilot#projektanfrage">Pilot anfragen <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="hw-service">
         <div class="eyebrow">Nach Aufwand</div>
         <h3>Betreuung pro Stunde</h3>
-        <p>Für einzelne Aufgaben oder als Unterstützung für Ihr Marketingteam. Den Aufwand stimmen wir vorab mit Ihnen ab.</p>
-        <ul class="shop-card-points"><li>Kampagnenstruktur, Anzeigen und Einstellungen prüfen</li><li>Neue Anzeigenvarianten und Kontexthinweise ausarbeiten</li><li>Tracking prüfen, Ergebnisse einordnen oder Fragen im Sparring klären</li></ul>
-        <div class="price">120 € netto pro Stunde</div>
-        <a class="shop-button" href="/kontakt?service=chatgpt-ads-stunden#projektanfrage">Stundenweise Hilfe anfragen</a>
-      </div>
-    </article>
-    <article class="shop-card shop-listing-card">
-      <div class="shop-card-media"><img src="/assets/chatgpt-ads-icon.png" alt="" loading="lazy" width="80" height="80"></div>
-      <div class="shop-card-body">
+        <p>Für einzelne Aufgaben oder als Unterstützung für Ihr Marketingteam.</p>
+        <div class="hw-price">120 €<span>pro Stunde · netto</span></div>
+        <ul>
+          <li>Kampagnenstruktur, Anzeigen und Einstellungen prüfen</li>
+          <li>Neue Anzeigenvarianten und Kontexthinweise ausarbeiten</li>
+          <li>Tracking prüfen, Ergebnisse einordnen oder Fragen im Sparring klären</li>
+        </ul>
+        <p class="hw-scope-note">Den Aufwand stimmen wir vorab mit Ihnen ab.</p>
+        <a class="btn" href="/kontakt?service=chatgpt-ads-stunden#projektanfrage">Stundenweise Hilfe anfragen <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="hw-service">
         <div class="eyebrow">Fortlaufend</div>
         <h3>Laufende Betreuung</h3>
         <p>Für Unternehmen, die den Pilot weiterführen oder bestehende ChatGPT-Kampagnen ausbauen möchten.</p>
-        <ul class="shop-card-points"><li>Budget, Auslieferung und Kampagnenleistung steuern</li><li>Anzeigentexte, Motive und Einsatzfälle weiter testen</li><li>Ergebnisse auswerten und nächste Maßnahmen priorisieren</li></ul>
-        <div class="price">Honorar auf Anfrage</div>
-        <a class="shop-button" href="/kontakt?service=chatgpt-ads-betreuung#projektanfrage">Betreuung anfragen</a>
-      </div>
-    </article>
+        <div class="hw-price">Auf Anfrage</div>
+        <ul>
+          <li>Budget, Auslieferung und Kampagnenleistung steuern</li>
+          <li>Anzeigentexte, Motive und Einsatzfälle weiter testen</li>
+          <li>Ergebnisse auswerten und nächste Maßnahmen priorisieren</li>
+        </ul>
+        <p class="hw-scope-note">Umfang und Abstimmungsrhythmus richten sich nach Ihren Zielen.</p>
+        <a class="btn" href="/kontakt?service=chatgpt-ads-betreuung#projektanfrage">Betreuung anfragen <span aria-hidden="true">↗</span></a>
+      </article>
     </div>
     <p class="gpt-note">Alle Honorare zzgl. MwSt. Mediabudget, neue Landingpages und ein umfangreicher Tracking-Aufbau werden separat vereinbart.</p>
   </div>
