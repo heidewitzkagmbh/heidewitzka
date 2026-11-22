@@ -42,6 +42,38 @@
   text-decoration: underline;
   text-underline-offset: 0.12em;
 }
+.contact-reply-preferences {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-inline-size: 0;
+}
+.contact-reply-preferences legend {
+  padding: 0;
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.contact-reply-preferences label {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.contact-form .contact-reply-preferences input[type="checkbox"] {
+  appearance: auto;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: .15em 0 0;
+  padding: 0;
+  accent-color: #111;
+}
+.contact-form .contact-reply-preferences input[type="checkbox"]:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
 </style>
 </head><body class="hw-refined">
 <div class="nav-wrap"><div class="wrap"><nav class="site-nav">
@@ -65,14 +97,11 @@
 <div class="field"><label for="topic">Worum geht es?</label><select id="topic" name="topic" required=""><option disabled="" selected="" value="">Bitte auswählen</option><option>Kampagnenmanagement</option><option>Performance Marketing</option><option>KI / Automation</option><option>Tracking / Analytics</option><option>Audit / Setup</option><option>Second Opinion zum Agenturreport</option><option>White Label</option><option>Freelancer-Team</option><option>Etwas anderes</option></select></div>
 <div class="field full"><label for="budget">Media-Budget pro Monat <span>optional</span></label><select id="budget" name="budget"><option value="">Noch offen / nicht relevant</option><option>bis 5.000 €</option><option>5.000–15.000 €</option><option>15.000–50.000 €</option><option>über 50.000 €</option></select></div>
 <div class="field full"><label for="message">Was ist die Aufgabe?</label><textarea id="message" name="message" placeholder="Ziel, aktuelle Situation, Kanäle oder das Problem in ein paar Sätzen." required=""></textarea></div>
-<div class="field full">
-  <label for="reply-preference">Wie wünschen Sie die Antwort auf Ihre Anfrage?</label>
-  <select id="reply-preference" name="reply-preference">
-    <option value="">Bitte auswählen (optional)</option>
-    <option>Telefonat vereinbaren</option>
-    <option>Kurze Rückmeldung und Einschätzung per E-Mail</option>
-  </select>
-</div>
+<fieldset class="field full contact-reply-preferences">
+  <legend>Wie wünschen Sie die Antwort auf Ihre Anfrage?</legend>
+  <label><input type="checkbox" name="reply-preference" value="Telefonat vereinbaren"/> Telefonat vereinbaren</label>
+  <label><input type="checkbox" name="reply-preference" value="Kurze Rückmeldung und Einschätzung per E-Mail"/> Kurze Rückmeldung und Einschätzung per E-Mail</label>
+</fieldset>
 </div>
 <div class="contact-submit-row"><button class="btn contact-submit" type="submit">Anfrage im E-Mail-Programm öffnen →</button><p>Der Button öffnet Ihr E-Mail-Programm mit den vorausgefüllten Angaben. Versendet wird die Anfrage erst dort. Alternativ schreiben Sie direkt an hello@heidewitzka.io. <a href="/datenschutz#kontakt">Datenschutzhinweise</a></p></div>
 </form></div>
@@ -86,7 +115,7 @@
 </div></section>
 </main>
 <footer class="footer"><div class="wrap"><div class="footer-grid"><div><strong>.heidewitzka</strong><p style="color:#aaa;max-width:420px">Performance Marketing + AI Operations im Marketing.</p></div><div><strong>Leistungen</strong><a href="/performance.html">Performance Marketing</a><a href="/kampagnen">Kampagnenmanagement</a><a href="/ai.html">KI im Marketing</a><a href="/agentic.html">Agentic Marketing</a></div><div><strong>Kanäle</strong><a href="/channels.html#search">Search Engines</a><a href="/channels.html#meta">Meta</a><a href="/channels.html#linkedin">LinkedIn</a><a href="/channels.html#pinterest">Pinterest</a><a href="/channels.html#youtube">YouTube</a></div><div><strong>Mehr</strong><a href="/shop.html">Leistungen &amp; Preise</a><a href="/insights.html">Blog</a><a href="/kontakt">Kontakt</a></div></div></div><div class="wrap footer-login-row"><a class="footer-login" href="/intern">Login <span aria-hidden="true">↗</span></a></div><div class="wrap footer-legal-row"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a></div></footer>
-<script>document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const subject='Projektanfrage Heidewitzka – '+(d.get('topic')||'Allgemein');const lines=['Name: '+(d.get('name')||''),'Unternehmen: '+(d.get('company')||''),'E-Mail: '+(d.get('email')||''),'Thema: '+(d.get('topic')||''),'Media-Budget: '+(d.get('budget')||'nicht angegeben')];const replyPreference=d.get('reply-preference');if(replyPreference)lines.push('Gewünschte Rückmeldung: '+replyPreference);lines.push('','Aufgabe:',d.get('message')||'');window.location.href='mailto:hello@heidewitzka.io?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));});</script>
+<script>document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const subject='Projektanfrage Heidewitzka – '+(d.get('topic')||'Allgemein');const lines=['Name: '+(d.get('name')||''),'Unternehmen: '+(d.get('company')||''),'E-Mail: '+(d.get('email')||''),'Thema: '+(d.get('topic')||''),'Media-Budget: '+(d.get('budget')||'nicht angegeben')];const replyPreferences=d.getAll('reply-preference');if(replyPreferences.length)lines.push('Gewünschte Rückmeldung: '+replyPreferences.join(', '));lines.push('','Aufgabe:',d.get('message')||'');window.location.href='mailto:hello@heidewitzka.io?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));});</script>
 <script>(function(){const nav=document.querySelector('.site-nav'),btn=document.querySelector('.nav-toggle'),menu=document.querySelector('.nav-links');if(!nav||!btn||!menu)return;const close=()=>{nav.classList.remove('menu-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü öffnen');document.body.classList.remove('nav-open')};btn.addEventListener('click',()=>{const open=!nav.classList.contains('menu-open');nav.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');document.body.classList.toggle('nav-open',open)});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});window.addEventListener('resize',()=>{if(window.innerWidth>900)close()})})();</script>
 <script>(function(){const cases={"netflix-ads": "Netflix Ads & Streaming-Werbung","research-opportunities": "Research & Opportunities", "targeting-kampagnensteuerung": "Targeting & Kampagnensteuerung", "content-creatives": "Content & Creatives", "tracking-analyse-automation": "Tracking, Analyse & Automation", "market-intelligence": "Research & Opportunities", "campaign-intelligence": "Targeting & Kampagnensteuerung", "content-creative-generation": "Content & Creatives", "predictive-monitoring": "Tracking, Analyse & Automation", "lead-intelligence": "Tracking, Analyse & Automation", "workflow-automation": "Tracking, Analyse & Automation", "plattform-ki": "Plattform-KI"};const key=new URLSearchParams(location.search).get('use_case');if(!Object.prototype.hasOwnProperty.call(cases,key))return;const topic=document.getElementById('topic');const message=document.getElementById('message');const label=cases[key];const option=document.createElement('option');option.value=label;option.textContent=label;topic.appendChild(option);topic.value=label;if(!message.value)message.value='Ich interessiere mich für '+label+' im Kampagnenmanagement.\n\nUnsere aktuelle Situation:\n\nUnser Ziel:\n';})();</script><script defer="" src="/service-inquiry.js"></script><script>
 (function(){
