@@ -114,17 +114,41 @@
 }
 .gpt-text-link { font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
 .gpt-section, #tracking { scroll-margin-top: 100px; }
-.gpt-pilot-description { max-width: 78ch; padding-top: 10px; color: #555; font-size: 20px; line-height: 1.58; }
+.gpt-pilot-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 22px clamp(28px, 5vw, 76px);
+  align-items: end;
+  margin-bottom: 34px;
+}
+.gpt-pilot-intro h2 { max-width: 15ch; }
+.gpt-pilot-intro p { max-width: 52ch; margin: 0; color: #555; font-size: 20px; line-height: 1.58; }
+.gpt-pilot-table { width: 100%; border-collapse: separate; border-spacing: 0; text-align: left; font-size: 17px; line-height: 1.5; }
+.gpt-pilot-table th, .gpt-pilot-table td { padding: 20px clamp(16px, 2.4vw, 34px); vertical-align: top; }
+.gpt-pilot-table thead th { padding-block: 13px; background: #111; color: #fff; font-size: 14px; }
+.gpt-pilot-table thead th:first-child { border-radius: 16px 0 0 0; }
+.gpt-pilot-table thead th:last-child { border-radius: 0 16px 0 0; }
+.gpt-pilot-table tbody tr > * { border-bottom: 1px solid var(--line); }
+.gpt-pilot-table tbody th { width: 24%; }
+.gpt-pilot-table tbody td:last-child { width: 34%; background: #f4f5f7; }
+.gpt-pilot-table tbody tr:last-child td:last-child { background: #e7f7ef; border-radius: 0 0 16px 0; }
+.gpt-pilot-phase { display: block; font-size: 21px; line-height: 1.2; }
+.gpt-pilot-time { display: block; margin-top: 5px; color: #555; font-size: 14px; font-weight: 400; }
+.gpt-pilot-result-label { display: none; }
 @media (max-width: 900px) {
-  .gpt-pilot-description { font-size: 18px; }
+  .gpt-pilot-intro { grid-template-columns: 1fr; }
+  .gpt-pilot-intro p { font-size: 18px; }
+}
+@media (max-width: 660px) {
+  .gpt-pilot-table, .gpt-pilot-table tbody { display: block; }
+  .gpt-pilot-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .gpt-pilot-table tbody tr { display: grid; border-top: 1px solid var(--line); padding: 16px 0; }
+  .gpt-pilot-table tbody tr > * { padding: 0 0 10px; border: 0; }
+  .gpt-pilot-table tbody th, .gpt-pilot-table tbody td:last-child { width: auto; }
+  .gpt-pilot-table tbody td:last-child, .gpt-pilot-table tbody tr:last-child td:last-child { padding: 12px 14px; border-radius: 10px; }
+  .gpt-pilot-result-label { display: block; margin-bottom: 3px; font-size: 14px; font-weight: 700; }
 }
 .gpt-support h2 { font-size: clamp(34px, 4.5vw, 64px); line-height: 1.05; margin: 0 0 16px; }
-.gpt-table-wrap { overflow: auto; margin-top: 26px; border: 1px solid var(--line); border-radius: 18px; }
-.gpt-table-wrap table { width: 100%; border-collapse: collapse; min-width: 620px; text-align: left; font-size: 16px; line-height: 1.5; }
-.gpt-table-wrap th, .gpt-table-wrap td { padding: 16px 20px; vertical-align: top; border-bottom: 1px solid var(--line); }
-.gpt-table-wrap thead { background: #f1f3f6; }
-.gpt-table-wrap th:first-child { width: 18%; }
-.gpt-table-wrap tbody tr:last-child > * { border-bottom: 0; }
 .gpt-note { margin-top: 18px; color: #555; font-size: 15px; }
 .gpt-support { display: grid; grid-template-columns: 1.15fr 1fr; gap: 42px; align-items: start; }
 .gpt-support ul { margin: 8px 0 0; padding-inline-start: 24px; }
@@ -135,7 +159,6 @@
 @media (max-width: 760px) {
   .gpt-support { grid-template-columns: 1fr; }
   .gpt-support { gap: 16px; }
-  .gpt-table-wrap th, .gpt-table-wrap td { padding: 12px; }
 }
 .blog-preview .blog-preview-cta { justify-self: start; }
 </style><link href="/site-refinement.css?v=20261027" rel="stylesheet"/></head><body class="hw-refined"><div class="nav-wrap"><div class="wrap"><nav class="site-nav">
@@ -167,22 +190,41 @@
 
 <section class="section gpt-section" id="pilot" aria-labelledby="pilot-heading">
   <div class="wrap">
-    <div class="section-head">
-      <div><h2 id="pilot-heading">60 Tage testen. Danach entscheiden.</h2></div>
-      <p>Ein konkretes Angebot, ein messbares Ziel und ein vorab vereinbartes Mediabudget.</p>
+    <div class="gpt-pilot-intro">
+      <h2 id="pilot-heading">60 Tage testen. Danach entscheiden.</h2>
+      <p>Wir testen ein konkretes Angebot mit einem messbaren Ziel und festem Mediabudget. Die 60 Tage beginnen mit dem Kampagnenstart. Nach zwei Zwischenbesprechungen und der Abschlussauswertung wissen Sie, welche nächsten Schritte sinnvoll sind.</p>
     </div>
-    <p class="gpt-pilot-description">Vor dem Start klären wir gemeinsam, was die Kampagne erreichen soll und woran wir ihren Erfolg messen. Dann prüfen wir die Zielseite, bereiten die Anzeigen vor und kontrollieren das Tracking. Mit der Freigabe und dem Start der Kampagne beginnt die 60-tägige Testphase. In zwei Zwischenbesprechungen schauen wir auf Auslieferung, Kosten und die Qualität erster Anfragen oder Käufe. Zum Abschluss gleichen wir die Ergebnisse mit dem vereinbarten Ziel ab und empfehlen, ob sich eine Fortsetzung lohnt, was wir ändern würden oder ob eine Pause sinnvoll ist.</p>
-    <div class="gpt-table-wrap" role="region" aria-label="Ablauf des 60-Tage-Piloten" tabindex="0">
-      <table>
-        <thead><tr><th scope="col">Zeitraum</th><th scope="col">Was wir tun</th><th scope="col">Was Sie erhalten</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Vor dem Start</th><td>Angebot, Zielseite und Eignung prüfen. Kampagne, Anzeigenvarianten und Messung vorbereiten.</td><td>Startbereite Kampagne mit abgestimmtem Ziel und Budget.</td></tr>
-          <tr><th scope="row">Tag 1–14</th><td>Kampagne nach Freigabe starten. Auslieferung, Kosten und Messung kontrollieren.</td><td>Erster Check mit den wichtigsten Beobachtungen und Anpassungen.</td></tr>
-          <tr><th scope="row">Tag 15–45</th><td>Anzeigen vergleichen, Budget steuern und die Qualität erster Anfragen einordnen.</td><td>Zweite Zwischenbesprechung mit konkreten Prioritäten.</td></tr>
-          <tr><th scope="row">Tag 46–60</th><td>Ergebnisse auswerten und mit dem vereinbarten Kampagnenziel abgleichen.</td><td>Abschlussauswertung mit Empfehlung zum Fortsetzen, Anpassen oder Pausieren.</td></tr>
+      <table class="gpt-pilot-table" role="table" aria-labelledby="pilot-heading">
+        <thead role="rowgroup">
+          <tr role="row">
+            <th scope="col" role="columnheader">Phase</th>
+            <th scope="col" role="columnheader">Was wir tun</th>
+            <th scope="col" role="columnheader">Ihr Ergebnis</th>
+          </tr>
+        </thead>
+        <tbody role="rowgroup">
+          <tr role="row">
+            <th scope="row" role="rowheader"><span class="gpt-pilot-phase">Vorbereitung</span><span class="gpt-pilot-time">Vor dem Start</span></th>
+            <td role="cell">Ziel und Mediabudget festlegen, Zielseite und Tracking prüfen und Anzeigen vorbereiten.</td>
+            <td role="cell"><span class="gpt-pilot-result-label" aria-hidden="true">Ihr Ergebnis</span>Startbereite Kampagne mit abgestimmtem Ziel und Budget.</td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader"><span class="gpt-pilot-phase">Start</span><span class="gpt-pilot-time">Tag 1–14</span></th>
+            <td role="cell">Nach Freigabe starten und prüfen, ob Auslieferung, Kosten und Messung wie geplant laufen.</td>
+            <td role="cell"><span class="gpt-pilot-result-label" aria-hidden="true">Ihr Ergebnis</span>Erste Zwischenbesprechung mit Beobachtungen und Anpassungen.</td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader"><span class="gpt-pilot-phase">Optimierung</span><span class="gpt-pilot-time">Tag 15–45</span></th>
+            <td role="cell">Anzeigenvarianten vergleichen, das Budget steuern und die Qualität erster Anfragen oder Käufe einordnen.</td>
+            <td role="cell"><span class="gpt-pilot-result-label" aria-hidden="true">Ihr Ergebnis</span>Zweite Zwischenbesprechung mit konkreten Prioritäten.</td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader"><span class="gpt-pilot-phase">Auswertung</span><span class="gpt-pilot-time">Tag 46–60</span></th>
+            <td role="cell">Ergebnisse mit dem vereinbarten Kampagnenziel abgleichen.</td>
+            <td role="cell"><span class="gpt-pilot-result-label" aria-hidden="true">Ihr Ergebnis</span>Abschlussauswertung mit Empfehlung zum Fortsetzen, Anpassen oder Pausieren.</td>
+          </tr>
         </tbody>
       </table>
-    </div>
   </div>
 </section>
 
