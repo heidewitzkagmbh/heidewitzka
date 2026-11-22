@@ -4,23 +4,6 @@
 .gpt-video-hero{position:relative;aspect-ratio:1472/624;margin:32px 0 0;border-radius:30px;overflow:hidden;background:#65775e}.gpt-video-hero video{display:block;width:100%;height:100%;object-fit:cover}.gpt-video-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.76),rgba(0,0,0,.12) 70%);pointer-events:none}.gpt-video-copy{position:absolute;left:5%;right:5%;bottom:9%;z-index:2;color:#fff;max-width:820px}.gpt-video-copy h2{font-size:clamp(28px,3.7vw,56px);line-height:1.04;letter-spacing:-.045em;margin:0 0 16px;text-wrap:balance}.gpt-video-copy p{font-size:clamp(16px,1.4vw,19px);line-height:1.45;margin:0;max-width:650px}.gpt-video-toggle{position:absolute;top:18px;right:18px;z-index:3;border:1px solid #ffffff80;border-radius:999px;background:#0009;color:#fff;padding:9px 14px;font:inherit;font-size:14px;cursor:pointer}.gpt-video-toggle:focus-visible{outline:3px solid white;outline-offset:3px}
 @media(max-width:760px){.gpt-video-hero{aspect-ratio:4/3;border-radius:22px}.gpt-video-copy{bottom:7%}.gpt-video-copy h2{font-size:clamp(27px,6vw,40px);margin-bottom:12px}.gpt-video-copy p{font-size:16px}.gpt-video-toggle{top:12px;right:12px}}
 .gpt-video-hero .gpt-video-toggle{top:auto;right:58px;bottom:16px;width:32px;height:32px;padding:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.30);color:rgba(255,255,255,.85);backdrop-filter:blur(5px);font-size:16px}.gpt-video-hero .gpt-video-toggle[hidden]{display:none}@media(max-width:620px){.gpt-video-hero .gpt-video-toggle{top:auto;right:50px;bottom:12px;width:28px;height:28px}}
-.campaign-data-grid .campaign-data-card {
-  padding: clamp(22px, 2.8vw, 38px);
-}
-.campaign-data-grid h3 {
-  font-size: clamp(25px, 2.3vw, 34px);
-}
-.campaign-data-grid ul {
-  margin: 0;
-  padding-inline-start: 1.2em;
-  list-style: disc;
-  color: #555;
-  font-size: 17px;
-  line-height: 1.55;
-}
-.campaign-data-grid li + li {
-  margin-top: 10px;
-}
 .campaign-combination .section-head {
   margin-bottom: 32px;
 }
@@ -155,12 +138,6 @@
 .hw-refined .gpt-page > .section { padding-block: var(--gpt-section-space); }
 .hw-refined .gpt-page > .section .section-head { margin-bottom: var(--gpt-content-gap); gap: 20px; }
 .hw-refined .gpt-page > #gespraech { margin: var(--gpt-section-space) auto; }
-.gpt-offer-actions { display: grid; gap: 10px; margin-top: auto; }
-.gpt-offer-actions .gpt-offer-inquiry { background: #fff; color: #111; border: 1px solid #c7cdd4; }
-.gpt-offer-actions .gpt-offer-inquiry:hover { background: #f4f5f7; }
-.campaign-data-grid .campaign-data-card { display: flex; flex-direction: column; }
-.campaign-data-card .gpt-offer-actions { padding-top: 20px; }
-.campaign-data-card .gpt-offer-actions .btn { justify-content: space-between; border-radius: 10px; }
 @media (max-width: 900px) { .hw-refined .gpt-page { --gpt-section-space: 48px; --gpt-content-gap: 28px; } }
 @media (max-width: 640px) {
   .hw-refined .gpt-page { --gpt-section-space: 40px; --gpt-content-gap: 24px; }
@@ -176,7 +153,7 @@
 .gpt-examples li + li { margin-top: 9px; }
 .gpt-example-link { margin: 24px 0 0; }
 @media (max-width: 760px) { .gpt-examples { grid-template-columns: 1fr; } }
-</style><link href="/site-refinement.css?v=20261027" rel="stylesheet"/></head><body class="hw-refined"><div class="nav-wrap"><div class="wrap"><nav class="site-nav">
+</style><link href="/site-refinement.css?v=20261122" rel="stylesheet"/></head><body class="hw-refined"><div class="nav-wrap"><div class="wrap"><nav class="site-nav">
 <a class="logo" href="/">heidewitzka</a>
 <button aria-controls="site-menu" aria-expanded="false" aria-label="Menü öffnen" class="nav-toggle" type="button"><span></span><span></span><span></span></button>
 <div class="nav-links" id="site-menu">
@@ -258,7 +235,7 @@
           <li>Zwei Zwischenbesprechungen und eine Abschlussauswertung</li>
         </ul>
         <p class="hw-scope-note">Das Mediabudget wird separat vereinbart.</p>
-        <div class="gpt-offer-actions"><a class="btn" href="/chatgpt-ads-pilot">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn gpt-offer-inquiry" href="/kontakt?service=chatgpt-ads-pilot#projektanfrage">Pilot anfragen <span aria-hidden="true">↗</span></a></div>
+        <div class="service-card-actions"><a class="btn" href="/chatgpt-ads-pilot">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn service-card-inquiry" href="/kontakt?service=chatgpt-ads-pilot#projektanfrage">Pilot anfragen <span aria-hidden="true">↗</span></a></div>
       </article>
       <article class="hw-service">
         <div class="eyebrow">Nach Aufwand</div>
@@ -271,7 +248,7 @@
           <li>Tracking prüfen, Ergebnisse einordnen oder Fragen im Sparring klären</li>
         </ul>
         <p class="hw-scope-note">Den Aufwand stimmen wir vorab mit Ihnen ab.</p>
-        <div class="gpt-offer-actions"><a class="btn" href="/marketing-unterstuetzung">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn gpt-offer-inquiry" href="/kontakt?service=chatgpt-ads-stunden#projektanfrage">Stundenweise Hilfe anfragen <span aria-hidden="true">↗</span></a></div>
+        <div class="service-card-actions"><a class="btn" href="/marketing-unterstuetzung">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn service-card-inquiry" href="/kontakt?service=chatgpt-ads-stunden#projektanfrage">Stundenweise Hilfe anfragen <span aria-hidden="true">↗</span></a></div>
       </article>
       <article class="hw-service">
         <div class="eyebrow">Fortlaufend</div>
@@ -374,7 +351,7 @@
       <li>Anfragen und Käufe als Ereignisse erfassen und als Schlüsselereignisse markieren.</li>
       <li>Testanfragen und Testkäufe auslösen und prüfen, ob Ereignisse und Kampagnenquellen korrekt ankommen.</li>
     </ul>
-    <div class="gpt-offer-actions"><a class="btn" href="/google-analytics-4-einrichten">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn gpt-offer-inquiry" href="/kontakt?service=ga4-einrichtung#projektanfrage">Einrichtung anfragen <span aria-hidden="true">↗</span></a></div>
+    <div class="service-card-actions"><a class="btn" href="/google-analytics-4-einrichten">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn service-card-inquiry" href="/kontakt?service=ga4-einrichtung#projektanfrage">Einrichtung anfragen <span aria-hidden="true">↗</span></a></div>
   </article>
   <article class="campaign-data-card">
     <h3>Search Console einrichten</h3>
@@ -383,7 +360,7 @@
       <li>XML-Sitemap einreichen und prüfen, ob wichtige Seiten bei Google indexiert sind.</li>
       <li>Suchanfragen, Impressionen und Klicks aus der unbezahlten Google-Suche auswerten.</li>
     </ul>
-    <div class="gpt-offer-actions"><a class="btn" href="/search-console-einrichten">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn gpt-offer-inquiry" href="/kontakt?service=search-console-einrichtung#projektanfrage">Einrichtung anfragen <span aria-hidden="true">↗</span></a></div>
+    <div class="service-card-actions"><a class="btn" href="/search-console-einrichten">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn service-card-inquiry" href="/kontakt?service=search-console-einrichtung#projektanfrage">Einrichtung anfragen <span aria-hidden="true">↗</span></a></div>
   </article>
   <article class="campaign-data-card">
     <h3>Tag Management einrichten</h3>
@@ -392,7 +369,7 @@
       <li>Einwilligungssignale aus dem Cookie-Banner anbinden und prüfen, wann Tags ausgelöst werden.</li>
       <li>Tags im Vorschaumodus testen, veröffentlichen und die Einrichtung dokumentieren.</li>
     </ul>
-    <div class="gpt-offer-actions"><a class="btn" href="/tag-manager-einrichten">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn gpt-offer-inquiry" href="/kontakt?service=tag-manager-einrichtung#projektanfrage">Einrichtung anfragen <span aria-hidden="true">↗</span></a></div>
+    <div class="service-card-actions"><a class="btn" href="/tag-manager-einrichten">Im Shop buchen <span aria-hidden="true">↗</span></a> <a class="btn service-card-inquiry" href="/kontakt?service=tag-manager-einrichtung#projektanfrage">Einrichtung anfragen <span aria-hidden="true">↗</span></a></div>
   </article>
 </div></div></section>
 
