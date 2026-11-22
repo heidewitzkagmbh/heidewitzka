@@ -7,7 +7,6 @@
     'google-ai-optionen':'Plattform-KI', 'pmax-optimierung':'Performance Max Optimierung',
     'remarketing':'Remarketing', 'produktfeed':'Produktfeed', 'reporting-dashboard':'Reporting & Dashboard',
     'kanalstrategie':'Kanalstrategie', 'multikanalstrategie':'Multikanalstrategie',
-    'chatgpt-ads-pilot':'ChatGPT Ads – 30-Tage-Pilot',
     'chatgpt-ads-aufbau':'ChatGPT Ads – Kampagnenaufbau', 'chatgpt-ads-betreuung':'ChatGPT Ads – Betreuung',
     'ki-sichtbarkeit-strategie':'Strategie für KI-Sichtbarkeit',
     'google-ads':'Google Ads & Microsoft Ads', 'meta-ads':'Meta & Instagram Ads',
