@@ -70,11 +70,6 @@
       "permanent": true
     },
     {
-      "source": "/tim-vogt",
-      "destination": "/",
-      "permanent": false
-    },
-    {
       "source": "/freelancer-team",
       "destination": "/",
       "permanent": false
