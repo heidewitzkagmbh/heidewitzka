@@ -167,6 +167,15 @@
   .hw-refined .gpt-page > .section .section-head { gap: 16px; }
 }
 .blog-preview .blog-preview-cta { justify-self: start; }
+.gpt-examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.gpt-examples .card { padding: clamp(22px, 3vw, 38px); }
+.gpt-examples h3 { margin: 0 0 16px; }
+.gpt-examples p { margin: 0 0 20px; }
+.gpt-examples p, .gpt-examples li { font-size: 17px; line-height: 1.55; color: #444; }
+.gpt-examples ul { margin: 0; padding-inline-start: 20px; }
+.gpt-examples li + li { margin-top: 9px; }
+.gpt-example-link { margin: 24px 0 0; }
+@media (max-width: 760px) { .gpt-examples { grid-template-columns: 1fr; } }
 </style><link href="/site-refinement.css?v=20261027" rel="stylesheet"/></head><body class="hw-refined"><div class="nav-wrap"><div class="wrap"><nav class="site-nav">
 <a class="logo" href="/">heidewitzka</a>
 <button aria-controls="site-menu" aria-expanded="false" aria-label="Menü öffnen" class="nav-toggle" type="button"><span></span><span></span><span></span></button>
@@ -282,6 +291,33 @@
   </div>
 </section>
 
+<section class="section gpt-section" id="praxisbeispiele" aria-labelledby="praxisbeispiele-heading">
+  <div class="wrap">
+    <div class="section-head"><div><h2 id="praxisbeispiele-heading">Zwei Beispiele für ChatGPT Ads</h2></div><p>So würden wir einen Produktshop und ein erklärungsbedürftiges B2B-Angebot testen.</p></div>
+    <div class="grid-2 gpt-examples">
+      <article class="card">
+        <h3>Ein Sideboard für eine schmale Nische</h3>
+        <p>„Welches Sideboard passt in eine 120 cm breite Nische und ist höchstens 40 cm tief?“</p>
+        <ul>
+          <li><strong>Feed vorbereiten.</strong> Maße, Varianten, Preis und Bestand prüfen. Gut lieferbare Modelle mit ausreichender Marge auswählen.</li>
+          <li><strong>Zur passenden Variante führen.</strong> Der Klick öffnet die konkrete Produktseite mit Maßen und Lieferangaben.</li>
+          <li><strong>Bestellungen auswerten.</strong> Shopdaten, Retouren und Deckungsbeitrag je Produktgruppe prüfen.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Eine B2B-Anfrage zur DATEV-Anbindung</h3>
+        <p>„Wie automatisieren wir die Rechnungsfreigabe, wenn die Buchhaltung mit DATEV arbeitet?“</p>
+        <ul>
+          <li><strong>Rechercheabsichten unterscheiden.</strong> Für die erste Orientierung eine Prozessübersicht anbieten. Für konkrete Vorhaben einen Integrationscheck.</li>
+          <li><strong>Die Anfrage vorbereiten.</strong> Vorhandene Systeme, Rechnungsvolumen und geplanten Start abfragen.</li>
+          <li><strong>Leadqualität prüfen.</strong> Im CRM nachhalten, welche Anfragen zum Angebot passen und zu einem Vertriebsgespräch führen.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="gpt-example-link"><a class="btn" href="/chatgpt-ads-praxisbeispiele">Beide Beispiele im Detail ansehen <span aria-hidden="true">↗</span></a></p>
+  </div>
+</section>
+
 <section class="section campaign-combination" aria-labelledby="campaign-combination-title">
   <div class="wrap">
     <div class="section-head">
@@ -393,7 +429,7 @@
       <h3>ChatGPT Ads in der Praxis</h3>
       <p>Best Practices für Anzeigen, Bilder und Landingpages. Dazu Context Hints und eine Rechnung zur Leadqualität.</p>
       <a class="insight-more" href="/chatgpt-ads-leitfaden">Leitfaden lesen</a>
-    </article><article class="insight-card"><a aria-label="Artikel lesen: Der 30-Euro-Lead ist teurer als der 90-Euro-Lead" class="insight-media" href="/leadqualitaet"><img alt="" height="800" loading="lazy" src="/assets/blog-leadqualitaet-milchglas.webp" width="1200"></a><h3>Der 30-Euro-Lead ist teurer als der 90-Euro-Lead</h3><p>Warum Abschlussquote und Deckungsbeitrag die Leadbewertung verändern – mit einer Rechnung, die über den CPL hinausgeht.</p><a class="insight-more" href="/leadqualitaet">Mehr erfahren <span>↗</span></a></article>
+    </article><article class="insight-card"><a class="insight-media" href="/chatgpt-ads-praxisbeispiele" aria-label="Artikel lesen: ChatGPT Ads in zwei Praxisbeispielen: Produktfeed und B2B-Leads"><img src="/assets/case-moebel-teaser-clean.webp" alt="" width="1024" height="1536" loading="lazy" style="object-position:center 55%"></a><h3>ChatGPT Ads in zwei Praxisbeispielen: Produktfeed und B2B-Leads</h3><p>Wie Heidewitzka einen Möbelshop und einen Anbieter für Rechnungsfreigabe testen würde. Mit Kampagnenaufbau, Messgrößen und Learnings aus vier Praxisberichten.</p><a class="insight-more" href="/chatgpt-ads-praxisbeispiele">Artikel lesen <span aria-hidden="true">↗</span></a></article>
 <article class="insight-card"><a class="insight-media" href="/chatgpt-ads-nach-der-antwort" aria-label="Artikel lesen: Die KI hat die Frage schon beantwortet. Warum sollte jetzt noch jemand auf Ihre Anzeige klicken?"><img src="/assets/case-solar-teaser-clean.webp" alt="" width="1054" height="1492" loading="lazy" style="object-position:center 59%"></a><h3>Die KI hat die Frage schon beantwortet. Warum sollte jetzt noch jemand auf Ihre Anzeige klicken?</h3><p>Drei Anzeigen für dasselbe Angebot zeigen, was einen Klick nach der KI-Antwort sinnvoll macht: Vergleichswerte, ein Rechner oder ein konkreter Vor-Ort-Check.</p><a class="insight-more" href="/chatgpt-ads-nach-der-antwort">Artikel lesen <span aria-hidden="true">↗</span></a></article>
 </div></div></section>
 </main><footer class="footer"><div class="wrap"><div class="footer-grid"><div><strong>.heidewitzka</strong><p style="color:#aaa;max-width:420px">Performance Marketing + AI Operations im Marketing.</p></div><div><strong>Leistungen</strong><a href="/performance.html">Performance Marketing</a><a href="/kampagnen">Kampagnenmanagement</a><a href="/ai.html">KI im Marketing</a><a href="/agentic.html">Agentic Marketing</a></div><div><strong>Kanäle</strong><a href="/channels.html#search">Search Engines</a><a href="/channels.html#meta">Meta</a><a href="/channels.html#linkedin">LinkedIn</a><a href="/channels.html#pinterest">Pinterest</a><a href="/channels.html#youtube">YouTube</a></div><div><strong>Mehr</strong><a href="/shop.html">Leistungen &amp; Preise</a><a href="/insights.html">Blog</a><a href="/kontakt">Kontakt</a></div></div></div><div class="wrap footer-login-row"><a class="footer-login" href="/intern">Login <span aria-hidden="true">↗</span></a></div><div class="wrap footer-legal-row"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a></div></footer>
