@@ -23,7 +23,31 @@
   justify-content: space-between;
   gap: 16px;
 }
-.lp-hero { padding: clamp(54px, 8vw, 110px) 0; }
+.lp-hero { padding: clamp(24px, 4vw, 56px) 0 clamp(48px, 7vw, 84px); }
+.lp-hero-media {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(350px, 42vw, 560px);
+  margin-bottom: 26px;
+  overflow: hidden;
+  border-radius: clamp(18px, 3vw, 32px);
+  background: #161616 center 14% / cover no-repeat url("https://d2ol7oe51mr4n9.cloudfront.net/user_3BonWUjPR6MWFNzvbZ78ajaHQL4/c02cec87-c119-4e7c-a76d-bad75c85f7b1.webp");
+}
+.lp-hero-media video, .lp-hero-media::after { position: absolute; inset: 0; width: 100%; height: 100%; }
+.lp-hero-media video { object-fit: cover; object-position: center 14%; }
+.lp-hero-media::after {
+  content: "";
+  background: linear-gradient(90deg, rgba(0, 0, 0, .68), rgba(0, 0, 0, .48)),
+              linear-gradient(0deg, rgba(0, 0, 0, .32), transparent 70%);
+}
+.lp-hero-copy { position: relative; z-index: 1; width: 100%; padding: clamp(20px, 4.6vw, 64px); color: #fff; }
+.gpt-lp .lp-hero-copy h1 { color: inherit; font-size: clamp(30px, 4.7vw, 68px); line-height: 1.03; text-wrap: wrap; }
+.lp-hero-copy .lp-lead { margin: 18px 0 0; color: inherit; }
+@media (prefers-reduced-motion: reduce) {
+  .lp-hero-media video { display: none; }
+}
 .lp-lead {
   max-width: 48ch;
   margin: 22px 0;
