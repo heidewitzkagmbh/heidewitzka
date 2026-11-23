@@ -133,3 +133,44 @@
   }
   .lp-mobile-action .btn { width: 100%; justify-content: center; }
 }
+
+.gpt-lp #kontakt { scroll-margin-top: 24px; }
+.lp-pilot-steps { max-width: 76ch; }
+.lp-price-grid { display: grid; gap: 18px; margin-top: 26px; }
+.lp-price-grid .lp-offer { display: flex; flex-direction: column; align-self: stretch; min-width: 0; }
+.lp-price-grid .lp-offer:first-child { border: 2px solid #248169; }
+.lp-price-grid .lp-offer ul { padding-inline-start: 20px; line-height: 1.5; }
+.lp-price-grid .lp-offer li + li { margin-top: 6px; }
+.lp-price-grid .lp-price-request { font-size: clamp(30px, 3.6vw, 48px); }
+.lp-offer .lp-badge {
+  align-self: flex-start;
+  margin: 0 0 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #d8f7ed;
+  color: #063e30;
+  font-size: 14px;
+  font-weight: 700;
+}
+.lp-price-actions { margin-top: auto; }
+.lp-contact-grid { margin-top: 26px; }
+.lp-contact-card { min-width: 0; padding: clamp(16px, 3vw, 28px); border: 1px solid var(--teaser-border); border-radius: 24px; background: #fff; }
+.lp-contact-card h3 { font-size: clamp(23px, 2vw, 32px); }
+.lp-contact-card p { line-height: 1.5; }
+#lp-calendly iframe { display: block; width: 100%; min-height: 820px; border: 0; }
+.lp-contact-form { display: grid; gap: 14px; margin-top: 18px; }
+.lp-contact-form label:not([hidden]) { display: grid; gap: 6px; font-weight: 650; }
+.lp-contact-form :is(input:not([type="checkbox"]), select, textarea) { width: 100%; padding: 10px 12px; border: 1px solid var(--teaser-border); border-radius: 10px; font: inherit; background: #f4f5f7; }
+.lp-contact-form .lp-privacy-check { grid-template-columns: auto 1fr; align-items: start; font-weight: 400; }
+.lp-contact-form .lp-privacy-check input { margin-top: .25em; }
+.lp-contact-form .btn { justify-self: start; }
+.lp-contact-form .btn:disabled { opacity: .55; cursor: default; }
+.lp-contact-form p { margin: 0; }
+@media (min-width: 900px) {
+  .lp-price-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lp-price-grid .lp-offer:first-child { grid-column: 2; grid-row: 1; }
+  .lp-price-grid .lp-offer:nth-child(2) { grid-column: 1; grid-row: 1; }
+}
+@media (max-width: 899px) {
+  .lp-contact-grid { grid-template-columns: minmax(0, 1fr); }
+}
