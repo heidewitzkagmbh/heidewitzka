@@ -27,26 +27,39 @@ module.exports = async function handler(req, res) {
   if (!/^application\/json(?:;|$)/i.test(req.headers['content-type'] || '')) return send(415, { sent: false });
 
   const body = req.body;
-  if (!body || typeof body !== 'object' || Array.isArray(body) || body.fax || body.privacy !== 'on') return send(400, { sent: false });
+  if (!body || typeof body !== 'object' || Array.isArray(body) || body.fax) return send(400, { sent: false });
   const read = (field, limit) => typeof body[field] === 'string' && body[field].length <= limit ? body[field].trim() : '';
   const name = read('name', 120);
   const email = read('email', 254);
-  const website = read('website', 250);
-  const interest = read('interest', 20);
   const id = req.headers['idempotency-key'];
-  if (!name || !/^[^\s@,<>]+@[^\s@,<>]+\.[^\s@,<>]+$/.test(email) || !/^https?:\/\/[^\s]+$/i.test(website) ||
-      !Object.hasOwn(interests, interest) || typeof id !== 'string' || !/^[a-f0-9-]{36}$/i.test(id)) return send(400, { sent: false });
+  if (!name || !/^[^\s@,<>]+@[^\s@,<>]+\.[^\s@,<>]+$/.test(email) ||
+      typeof id !== 'string' || !/^[a-f0-9-]{36}$/i.test(id)) return send(400, { sent: false });
 
-  const text = [
-    'Interesse: ' + interests[interest],
-    'Name: ' + name,
-    'E-Mail: ' + email,
-    'Website: ' + website,
-    'Branche: ' + read('branche', 100),
-    'Mediabudget: ' + read('budget', 100),
-    '',
-    read('message', 3000)
-  ].join('\n');
+  const message = read('message', 3000);
+  let subject;
+  let details;
+  if (body.source === 'contact') {
+    const topic = read('topic', 180);
+    if (!topic || !message) return send(400, { sent: false });
+    const allowedPreferences = ['Telefonat vereinbaren', 'Kurze Rückmeldung und Einschätzung per E-Mail'];
+    const preferences = Array.isArray(body['reply-preference'])
+      ? allowedPreferences.filter(value => body['reply-preference'].includes(value))
+      : [];
+    subject = 'Projektanfrage über die Kontaktseite';
+    details = [
+      'Thema: ' + topic,
+      'Unternehmen: ' + read('company', 180),
+      'Gewünschte Rückmeldung: ' + preferences.join(', ')
+    ];
+  } else {
+    const website = read('website', 250);
+    const interest = read('interest', 20);
+    if (body.privacy !== 'on' || !/^https?:\/\/[^\s]+$/i.test(website) ||
+        !Object.hasOwn(interests, interest)) return send(400, { sent: false });
+    subject = 'Website-Anfrage: ' + interests[interest];
+    details = ['Interesse: ' + interests[interest], 'Website: ' + website, 'Branche: ' + read('branche', 100)];
+  }
+  const text = ['Name: ' + name, 'E-Mail: ' + email, ...details, 'Mediabudget: ' + read('budget', 100), '', message].join('\n');
 
   try {
     const response = await fetch('https://api.resend.com/emails', {
@@ -56,7 +69,7 @@ module.exports = async function handler(req, res) {
         'Content-Type': 'application/json',
         'Idempotency-Key': 'lp-contact/' + id
       },
-      body: JSON.stringify({ from, to: ['hallo@heidewitzka.io'], reply_to: email, subject: 'Website-Anfrage: ' + interests[interest], text }),
+      body: JSON.stringify({ from, to: ['hallo@heidewitzka.io'], reply_to: email, subject, text }),
       signal: AbortSignal.timeout(8000)
     });
     if (!response.ok || !(await response.json()).id) return send(502, { sent: false });

@@ -169,20 +169,22 @@
 </div>
 <section class="section contact-section" id="projektanfrage"><div class="wrap"><div class="contact-shell">
 <div class="contact-form-card"><div class="eyebrow">Projektanfrage</div><h2>Was haben Sie vor?</h2>
-<form class="contact-form" id="contact-form"><div class="contact-form-grid">
-<div class="field"><label for="name">Name</label><input autocomplete="name" id="name" name="name" placeholder="Vor- und Nachname" required="" type="text"/></div>
-<div class="field"><label for="company">Unternehmen</label><input autocomplete="organization" id="company" name="company" placeholder="Unternehmen" type="text"/></div>
-<div class="field"><label for="email">E-Mail</label><input autocomplete="email" id="email" name="email" placeholder="name@unternehmen.de" required="" type="email"/></div>
+<form class="contact-form" id="contact-form" method="post" action="/api/lp-contact"><div class="contact-form-grid">
+<div class="field"><label for="name">Name</label><input maxlength="120" autocomplete="name" id="name" name="name" placeholder="Vor- und Nachname" required="" type="text"/></div>
+<div class="field"><label for="company">Unternehmen</label><input maxlength="180" autocomplete="organization" id="company" name="company" placeholder="Unternehmen" type="text"/></div>
+<div class="field"><label for="email">E-Mail</label><input maxlength="254" autocomplete="email" id="email" name="email" placeholder="name@unternehmen.de" required="" type="email"/></div>
 <div class="field"><label for="topic">Worum geht es?</label><select id="topic" name="topic" required=""><option disabled="" selected="" value="">Bitte auswählen</option><option>Kampagnenmanagement</option><option>Performance Marketing</option><option>KI / Automation</option><option>Tracking / Analytics</option><option>Audit / Setup</option><option>Second Opinion zum Agenturreport</option><option>White Label</option><option>Freelancer-Team</option><option>Etwas anderes</option></select></div>
 <div class="field full"><label for="budget">Media-Budget pro Monat <span>optional</span></label><select id="budget" name="budget"><option value="">Noch offen / nicht relevant</option><option>bis 5.000 €</option><option>5.000–15.000 €</option><option>15.000–50.000 €</option><option>über 50.000 €</option></select></div>
-<div class="field full"><label for="message">Was ist die Aufgabe?</label><textarea id="message" name="message" placeholder="Ziel, aktuelle Situation, Kanäle oder das Problem in ein paar Sätzen." required=""></textarea></div>
+<div class="field full"><label for="message">Was ist die Aufgabe?</label><textarea maxlength="3000" id="message" name="message" placeholder="Ziel, aktuelle Situation, Kanäle oder das Problem in ein paar Sätzen." required=""></textarea></div>
 <fieldset class="field full contact-reply-preferences">
   <legend>Wie wünschen Sie die Antwort auf Ihre Anfrage?</legend>
   <label><input type="checkbox" name="reply-preference" value="Telefonat vereinbaren"/> Telefonat vereinbaren</label>
   <label><input type="checkbox" name="reply-preference" value="Kurze Rückmeldung und Einschätzung per E-Mail"/> Kurze Rückmeldung und Einschätzung per E-Mail</label>
 </fieldset>
+<label hidden>Fax<input name="fax" tabindex="-1" autocomplete="off"></label>
 </div>
-<div class="contact-submit-row"><button class="btn contact-submit" type="submit">Anfrage im E-Mail-Programm öffnen →</button><p>Der Button öffnet Ihr E-Mail-Programm mit den vorausgefüllten Angaben. Versendet wird die Anfrage erst dort. Alternativ schreiben Sie direkt an hallo@heidewitzka.io. <a href="/datenschutz#kontakt">Datenschutzhinweise</a></p></div>
+<div class="contact-submit-row"><button class="btn contact-submit" type="submit">Anfrage im E-Mail-Programm öffnen →</button><p><span id="contact-send-help">Der Button öffnet Ihr E-Mail-Programm mit den vorausgefüllten Angaben. Versendet wird die Anfrage erst dort.</span> Alternativ schreiben Sie direkt an hallo@heidewitzka.io. <a href="/datenschutz#kontakt">Datenschutzhinweise</a></p></div>
+<p id="contact-submit-status" role="status"></p>
 </form></div>
 <aside class="contact-aside"><div class="eyebrow">Direkt</div><a class="contact-mail" href="mailto:hallo@heidewitzka.io?subject=Projektanfrage%20Heidewitzka">hallo@heidewitzka.io ↗</a><div class="contact-aside-block"><strong>Regionen:</strong><p>Hybride Zusammenarbeit (Unternehmen/remote) in NRW, bundesweit nach Auftrag oder individueller Vereinbarung. Remote jederzeit direkt buchbar.</p></div><div class="contact-aside-block"><strong>Postanschrift</strong><p>Heidewitzka GmbH<br/>Alter Postweg 7<br/>21781 Cadenberge<br/>Deutschland</p></div><div class="contact-aside-block"><strong>Sitz der Gesellschaft</strong><p>Heidewitzka GmbH<br/>Deichstraße 21<br/>21785 Neuhaus (Oste)<br/>Deutschland</p></div></aside>
 </div>
@@ -203,7 +205,73 @@
 <section aria-label="Gespräch mit Tim Vogt" class="wrap hw-contact" id="gespraech"><img alt="Tim Vogt, Ihr Ansprechpartner bei Heidewitzka" height="170" loading="lazy" src="/assets/tim-vogt-portrait-rectangular.jpg" width="230"/><div class="hw-contact-copy"><p>Sie haben eine konkrete Frage oder möchten eine Idee besprechen? Im ersten Gespräch klären wir, wo Sie gerade stehen und welcher nächste Schritt für Sie sinnvoll ist.</p><p class="hw-contact-author">Tim Vogt – Heidewitzka GmbH</p></div><div class="hw-contact-actions"><a href="https://www.linkedin.com/in/timvgt/" rel="noopener noreferrer" target="_blank">Auf LinkedIn vernetzen <span aria-hidden="true">↗</span></a><a href="https://calendly.com/vogt-heidewitzka/30min" rel="noopener noreferrer" target="_blank">20-Min-Gespräch <span aria-hidden="true">↗</span></a></div></section>
 </main>
 <footer class="footer"><div class="wrap"><div class="footer-grid"><div><strong>.heidewitzka</strong><p style="color:#aaa;max-width:420px">Performance Marketing + AI Operations im Marketing.</p></div><div><strong>Leistungen</strong><a href="/performance.html">Performance Marketing</a><a href="/kampagnen">Kampagnenmanagement</a><a href="/ai.html">KI im Marketing</a><a href="/agentic.html">Agentic Marketing</a></div><div><strong>Kanäle</strong><a href="/channels.html#search">Search Engines</a><a href="/channels.html#meta">Meta</a><a href="/channels.html#linkedin">LinkedIn</a><a href="/channels.html#pinterest">Pinterest</a><a href="/channels.html#youtube">YouTube</a></div><div><strong>Mehr</strong><a href="/shop.html">Leistungen &amp; Preise</a><a href="/insights.html">Blog</a><a href="/kontakt">Kontakt</a></div></div></div><div class="wrap footer-login-row"><a class="footer-login" href="/intern">Login <span aria-hidden="true">↗</span></a></div><div class="wrap footer-legal-row"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a></div></footer>
-<script>document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const subject='Projektanfrage Heidewitzka – '+(d.get('topic')||'Allgemein');const lines=['Name: '+(d.get('name')||''),'Unternehmen: '+(d.get('company')||''),'E-Mail: '+(d.get('email')||''),'Thema: '+(d.get('topic')||''),'Media-Budget: '+(d.get('budget')||'nicht angegeben')];const replyPreferences=d.getAll('reply-preference');if(replyPreferences.length)lines.push('Gewünschte Rückmeldung: '+replyPreferences.join(', '));lines.push('','Aufgabe:',d.get('message')||'');window.location.href='mailto:hallo@heidewitzka.io?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));});</script>
+<script>
+(() => {
+  const form = document.getElementById('contact-form');
+  const button = form.querySelector('button[type="submit"]');
+  const help = document.getElementById('contact-send-help');
+  const status = document.getElementById('contact-submit-status');
+  let online = false;
+  let lastPayload;
+  let requestId;
+
+  fetch(form.action).then(response => response.ok ? response.json() : null).then(result => {
+    if (result?.available !== true) return;
+    online = true;
+    button.textContent = 'Anfrage senden';
+    help.textContent = 'Ihre Anfrage wird direkt über die Website gesendet.';
+  }).catch(() => {});
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (button.disabled) return;
+    const data = new FormData(form);
+    if (!online) {
+      const topic = data.get('topic') || 'Allgemein';
+      const subject = 'Projektanfrage Heidewitzka – ' + topic;
+      const lines = [
+        'Name: ' + data.get('name'),
+        'Unternehmen: ' + data.get('company'),
+        'E-Mail: ' + data.get('email'),
+        'Thema: ' + topic,
+        'Media-Budget: ' + (data.get('budget') || 'nicht angegeben')
+      ];
+      const preferences = data.getAll('reply-preference');
+      if (preferences.length) lines.push('Gewünschte Rückmeldung: ' + preferences.join(', '));
+      lines.push('', 'Aufgabe:', data.get('message'));
+      window.location.href = 'mailto:hallo@heidewitzka.io?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+      return;
+    }
+
+    const payload = JSON.stringify({
+      ...Object.fromEntries(data),
+      source: 'contact',
+      'reply-preference': data.getAll('reply-preference')
+    });
+    if (payload !== lastPayload) {
+      requestId = crypto.randomUUID();
+      lastPayload = payload;
+    }
+    button.disabled = true;
+    status.textContent = 'Ihre Anfrage wird gesendet …';
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Idempotency-Key': requestId },
+        body: payload
+      });
+      if (!response.ok || (await response.json()).sent !== true) throw new Error('Versand fehlgeschlagen');
+      status.textContent = 'Vielen Dank, Ihre Anfrage wurde gesendet.';
+      form.reset();
+      lastPayload = undefined;
+    } catch {
+      status.textContent = 'Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt per E-Mail.';
+    } finally {
+      button.disabled = false;
+    }
+  });
+})();
+</script>
 <script>(function(){const nav=document.querySelector('.site-nav'),btn=document.querySelector('.nav-toggle'),menu=document.querySelector('.nav-links');if(!nav||!btn||!menu)return;const close=()=>{nav.classList.remove('menu-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü öffnen');document.body.classList.remove('nav-open')};btn.addEventListener('click',()=>{const open=!nav.classList.contains('menu-open');nav.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');document.body.classList.toggle('nav-open',open)});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});window.addEventListener('resize',()=>{if(window.innerWidth>900)close()})})();</script>
 <script>(function(){const cases={"netflix-ads": "Netflix Ads & Streaming-Werbung","research-opportunities": "Research & Opportunities", "targeting-kampagnensteuerung": "Targeting & Kampagnensteuerung", "content-creatives": "Content & Creatives", "tracking-analyse-automation": "Tracking, Analyse & Automation", "market-intelligence": "Research & Opportunities", "campaign-intelligence": "Targeting & Kampagnensteuerung", "content-creative-generation": "Content & Creatives", "predictive-monitoring": "Tracking, Analyse & Automation", "lead-intelligence": "Tracking, Analyse & Automation", "workflow-automation": "Tracking, Analyse & Automation", "plattform-ki": "Plattform-KI"};const key=new URLSearchParams(location.search).get('use_case');if(!Object.prototype.hasOwnProperty.call(cases,key))return;const topic=document.getElementById('topic');const message=document.getElementById('message');const label=cases[key];const option=document.createElement('option');option.value=label;option.textContent=label;topic.appendChild(option);topic.value=label;if(!message.value)message.value='Ich interessiere mich für '+label+' im Kampagnenmanagement.\n\nUnsere aktuelle Situation:\n\nUnser Ziel:\n';})();</script><script defer="" src="/service-inquiry.js"></script><script>
 (function(){
