@@ -18,7 +18,7 @@ body.hw-refined{--bg:#fff;--paper:#fff;--line:#e1e4e8;background:#fff;font-famil
 .hw-refined .btn{min-height:48px;line-height:1.35;text-align:left}
 .hw-refined a:focus-visible,.hw-refined button:focus-visible,.hw-refined summary:focus-visible{outline:3px solid #0a66c2;outline-offset:5px}
 .hw-refined [id]{scroll-margin-top:110px}
-.hw-refined .hw-contact{margin:48px auto 64px;padding:24px;display:grid;grid-template-columns:230px minmax(0,1fr) 242px;gap:32px;align-items:start;border:0;border-radius:30px;background:#111;color:#cfcfcf}
+.hw-refined .hw-contact{margin:clamp(72px, 8vw, 112px) auto 64px;padding:24px;display:grid;grid-template-columns:230px minmax(0,1fr) 242px;gap:32px;align-items:start;border:0;border-radius:30px;background:#111;color:#cfcfcf}
 .hw-contact>img{display:block;width:230px;height:170px;object-fit:cover;object-position:center 25%;border-radius:14px;filter:grayscale(1)}
 .hw-contact-copy{min-width:0}
 .hw-refined .hw-contact-copy>p{margin:0;font-size:20px;font-weight:400;line-height:1.5;letter-spacing:-.025em;color:#cfcfcf;max-width:800px}
