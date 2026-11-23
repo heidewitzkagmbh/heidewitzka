@@ -8,8 +8,8 @@
   <title>ChatGPT Ads Agentur | 60-Tage-Pilot | Heidewitzka</title>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/site-refinement.css?v=20261027">
-  <link rel="stylesheet" href="/lp/chatgpt-ads.css?v=20261123-4">
-  <script src="/lp/chatgpt-ads-contact.js" defer></script>
+  <link rel="stylesheet" href="/lp/chatgpt-ads.css?v=20261123-5">
+  <script src="/lp/chatgpt-ads-contact.js?v=20261123-5" defer></script>
 </head>
 <body class="hw-refined gpt-lp">
   <header class="lp-header">
@@ -33,7 +33,7 @@
         <a class="btn lp-primary" href="#kontakt">Kostenlosen Eignungscheck buchen</a>
         <a class="lp-text-link" href="#pilot">Pilot und Leistungsumfang ansehen</a>
       </div>
-      <p class="lp-note">20-Minuten-Gespräch · Pilot 1.900 € netto · Mediabudget separat</p>
+      <p class="lp-note">Kostenloses Erstgespräch · Pilot 1.900 € netto · Mediabudget separat</p>
     </section>
 
     <section class="wrap lp-trust" aria-label="Heidewitzka in Zahlen">
@@ -190,18 +190,33 @@
     <section class="section hw-soft" id="kontakt" aria-labelledby="lp-contact-title">
       <div class="wrap">
         <h2 id="lp-contact-title">Eignungscheck und Kontakt</h2>
-        <div class="lp-two-columns lp-contact-grid">
+        <div class="lp-contact-grid">
           <div class="lp-contact-card">
-            <h3>20-Minuten-Gespräch buchen</h3>
+            <h3>Rückruf anfordern</h3>
+            <p>Hinterlassen Sie Ihre Telefonnummer. Wir melden uns bei Ihnen.</p>
+            <form class="lp-contact-form" id="lp-callback-form" method="post" action="/api/lp-contact">
+              <input type="hidden" name="source" value="callback">
+              <label>Name<input name="name" autocomplete="name" required maxlength="120"></label>
+              <label>Telefonnummer<input name="phone" type="tel" autocomplete="tel" required maxlength="40"></label>
+              <label>Unternehmen<input name="company" autocomplete="organization" required maxlength="180"></label>
+              <label hidden>Fax<input name="fax" tabindex="-1" autocomplete="off"></label>
+              <p><a class="lp-text-link" href="/datenschutz#kontakt">Datenschutzhinweise</a></p>
+              <button class="btn lp-primary" type="submit" disabled>Rückruf anfordern</button>
+              <p id="lp-callback-status" role="status" aria-live="polite"></p>
+              <noscript><p>Schreiben Sie uns für einen Rückruf an <a href="mailto:hallo@heidewitzka.io?subject=R%C3%BCckruf%20bitte">hallo@heidewitzka.io</a>.</p></noscript>
+            </form>
+          </div>
+          <div class="lp-contact-card">
+            <h3>Erstgespräch buchen</h3>
             <div id="lp-calendly-intro">
-              <p>Wählen Sie einen Termin für Ihren kostenlosen Eignungscheck. Beim Laden der Terminwahl wird eine Verbindung zu Calendly hergestellt.</p>
+              <p>Wählen Sie einen Termin für Ihren kostenlosen und unverbindlichen Eignungscheck. Beim Laden der Terminwahl wird eine Verbindung zu Calendly hergestellt.</p>
               <button class="btn lp-primary" type="button" id="lp-calendly-load">Terminwahl laden</button>
             </div>
             <div id="lp-calendly" data-url="https://calendly.com/vogt-heidewitzka/30min"></div>
             <p><a class="lp-text-link" href="https://calendly.com/vogt-heidewitzka/30min">Terminwahl direkt bei Calendly öffnen</a></p>
           </div>
           <div class="lp-contact-card">
-            <h3>Anfrage schreiben</h3>
+            <h3>Schriftliche Anfrage</h3>
             <form class="lp-contact-form" id="lp-contact-form" method="post" action="/api/lp-contact">
               <label>Interesse<select name="interest" required><option value="">Bitte auswählen</option><option value="pilot">ChatGPT Ads 60-Tage-Pilot</option><option value="stunde">Unterstützung pro Stunde</option><option value="betreuung">Laufende Betreuung</option><option value="sonstiges">Andere Frage zu ChatGPT Ads</option></select></label>
               <label>Name<input name="name" autocomplete="name" required maxlength="120"></label>

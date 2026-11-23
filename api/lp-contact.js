@@ -32,13 +32,20 @@ module.exports = async function handler(req, res) {
   const name = read('name', 120);
   const email = read('email', 254);
   const id = req.headers['idempotency-key'];
-  if (!name || !/^[^\s@,<>]+@[^\s@,<>]+\.[^\s@,<>]+$/.test(email) ||
+  const callback = body.source === 'callback';
+  if (!name || (!callback && !/^[^\s@,<>]+@[^\s@,<>]+\.[^\s@,<>]+$/.test(email)) ||
       typeof id !== 'string' || !/^[a-f0-9-]{36}$/i.test(id)) return send(400, { sent: false });
 
   const message = read('message', 3000);
   let subject;
   let details;
-  if (body.source === 'contact') {
+  if (callback) {
+    const phone = read('phone', 40);
+    const company = read('company', 180);
+    if (!company || !/^[+0-9() .\/-]+$/.test(phone) || phone.replace(/\D/g, '').length < 5) return send(400, { sent: false });
+    subject = 'Rückrufanfrage über die ChatGPT-Ads-Landingpage';
+    details = ['Telefonnummer: ' + phone, 'Unternehmen: ' + company];
+  } else if (body.source === 'contact') {
     const topic = read('topic', 180);
     if (!topic || !message) return send(400, { sent: false });
     const allowedPreferences = ['Telefonat vereinbaren', 'Kurze Rückmeldung und Einschätzung per E-Mail'];
@@ -59,7 +66,8 @@ module.exports = async function handler(req, res) {
     subject = 'Website-Anfrage: ' + interests[interest];
     details = ['Interesse: ' + interests[interest], 'Website: ' + website, 'Branche: ' + read('branche', 100)];
   }
-  const text = ['Name: ' + name, 'E-Mail: ' + email, ...details, 'Mediabudget: ' + read('budget', 100), '', message].join('\n');
+  const deliveryDetails = callback ? details : ['E-Mail: ' + email, ...details, 'Mediabudget: ' + read('budget', 100), '', message];
+  const text = ['Name: ' + name, ...deliveryDetails].join('\n');
 
   try {
     const response = await fetch('https://api.resend.com/emails', {
@@ -69,7 +77,7 @@ module.exports = async function handler(req, res) {
         'Content-Type': 'application/json',
         'Idempotency-Key': 'lp-contact/' + id
       },
-      body: JSON.stringify({ from, to: ['hallo@heidewitzka.io'], reply_to: email, subject, text }),
+      body: JSON.stringify({ from, to: ['hallo@heidewitzka.io'], reply_to: callback ? undefined : email, subject, text }),
       signal: AbortSignal.timeout(8000)
     });
     if (!response.ok || !(await response.json()).id) return send(502, { sent: false });
