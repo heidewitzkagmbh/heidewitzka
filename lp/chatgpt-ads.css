@@ -154,7 +154,7 @@
   font-weight: 700;
 }
 .lp-price-actions { margin-top: auto; }
-.lp-contact-grid { margin-top: 26px; }
+.lp-contact-grid { display: grid; gap: 20px; align-items: start; margin-top: 26px; }
 .lp-contact-card { min-width: 0; padding: clamp(16px, 3vw, 28px); border: 1px solid var(--teaser-border); border-radius: 24px; background: #fff; }
 .lp-contact-card h3 { font-size: clamp(23px, 2vw, 32px); }
 .lp-contact-card p { line-height: 1.5; }
@@ -172,9 +172,11 @@
   .lp-price-grid .lp-offer:first-child { grid-column: 2; grid-row: 1; }
   .lp-price-grid .lp-offer:nth-child(2) { grid-column: 1; grid-row: 1; }
 }
-@media (max-width: 899px) {
-  .lp-contact-grid { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1180px) {
+  .lp-contact-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+#lp-calendly { overflow-wrap: anywhere; }
+#lp-calendly .calendly-inline-widget { min-width: 0 !important; }
 
 .lp-hero-checks { display: grid; gap: 8px; margin: 0 0 12px; padding: 0; list-style: none; }
 .lp-hero-checks li { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: baseline; gap: 9px; }

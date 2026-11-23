@@ -1,8 +1,6 @@
 (() => {
   const endpoint = '/api/lp-contact';
   const form = document.getElementById('lp-contact-form');
-  const submit = form.querySelector('button[type="submit"]');
-  const status = document.getElementById('lp-form-status');
   const interest = form.elements.namedItem('interest');
 
   function track(event) {
@@ -43,48 +41,73 @@
     track('lp_booking_complete');
   });
 
-  async function enableForm() {
-    try {
-      const response = await fetch(endpoint);
-      if (response.ok && (await response.json()).available === true) {
-        submit.disabled = false;
-        status.textContent = '';
+  const callbackForm = document.getElementById('lp-callback-form');
+  let online = false;
+
+  function wireForm(requestForm, status, isCallback) {
+    const submit = requestForm.querySelector('button[type="submit"]');
+    let lastPayload;
+    let requestId;
+
+    requestForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (submit.disabled) return;
+      const data = Object.fromEntries(new FormData(requestForm));
+
+      if (isCallback && !online) {
+        const subject = 'Rückrufanfrage über die ChatGPT-Ads-Landingpage';
+        const body = ['Name: ' + data.name, 'Telefonnummer: ' + data.phone, 'Unternehmen: ' + data.company].join('\n');
+        window.location.href = 'mailto:hallo@heidewitzka.io?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         return;
       }
-    } catch {
-      // The email link remains usable when the service is unreachable.
-    }
-    status.textContent = 'Der Onlineversand ist aktuell nicht verfügbar. Schreiben Sie uns direkt per E-Mail.';
+
+      const payload = JSON.stringify(data);
+      if (payload !== lastPayload) {
+        requestId = crypto.randomUUID();
+        lastPayload = payload;
+      }
+      submit.disabled = true;
+      status.textContent = 'Ihre Anfrage wird gesendet …';
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Idempotency-Key': requestId },
+          body: payload
+        });
+        if (!response.ok || (await response.json()).sent !== true) throw new Error('Versand fehlgeschlagen');
+        track(isCallback ? 'lp_callback_submit' : 'lp_form_submit');
+        status.textContent = isCallback ? 'Vielen Dank, Ihre Rückrufanfrage wurde gesendet.' : 'Vielen Dank, Ihre Anfrage wurde gesendet.';
+        requestForm.reset();
+        lastPayload = undefined;
+      } catch {
+        status.textContent = 'Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns an hallo@heidewitzka.io.';
+      } finally {
+        submit.disabled = false;
+      }
+    });
+
+    return () => {
+      submit.disabled = !online && !isCallback;
+      if (!online && isCallback) {
+        submit.textContent = 'Rückruf per E-Mail vorbereiten';
+        status.textContent = 'Ihr E-Mail-Programm öffnet sich mit den ausgefüllten Angaben.';
+      } else if (!online) {
+        status.textContent = 'Der Onlineversand ist aktuell nicht verfügbar. Schreiben Sie uns direkt per E-Mail.';
+      } else {
+        status.textContent = '';
+      }
+    };
   }
 
-  let lastPayload;
-  let requestId;
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    if (submit.disabled) return;
-    const payload = JSON.stringify(Object.fromEntries(new FormData(form)));
-    if (payload !== lastPayload) {
-      requestId = crypto.randomUUID();
-      lastPayload = payload;
-    }
-    submit.disabled = true;
-    status.textContent = 'Ihre Anfrage wird gesendet …';
-    try {
-      const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Idempotency-Key': requestId },
-        body: payload
-      });
-      if (!response.ok || (await response.json()).sent !== true) throw new Error('Versand fehlgeschlagen');
-      track('lp_form_submit');
-      status.textContent = 'Vielen Dank, Ihre Anfrage wurde gesendet.';
-      form.reset();
-      lastPayload = undefined;
-    } catch {
-      status.textContent = 'Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns per E-Mail.';
-    } finally {
-      submit.disabled = false;
-    }
-  });
-  enableForm();
+  const updateCallback = wireForm(callbackForm, document.getElementById('lp-callback-status'), true);
+  const updateWritten = wireForm(form, document.getElementById('lp-form-status'), false);
+
+  fetch(endpoint)
+    .then(response => response.ok ? response.json() : null)
+    .then(result => { online = result?.available === true; })
+    .catch(() => {})
+    .finally(() => {
+      updateCallback();
+      updateWritten();
+    });
 })();
