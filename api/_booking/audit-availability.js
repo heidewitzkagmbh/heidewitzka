@@ -6,6 +6,7 @@ const offsetFormatter = new Intl.DateTimeFormat('en-GB', {
 });
 const minute = 60_000;
 const day = 24 * 60 * minute;
+const minimumNoticeWeekdays = 5;
 
 function isoWeek(date) {
   const thursday = new Date(date);
@@ -29,7 +30,6 @@ function milliseconds(interval) {
 function listAuditSlots({
   now,
   daysAhead,
-  minimumNoticeHours,
   kickoffMinutes,
   slotStepMinutes,
   bufferMinutes,
@@ -40,7 +40,6 @@ function listAuditSlots({
   blockedDates = []
 }) {
   const today = Date.parse(`${dateFormatter.format(now)}T00:00:00Z`);
-  const earliest = now.getTime() + minimumNoticeHours * 60 * minute;
   const buffer = bufferMinutes * minute;
   const blocked = new Set(blockedDates);
   const reservedByWeek = new Map();
@@ -53,11 +52,19 @@ function listAuditSlots({
   }
 
   const slots = [];
-  for (let index = 0; index < daysAhead; index += 1) {
+  let noticeDaysRemaining = minimumNoticeWeekdays;
+  // Count full weekdays after today's Berlin date, even if no booking window is configured.
+  for (let index = 1; index < daysAhead; index += 1) {
     const date = new Date(today + index * day);
+    const weekday = date.getUTCDay();
+    if (weekday === 0 || weekday === 6) continue;
+    if (noticeDaysRemaining > 0) {
+      noticeDaysRemaining -= 1;
+      continue;
+    }
     const label = date.toISOString().slice(0, 10);
     const week = isoWeek(date);
-    const windows = windowsByWeekday[date.getUTCDay()] ?? [];
+    const windows = windowsByWeekday[weekday] ?? [];
     if (!windows.length || blocked.has(label) || (reservedByWeek.get(week) ?? 0) >= weeklyCapacity) continue;
 
     // Berlin's offset changes overnight. Audit windows are during business hours.
@@ -68,7 +75,7 @@ function listAuditSlots({
       for (let startMinute = opens; startMinute + kickoffMinutes <= closes; startMinute += slotStepMinutes) {
         const start = localMidnight + startMinute * minute;
         const end = start + kickoffMinutes * minute;
-        if (start < earliest || conflicts.some(interval => start - buffer < interval.end && end + buffer > interval.start)) continue;
+        if (conflicts.some(interval => start - buffer < interval.end && end + buffer > interval.start)) continue;
         slots.push({ start: new Date(start).toISOString(), end: new Date(end).toISOString() });
       }
     }
