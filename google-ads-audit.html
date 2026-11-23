@@ -4,6 +4,7 @@
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 
 <title>Google Ads Audit | Heidewitzka</title>
+<meta name="referrer" content="no-referrer"/>
 <link href="/styles.css" rel="stylesheet"/>
 <meta content="Google Ads Audit von Heidewitzka: Konto, Struktur, Suchanfragen, Budget, Tracking und konkrete Prioritäten prüfen lassen." name="description"/>
 <link href="https://www.heidewitzka.io/google-ads-audit" rel="canonical"/>
@@ -15,6 +16,13 @@
   .audit-actions .audit-question { background: #d5f9eb; color: #063e30; }
   .audit-actions .audit-question:hover { background: #a8efd6; color: #063e30; }
   .product-detail-buy .audit-actions { margin-top: 22px; }
+  .audit-offer { max-width: 680px; }
+  .audit-offer form { display: grid; gap: 16px; }
+  .audit-offer label { display: block; font-weight: 600; }
+  .audit-offer :is(select, input:not([type="checkbox"])) { width: 100%; padding: 12px; border: 1px solid #747f8d; border-radius: 8px; background: white; color: #111; font: inherit; }
+  .audit-offer .btn { justify-self: start; }
+  .audit-offer [role="status"] { margin: 0; }
+  [data-audit-booking][hidden], .audit-offer [hidden] { display: none; }
   @media (max-width: 420px) { .audit-actions { grid-template-columns: 1fr; } }
 </style></head><body class="hw-refined">
 <div class="nav-wrap"><div class="wrap"><nav class="site-nav">
@@ -35,10 +43,10 @@
 <div class="product-detail-buy">
 <h1>Google Ads Audit</h1>
 <p class="product-detail-lead">Wo geht Budget verloren? Auf welche Conversions optimieren Ihre Kampagnen? Sie erhalten eine Analyse Ihres Kontos und einen Maßnahmenplan, der zeigt, wo Sie zuerst ansetzen sollten.</p>
-<div class="product-detail-price">ab 950 € <span>einmalig, zzgl. MwSt.</span></div>
-<p class="hw-scope-note">Für ein bestehendes Google-Ads-Konto. Umfang, Preis und Termin stimmen wir vor der Beauftragung mit Ihnen ab.</p>
+<div class="product-detail-price" id="audit-price">ab 950 € <span>einmalig, zzgl. MwSt.</span></div>
+<p class="hw-scope-note" id="audit-scope">Für ein bestehendes Google-Ads-Konto. Umfang, Preis und Termin stimmen wir vor der Beauftragung mit Ihnen ab.</p>
 <div class="audit-actions">
-<a class="btn" href="/kontakt?service=google-ads-audit#projektanfrage">Audit anfragen <span aria-hidden="true">→</span></a>
+<a class="btn" id="audit-primary" href="/kontakt?service=google-ads-audit#projektanfrage">Audit anfragen <span aria-hidden="true">→</span></a>
 <a class="btn audit-question" href="https://calendly.com/vogt-heidewitzka/30min" rel="noopener noreferrer" target="_blank">Fragen klären <span aria-hidden="true">↗</span></a>
 </div>
 </div>
@@ -52,6 +60,26 @@
 <a href="#audit-umfang">Prüfschwerpunkte ansehen <span aria-hidden="true">↓</span></a>
 </div>
 </div></div></section>
+<section class="section product-detail-section" id="audit-buchung" data-audit-booking hidden>
+<div class="wrap"><div class="audit-offer">
+<div class="section-head"><div><h2>Kick-off buchen</h2></div></div>
+<p id="audit-booking-intro">Wählen Sie einen 30-minütigen Kick-off mit Tim Vogt. Die Termine erscheinen in deutscher Ortszeit. Zwischen Buchung und Termin liegen mindestens fünf volle Werktage (Montag bis Freitag).</p>
+<p id="audit-test" hidden><strong>Stripe-Testmodus</strong> · Die Zahlung ist eine Simulation. Verwenden Sie eine Test-E-Mail-Adresse unter Ihrer Kontrolle.</p>
+<p id="audit-booking-status" role="status"></p>
+<form id="audit-booking-form">
+<div><label for="audit-campaigns">Aktive Kampagnen im Konto</label>
+<input id="audit-campaigns" name="campaigns" type="number" min="1" step="1" required/></div>
+<div><label for="audit-slot">Kick-off-Termin</label>
+<select id="audit-slot" name="start" required><option value="">Termin auswählen</option></select></div>
+<div><label for="audit-email">E-Mail-Adresse für die Einladung</label>
+<input id="audit-email" name="email" type="email" maxlength="254" autocomplete="email" required/></div>
+<label><input name="business" type="checkbox" required/> Ich buche für ein Unternehmen mit Sitz und Rechnungsadresse in Deutschland.</label>
+<p><a href="/datenschutz">Datenschutzhinweise</a></p>
+<button class="btn" type="submit">Weiter zur Zahlung</button>
+</form>
+<p><a href="/kontakt?service=google-ads-audit#projektanfrage">Audit individuell anfragen</a></p>
+</div></div>
+</section>
 <section class="section product-detail-section" id="audit-umfang"><div class="wrap">
 <div class="section-head"><div><div class="eyebrow">Leistungsumfang</div><h2>Die Prüfschwerpunkte.</h2></div><p>Der Audit konzentriert sich auf die Stellen, an denen Struktur, Daten und operative Steuerung zusammenkommen.</p></div>
 <div class="grid-4 product-scope-grid">
@@ -93,4 +121,5 @@
 <div><strong>Mehr</strong><a href="/shop.html">Leistungen &amp; Preise</a><a href="/insights.html">Blog</a><a href="/kontakt?service=google-ads-audit#projektanfrage">Kontakt</a></div>
 </div></div><div class="wrap footer-login-row"><a class="footer-login" href="/intern">Login <span aria-hidden="true">↗</span></a></div><div class="wrap footer-legal-row"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a></div></footer>
 <script>(function(){const nav=document.querySelector('.site-nav'),btn=document.querySelector('.nav-toggle'),menu=document.querySelector('.nav-links');if(!nav||!btn||!menu)return;const close=()=>{nav.classList.remove('menu-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü öffnen');document.body.classList.remove('nav-open')};btn.addEventListener('click',()=>{const open=!nav.classList.contains('menu-open');nav.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');document.body.classList.toggle('nav-open',open)});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});window.addEventListener('resize',()=>{if(window.innerWidth>900)close()})})();</script>
+<script defer src="/audit-booking.js"></script>
 </body></html>
