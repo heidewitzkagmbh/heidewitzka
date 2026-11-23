@@ -1,4 +1,4 @@
-const { schedule } = require('./audit-config');
+const { schedule, blockedDates } = require('./audit-config');
 const { listAuditSlots } = require('./audit-availability');
 
 async function providerRequest(url, options = {}) {
@@ -90,7 +90,7 @@ async function availableSlots(now = new Date()) {
   ]);
   return listAuditSlots({
     ...schedule, now, busy,
-    blockedDates: (process.env.AUDIT_BLOCKED_DATES ?? '').split(',').map(date => date.trim()),
+    blockedDates: blockedDates(),
     reservations: bookings.map(row => ({ start: row.starts_at, end: row.ends_at }))
   });
 }

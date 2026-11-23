@@ -22,10 +22,34 @@
     action.textContent = 'Audit buchen & Termin wählen';
   }
 
+  function displayCalendarPreview(data) {
+    const label = document.getElementById('audit-calendar-label');
+    const firstDate = document.getElementById('audit-calendar-date');
+    const note = document.getElementById('audit-calendar-note');
+    const start = data.enabled ? data.slots[0]?.start : data.preview?.start;
+    if (!start) {
+      firstDate.hidden = true;
+      if (data.enabled) {
+        label.textContent = 'Kalendervorschau für den Kick-off';
+        note.textContent = 'Aktuell sind keine Termine online verfügbar. Fragen Sie gern individuell an.';
+      }
+      return;
+    }
+    label.textContent = data.enabled ? 'Nächster buchbarer Kick-off' : 'Frühestmöglicher Kick-off laut Terminplan';
+    firstDate.dateTime = start;
+    firstDate.textContent = data.enabled ? date.format(new Date(start)) + ' Uhr' :
+      new Intl.DateTimeFormat('de-DE', { dateStyle: 'full', timeZone: 'Europe/Berlin' }).format(new Date(start));
+    firstDate.hidden = false;
+    note.textContent = data.enabled
+      ? 'Weitere freie Termine sehen Sie bei der Buchung.'
+      : 'Vorschau mit fünf vollen Werktagen Vorlauf. Ob der Termin frei ist, bestätigen wir auf Anfrage.';
+  }
+
   async function loadSlots() {
     const response = await fetch(endpoint);
     if (!response.ok) throw new Error('Availability unavailable');
     const data = await response.json();
+    displayCalendarPreview(data);
     if (!data.enabled) return;
     document.getElementById('audit-test').hidden = data.mode !== 'test';
     section.hidden = false;

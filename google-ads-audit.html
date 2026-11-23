@@ -16,6 +16,10 @@
   .audit-actions .audit-question { background: #d5f9eb; color: #063e30; }
   .audit-actions .audit-question:hover { background: #a8efd6; color: #063e30; }
   .product-detail-buy .audit-actions { margin-top: 22px; }
+  .audit-calendar-preview { width: 100%; max-width: 460px; box-sizing: border-box; margin: 18px 0 0; padding: 14px 16px; border-radius: 10px; background: #f1f3f6; line-height: 1.5; }
+  .audit-calendar-preview strong, .audit-calendar-preview time, .audit-calendar-preview small { display: block; }
+  .audit-calendar-preview time[hidden] { display: none; }
+  .audit-calendar-preview small { margin-top: 4px; color: #434a54; }
   .audit-offer { max-width: 680px; }
   .audit-offer form { display: grid; gap: 16px; }
   .audit-offer label { display: block; font-weight: 600; }
@@ -45,6 +49,11 @@
 <p class="product-detail-lead">Wo geht Budget verloren? Auf welche Conversions optimieren Ihre Kampagnen? Sie erhalten eine Analyse Ihres Kontos und einen Maßnahmenplan, der zeigt, wo Sie zuerst ansetzen sollten.</p>
 <div class="product-detail-price" id="audit-price">ab 950 € <span>einmalig, zzgl. MwSt.</span></div>
 <p class="hw-scope-note" id="audit-scope">Für ein bestehendes Google-Ads-Konto. Umfang, Preis und Termin stimmen wir vor der Beauftragung mit Ihnen ab.</p>
+<p class="audit-calendar-preview">
+<strong id="audit-calendar-label">Kalendervorschau für den Kick-off</strong>
+<time id="audit-calendar-date" hidden></time>
+<small id="audit-calendar-note">Wir planen den Kick-off mit mindestens fünf vollen Werktagen Vorlauf. Einen freien Termin bestätigen wir auf Anfrage.</small>
+</p>
 <div class="audit-actions">
 <a class="btn" id="audit-primary" href="/kontakt?service=google-ads-audit#projektanfrage">Audit anfragen <span aria-hidden="true">→</span></a>
 <a class="btn audit-question" href="https://calendly.com/vogt-heidewitzka/30min" rel="noopener noreferrer" target="_blank">Fragen klären <span aria-hidden="true">↗</span></a>
@@ -113,5 +122,5 @@
 <div><strong>Mehr</strong><a href="/shop.html">Leistungen &amp; Preise</a><a href="/insights.html">Blog</a><a href="/kontakt?service=google-ads-audit#projektanfrage">Kontakt</a></div>
 </div></div><div class="wrap footer-login-row"><a class="footer-login" href="/intern">Login <span aria-hidden="true">↗</span></a></div><div class="wrap footer-legal-row"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a></div></footer>
 <script>(function(){const nav=document.querySelector('.site-nav'),btn=document.querySelector('.nav-toggle'),menu=document.querySelector('.nav-links');if(!nav||!btn||!menu)return;const close=()=>{nav.classList.remove('menu-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü öffnen');document.body.classList.remove('nav-open')};btn.addEventListener('click',()=>{const open=!nav.classList.contains('menu-open');nav.classList.toggle('menu-open',open);btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');document.body.classList.toggle('nav-open',open)});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});window.addEventListener('resize',()=>{if(window.innerWidth>900)close()})})();</script>
-<script defer src="/audit-booking.js"></script>
+<script defer src="/audit-booking.js?v=20261123"></script>
 </body></html>

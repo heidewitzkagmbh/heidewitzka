@@ -31,4 +31,8 @@ function siteOrigin() {
   return 'https://www.heidewitzka.io';
 }
 
-module.exports = { bookingMode, siteOrigin, schedule };
+function blockedDates() {
+  return (process.env.AUDIT_BLOCKED_DATES ?? '').split(',').map(date => date.trim());
+}
+
+module.exports = { bookingMode, siteOrigin, schedule, blockedDates };

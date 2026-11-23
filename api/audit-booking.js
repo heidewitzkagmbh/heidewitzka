@@ -1,6 +1,14 @@
 const { randomUUID } = require('node:crypto');
-const { bookingMode, siteOrigin, schedule } = require('./_booking/audit-config');
+const { bookingMode, siteOrigin, schedule, blockedDates } = require('./_booking/audit-config');
 const { availableSlots, database, stripe, updateBooking } = require('./_booking/audit-services');
+const { listAuditSlots } = require('./_booking/audit-availability');
+
+function calendarPreview() {
+  const [first] = listAuditSlots({
+    ...schedule, now: new Date(), busy: [], reservations: [], blockedDates: blockedDates()
+  });
+  return { start: first?.start ?? null };
+}
 
 async function offer() {
   const [price, tax] = await Promise.all([
@@ -97,7 +105,10 @@ module.exports = async function handler(req, res) {
     return send(405, { error: 'method' });
   }
   const mode = bookingMode();
-  if (!mode) return send(req.method === 'GET' ? 200 : 503, { enabled: false });
+  if (!mode) {
+    if (req.method === 'POST') return send(503, { enabled: false });
+    return send(200, { enabled: false, preview: calendarPreview() });
+  }
   const origin = siteOrigin();
 
   try {
