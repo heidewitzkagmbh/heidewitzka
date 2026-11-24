@@ -93,9 +93,21 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;display:flex;justify
 .project-compact .context{margin-top:8px}
 @media(max-width:760px){.project-compact{gap:10px}.more-projects-heading{padding-top:34px}}
 .project-work .campaign-goal ul{font-size:inherit}
+.masthead .nav-consultation{display:inline-flex;align-items:center;justify-content:center;min-height:44px;background:#4aefb0;color:#063e30;border-radius:12px;padding:15px 22px;font-size:16px;font-weight:700;line-height:1.2;text-align:center;text-decoration:none;transition:background .18s ease}
+.masthead .nav-consultation:hover{background:#36dfa0;color:#063e30}
+.masthead .nav-consultation:focus-visible{outline:3px solid #063e30;outline-offset:4px}
+@media(max-width:600px){
+  .masthead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px}
+  .masthead .brand{grid-area:1/1;font-size:22px}
+  .masthead>span{grid-area:2/1}
+  .masthead .nav-consultation{grid-area:1/2/3/3;justify-self:end;max-width:190px;padding:10px 12px;font-size:14px}
+}
+@media(max-width:380px){.masthead .nav-consultation{max-width:138px}}
 </style><link href="/site-refinement.css?v=20261027" rel="stylesheet"/><link rel="canonical" href="https://www.heidewitzka.io/tim-vogt"/></head><body class="hw-refined">
 <div class="shell">
-<header class="masthead"><a aria-label="Heidewitzka Startseite" class="brand" href="/">.heidewitzka</a><span>Ein persönlicher Einblick</span></header>
+<header class="masthead"><a aria-label="Heidewitzka Startseite" class="brand" href="/">.heidewitzka</a><span>Ein persönlicher Einblick</span>
+<a class="nav-consultation" href="https://calendly.com/vogt-heidewitzka/30min" rel="noopener noreferrer" target="_blank">20-Minuten-Gespräch buchen</a>
+</header>
 <main>
 <section aria-labelledby="page-title" class="hero">
 <div><p class="eyebrow">Tim Vogt · Kampagnenmanagement</p><h1 id="page-title">Tim Vogt</h1>
